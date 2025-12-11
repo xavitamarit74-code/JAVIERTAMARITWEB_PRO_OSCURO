@@ -892,8 +892,22 @@
   }
   
   &__button {
-    // Usar mixin centralizado de _botones.scss
-    @include btn.boton-moderno-podcast('medium');
+    // Usar el mismo estilo que el botón "Leer Más"
+    @include m.boton;
+    padding: 1.2rem 2.5rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    border-radius: 3rem;
+    text-decoration: none;
+
+    @include m.tablet {
+      font-size: 1.5rem;
+      padding: 1.3rem 3rem;
+    }
+    @include m.desktop {
+      font-size: 1.6rem;
+      padding: 1.4rem 3.5rem;
+    }
   }
 }
 
@@ -1050,14 +1064,30 @@
     }
   }
   
-  // CTA de la card
+  // CTA de la card - Usar el mismo estilo que el botón "Leer Más"
   &__cta {
-    // Usar mixin centralizado de _botones.scss
-    @include btn.boton-moderno-podcast('small');
+    @include m.boton;
+    padding: 1.2rem 2.5rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    border-radius: 3rem;
+    text-decoration: none;
+    display: inline-block;
+    
+    @include m.tablet {
+      font-size: 1.5rem;
+      padding: 1.3rem 3rem;
+    }
+    @include m.desktop {
+      font-size: 1.6rem;
+      padding: 1.4rem 3.5rem;
+    }
     
     // Efecto adicional cuando la card hace hover
     .podcast-preview-card:hover & {
-      transform: translateX(5px) scale(1.05);
+      background-color: v.$negro;
+      color: v.$blanco;
+      border-color: v.$negro;
     }
   }
 }

@@ -59,14 +59,13 @@
     
     &:hover {
         background-color: v.$negro;
-        color: v.$primario;
-        border-color: transparent;
-        border-color: v.$primario;
+        color: v.$primario !important;
+        border: 2px solid v.$primario !important;
     }
     
     &:active,
     &:focus {
-        background-color: v.$primario;
+        background-color: v.$primario !important;
         color: v.$negro;
         border-color: v.$rosaOscuro;
         transform: scale(0.98);

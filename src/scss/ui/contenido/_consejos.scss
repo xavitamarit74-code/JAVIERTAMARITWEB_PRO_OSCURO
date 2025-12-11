@@ -98,7 +98,7 @@
         font-weight: 600;
         border-radius: 3rem;
         white-space: nowrap;
-        transition: all 0.3s ease;
+        text-decoration: none;
         
         @include m.tablet {
             font-size: 1.5rem;
@@ -114,15 +114,6 @@
             padding: 1.4rem 3.5rem;
             left: 5%;
             top: 90%;
-        }
-        
-        &:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-            
-            @include m.tablet {
-                transform: translateX(-50%) translateY(-2px);
-            }
         }
     }  
 }

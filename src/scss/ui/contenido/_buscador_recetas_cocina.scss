@@ -444,24 +444,21 @@
         &__item-btn {
         @include m.boton;
         width: 100%;
-        padding: 1.2rem 1rem;
+        padding: 1.2rem 2.5rem;
         font-size: 1.4rem;
         font-weight: 600;
         font-family: v.$font-family;
-        border-radius: 0.8rem;
+        border-radius: 3rem;
         margin-top: 1.5rem;
-        min-height: 4.8rem; // Altura mínima fija para el botón
-        flex-shrink: 0; // No se encoge
-        
-        @include m.mobile {
-            font-size: 1.3rem;
-            padding: 1rem 0.8rem;
-            margin-top: 1rem;
-            min-height: 4.2rem;
-        }
+        text-decoration: none;
         
         @include m.tablet {
-            min-height: 4.5rem;
+            font-size: 1.5rem;
+            padding: 1.3rem 3rem;
+        }
+        @include m.desktop {
+            font-size: 1.6rem;
+            padding: 1.4rem 3.5rem;
         }
     }
 }

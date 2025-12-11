@@ -1,0 +1,742 @@
+// base/_dark-mode.scss
+// ============================================
+// MODO OSCURO - Dark Mode Styles
+// ============================================
+// Activado mediante [data-theme="dark"] en <html>
+
+@use 'variables' as v;
+
+// ============================================
+// TRANSICIÓN GLOBAL
+// ============================================
+[data-theme="dark"] *,
+[data-theme="dark"] *::before,
+[data-theme="dark"] *::after {
+    transition: background-color 0.3s ease, 
+                border-color 0.3s ease, 
+                color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+// Respetar preferencia de movimiento reducido
+@media (prefers-reduced-motion: reduce) {
+    [data-theme="dark"] *,
+    [data-theme="dark"] *::before,
+    [data-theme="dark"] *::after {
+        transition: none;
+    }
+}
+
+// ============================================
+// BASE - BODY & HTML
+// ============================================
+html[data-theme="dark"] {
+    background-color: v.$negro;
+}
+
+[data-theme="dark"] body {
+    background-color: v.$negro;
+    color: v.$blanco;
+}
+
+// ============================================
+// HEADER
+// ============================================
+[data-theme="dark"] .header {
+    background-color: v.$negro;
+    
+    &-hero {
+        background-color: v.$gris-900;
+        border-color: v.$primario;
+        box-shadow: 
+            0 2px 4px rgba(78, 205, 196, 0.1),
+            0 4px 8px rgba(0, 0, 0, 0.2),
+            0 8px 16px rgba(0, 0, 0, 0.2);
+        
+        &__content {
+            background-color: v.$gris-900;
+        }
+        
+        &__title {
+            color: v.$blanco;
+        }
+        
+        &__subtitle {
+            color: v.$primario;
+        }
+        
+        &__social-link {
+            color: v.$blanco;
+            
+            &:hover {
+                color: v.$primario;
+            }
+        }
+    }
+}
+
+// ============================================
+// NAVEGACIÓN
+// ============================================
+[data-theme="dark"] .navegacion {
+    background-color: v.$negro;
+    border-color: v.$primario;
+    
+    &__link {
+        color: v.$blanco;
+        
+        &:hover,
+        &--active {
+            color: v.$primario;
+        }
+    }
+}
+
+// ============================================
+// CONTADOR (Tiempo Transcurrido)
+// ============================================
+[data-theme="dark"] .contador {
+    // Background principal: gradiente oscuro en lugar del turquesa/rosa
+    background: linear-gradient(135deg, v.$gris-900 0%, v.$negro 50%, v.$gris-800 100%);
+    color: v.$blanco;
+    border: 2px solid v.$primario;
+    box-shadow: 
+        0 6px 25px rgba(0, 0, 0, 0.5),
+        0 0 30px rgba(78, 205, 196, 0.1);
+    
+    // Override del pseudo-elemento de brillo
+    &::before {
+        background: linear-gradient(135deg, rgba(78, 205, 196, 0.05), rgba(247, 144, 178, 0.03));
+    }
+    
+    &__header {
+        background-color: transparent;
+    }
+    
+    &__title {
+        color: v.$blanco;
+        text-shadow: 0 0 10px rgba(78, 205, 196, 0.3);
+    }
+    
+    &__icono {
+        filter: drop-shadow(0 0 5px rgba(78, 205, 196, 0.5));
+    }
+    
+    &__contenido {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(78, 205, 196, 0.3);
+        box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.05);
+    }
+    
+    &__texto {
+        color: v.$blanco;
+    }
+    
+    &__fecha {
+        color: v.$primario;
+        font-weight: 700;
+        background: rgba(78, 205, 196, 0.15);
+        border: 1px solid rgba(78, 205, 196, 0.3);
+        padding: 0.3rem 0.8rem;
+        border-radius: 20px;
+    }
+    
+    &__numeros {
+        gap: 0.8rem;
+    }
+    
+    &__item {
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(5px);
+        border: 1px solid rgba(78, 205, 196, 0.2);
+        transition: all 0.3s ease;
+        
+        &:hover {
+            background: rgba(78, 205, 196, 0.1);
+            border-color: v.$primario;
+            transform: translateY(-3px) scale(1.03);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+    }
+    
+    &__valor {
+        // Mantener el gradiente dorado pero con más brillo para oscuro
+        background: linear-gradient(90deg, #FFD700, #FFC107, #FFEB3B);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.6));
+    }
+    
+    &__etiqueta {
+        color: v.$blanco;
+        opacity: 0.9;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    }
+    
+    &__decoracion {
+        margin-top: 1.5rem;
+    }
+    
+    &__carpe {
+        color: v.$primario;
+        text-shadow: 0 0 10px rgba(78, 205, 196, 0.4);
+        font-style: italic;
+    }
+}
+
+// ============================================
+// RELATOS
+// ============================================
+[data-theme="dark"] .relatos {
+    &__title {
+        color: v.$blanco;
+    }
+    
+    &__descripcion p {
+        color: v.$blanco;
+    }
+    
+    &__parrafo {
+        color: v.$blanco;
+    }
+}
+
+[data-theme="dark"] .relato {
+    background: linear-gradient(135deg, v.$gris-900 0%, v.$gris-800 100%);
+    border-color: v.$rosaOscuro;
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.4);
+    
+    &::before {
+        background: linear-gradient(45deg, transparent, rgba(78, 205, 196, 0.1));
+    }
+    
+    &:hover {
+        border-color: v.$primario;
+        border-width: 2px;
+        box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.5);
+        
+        // Activar hover del botón cuando se hace hover en el card
+        .relato__enlace {
+            background-color: v.$negro;
+            color: v.$primario;
+            border-color: v.$primario;
+        }
+    }
+    
+    &__numero {
+        background: linear-gradient(135deg, v.$primario, v.$rosaOscuro);
+        color: v.$blanco;
+    }
+    
+    &__titulo {
+        color: v.$blanco;
+    }
+    
+    &__texto {
+        color: v.$blanco;
+    }
+    
+    &__fecha {
+        color: v.$primario;
+        background-color: rgba(78, 205, 196, 0.15);
+        border-color: rgba(78, 205, 196, 0.3);
+    }
+    
+    &__enlace {
+        background-color: v.$gris-800;
+        color: v.$blanco;
+        border-color: v.$rosaOscuro;
+        
+        &:hover {
+            background-color: v.$negro;
+            color: v.$primario;
+            border-color: v.$primario;
+        }
+    }
+}
+
+// ============================================
+// BLOG
+// ============================================
+[data-theme="dark"] .blogs {
+    &__title {
+        color: v.$blanco;
+    }
+}
+
+[data-theme="dark"] .blog {
+    background-color: v.$gris-900;
+    border-color: v.$rosaOscuro;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+    
+    &:hover {
+        border-color: v.$primario;
+        border-width: 2px;
+        box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.5);
+        transform: translateY(-8px);
+        
+        // Activar hover del botón cuando se hace hover en el card
+        .blog__enlace {
+            background-color: v.$negro;
+            color: v.$primario;
+            border-color: v.$primario;
+        }
+    }
+    
+    &__title {
+        color: v.$blanco;
+        
+        a {
+            color: v.$blanco;
+            
+            &:hover {
+                color: v.$primario;
+            }
+        }
+    }
+    
+    &__fecha {
+        color: v.$primario;
+    }
+    
+    &__articulo {
+        color: v.$blanco;
+    }
+    
+    &__enlace {
+        background-color: v.$gris-800;
+        color: v.$blanco;
+        border-color: v.$rosaOscuro;
+        
+        &:hover {
+            background-color: v.$negro;
+            color: v.$primario;
+            border-color: v.$primario;
+        }
+    }
+    
+    &__parrafo {
+        color: v.$blanco;
+    }
+}
+
+// Publicación (artículo individual)
+[data-theme="dark"] .publicacion {
+    color: v.$blanco;
+    
+    p, div, span, h1, h2, h3, h4, h5, h6 {
+        color: v.$blanco;
+    }
+}
+
+// ============================================
+// CONSEJOS
+// ============================================
+[data-theme="dark"] .consejos {
+    &__title {
+        color: v.$blanco;
+    }
+    
+    &__texto {
+        color: v.$blanco;
+        
+        p {
+            color: v.$blanco;
+        }
+    }
+}
+
+[data-theme="dark"] .consejo__enlace {
+    background-color: v.$gris-800;
+    color: v.$blanco;
+    border-color: v.$rosaOscuro;
+    
+    &:hover {
+        background-color: v.$negro;
+        color: v.$primario;
+        border-color: v.$primario;
+    }
+}
+
+[data-theme="dark"] .consejo {
+    
+    &__imagen {
+        border-color: v.$rosaOscuro;
+    }
+}
+
+// ============================================
+// PODCASTS
+// ============================================
+[data-theme="dark"] .podcasts-preview {
+    &__title {
+        color: v.$blanco;
+    }
+    
+    &__category-title {
+        color: v.$blanco;
+    }
+    
+    &__category-description {
+        color: v.$blanco;
+    }
+    
+    &__button {
+        background-color: v.$gris-800;
+        color: v.$blanco;
+        border-color: v.$rosaOscuro;
+        
+        &:hover {
+            background-color: v.$negro;
+            color: v.$primario;
+            border-color: v.$primario;
+        }
+    }
+}
+
+
+[data-theme="dark"] .podcast-category {
+    background-color: v.$gris-900;
+    border-color: v.$primario;
+    
+    &__title {
+        color: v.$blanco;
+    }
+    
+    &__description {
+        color: v.$blanco;
+    }
+}
+
+[data-theme="dark"] .podcast-episode {
+    background-color: v.$gris-900;
+    border-color: v.$rosaOscuro;
+    
+    &:hover {
+        border-color: v.$primario;
+    }
+    
+    &__title {
+        color: v.$blanco;
+    }
+    
+    &__description {
+        color: v.$blanco;
+    }
+    
+    &__date,
+    &__duration {
+        color: v.$blanco;
+    }
+}
+
+[data-theme="dark"] .podcast-player-container {
+    background: linear-gradient(to bottom, rgba(78, 205, 196, 0.1), rgba(247, 144, 178, 0.1));
+    border-color: rgba(247, 144, 178, 0.3);
+}
+
+// Podcast Preview Card (index.html)
+[data-theme="dark"] .podcast-preview-card {
+    background-color: v.$gris-900;
+    border-color: v.$rosaOscuro;
+    
+    &:hover {
+        border-color: v.$primario;
+        border-width: 2px;
+    }
+    
+    &__title {
+        color: v.$blanco;
+    }
+    
+    &__description {
+        color: v.$blanco;
+    }
+    
+    &__meta {
+        color: v.$blanco;
+        border-top-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    &__cta {
+        background-color: v.$gris-800;
+        color: v.$blanco;
+        border-color: v.$rosaOscuro;
+        
+        &:hover {
+            background-color: v.$negro;
+            color: v.$primario;
+            border-color: v.$primario;
+        }
+    }
+}
+
+// ============================================
+// REDES
+// ============================================
+[data-theme="dark"] .redes {
+    &__title {
+        color: v.$blanco;
+    }
+}
+
+[data-theme="dark"] .video {
+    &__title {
+        color: v.$blanco;
+    }
+}
+
+// ============================================
+// FOOTER
+// ============================================
+[data-theme="dark"] .footer {
+    background-color: v.$negro;
+    border-top-color: v.$primario;
+    
+    &__link {
+        color: v.$blanco;
+        
+        &:hover,
+        &--active {
+            color: v.$primario;
+        }
+    }
+    
+    &__icon {
+        color: v.$blanco;
+        
+        &:hover {
+            color: v.$primario;
+        }
+    }
+    
+    &__copyright {
+        background-color: v.$primario;
+        color: v.$negro;
+    }
+}
+
+// ============================================
+// LIGHTBOX
+// ============================================
+[data-theme="dark"] .lightbox {
+    background-color: rgba(0, 0, 0, 0.95);
+    
+    &__zoom-controls {
+        background: rgba(30, 30, 30, 0.9);
+        border-color: v.$primario;
+    }
+    
+    &__btn {
+        background: rgba(255, 255, 255, 0.1);
+        color: v.$blanco;
+        
+        &:hover {
+            background: rgba(78, 205, 196, 0.3);
+        }
+    }
+}
+
+// ============================================
+// SCROLLBAR (Dark Mode)
+// ============================================
+[data-theme="dark"] {
+    scrollbar-color: v.$primario v.$negro;
+    
+    &::-webkit-scrollbar-track {
+        background: v.$negro !important;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        background-color: v.$primario !important;
+        border-color: v.$negro !important;
+    }
+    
+    &::-webkit-scrollbar-thumb:hover {
+        background-color: v.$primario-claro !important;
+    }
+}
+
+// ============================================
+// HEADER INNER (páginas internas)
+// ============================================
+[data-theme="dark"] .header-inner {
+    background-color: v.$negro;
+    
+    &__content {
+        background-color: v.$gris-900;
+        border-color: v.$primario;
+    }
+    
+    &__title {
+        color: v.$blanco;
+    }
+    
+    &__subtitle {
+        color: v.$primario;
+    }
+}
+
+// ============================================
+// FORMULARIOS Y INPUTS (si existen)
+// ============================================
+[data-theme="dark"] input,
+[data-theme="dark"] textarea,
+[data-theme="dark"] select {
+    background-color: v.$gris-800;
+    color: v.$blanco;
+    border-color: v.$rosaOscuro;
+    
+    &:focus {
+        border-color: v.$primario;
+        outline-color: v.$primario;
+    }
+    
+    &::placeholder {
+        color: v.$gris-400;
+    }
+}
+
+// ============================================
+// CUSTOM SELECT
+// ============================================
+[data-theme="dark"] .custom-select {
+    &__trigger {
+        background-color: v.$gris-800;
+        color: v.$blanco;
+        border-color: v.$rosaOscuro;
+    }
+    
+    &__options {
+        background-color: v.$gris-800;
+        border-color: v.$rosaOscuro;
+    }
+    
+    &__option {
+        color: v.$blanco;
+        
+        &:hover,
+        &--selected {
+            background-color: v.$gris-700;
+            color: v.$primario;
+        }
+    }
+}
+
+// ============================================
+// BOTÓN THEME TOGGLE
+// ============================================
+.theme-toggle {
+    position: fixed;
+    bottom: 2rem;
+    left: 2rem;
+    z-index: 9999;
+    
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid v.$rosaOscuro;
+    
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    
+    cursor: pointer;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    font-size: 1.5rem;
+    
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    
+    // Icono de sol (modo claro visible)
+    &__icon--light {
+        display: block;
+    }
+    
+    &__icon--dark {
+        display: none;
+    }
+    
+    &:hover {
+        transform: scale(1.1);
+        border-color: v.$primario;
+        box-shadow: 0 6px 20px rgba(78, 205, 196, 0.3);
+    }
+    
+    &:focus {
+        outline: 3px solid v.$primario;
+        outline-offset: 2px;
+    }
+    
+    &:active {
+        transform: scale(0.95);
+    }
+    
+    // Responsive
+    @media (max-width: 480px) {
+        width: 44px;
+        height: 44px;
+        bottom: 1.5rem;
+        left: 1.5rem;
+        font-size: 1.3rem;
+    }
+}
+
+// Estado cuando está en modo oscuro
+[data-theme="dark"] .theme-toggle {
+    background: rgba(0, 0, 0, 0.5);
+    border-color: v.$primario;
+    
+    &__icon--light {
+        display: none;
+    }
+    
+    &__icon--dark {
+        display: block;
+    }
+    
+    &:hover {
+        border-color: v.$rosaOscuro;
+        box-shadow: 0 6px 20px rgba(247, 144, 178, 0.3);
+    }
+}
+
+// Animación de rotación al cambiar
+.theme-toggle--animating {
+    animation: theme-toggle-spin 0.5s ease;
+}
+
+@keyframes theme-toggle-spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+// Respetar preferencia de movimiento reducido
+@media (prefers-reduced-motion: reduce) {
+    .theme-toggle {
+        transition: none;
+        
+        &:hover {
+            transform: none;
+        }
+        
+        &:active {
+            transform: none;
+        }
+    }
+    
+    .theme-toggle--animating {
+        animation: none;
+    }
+}

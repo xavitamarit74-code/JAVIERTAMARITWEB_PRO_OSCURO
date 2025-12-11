@@ -203,7 +203,15 @@
     &:hover {
         transform: translateY(-8px);
         box-shadow: 0px 15px 35px rgba(53, 52, 52, 0.2);
-        border-color: v.$rosaOscuro;
+        border-color: v.$primario;
+        border-width: 2px;
+        
+        // Activar hover del botón cuando se hace hover en el card
+        .relato__enlace {
+            background-color: v.$negro;
+            color: v.$blanco;
+            border-color: v.$negro;
+        }
     }
 
     // Elemento decorativo de fondo
