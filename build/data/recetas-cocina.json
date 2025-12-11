@@ -1,0 +1,2013 @@
+{
+  "categorias": {
+    "desayuno": {
+      "titulo": "Desayuno",
+      "descripcion": "Recetas nutritivas para empezar el día con energía",
+      "recetas": [
+        {
+          "id": 1,
+          "titulo": "Smoothie de Espinacas y Frutas",
+          "imagen": "img/receta_1.webp",
+          "alt": "receta 1 desayuno smoothie verde",
+          "raciones": "1 persona",
+          "tiempo_preparacion": "5 minutos",
+          "tiempo_coccion": null,
+          "ingredientes": [
+            "1 taza de espinacas frescas",
+            "1/2 plátano",
+            "1 manzana verde",
+            "1 taza de agua de coco"
+          ],
+          "preparacion": [
+            "Lava las espinacas.",
+            "Pela y corta las frutas.",
+            "Licúa todos los ingredientes hasta obtener una textura suave."
+          ],
+          "alergenos": [
+            "Sin gluten.",
+            "Sin frutos secos.",
+            "Sin lactosa."
+          ],
+          "una_mano": "Sí, utilizando frutas pre-peladas.",
+          "comentario": "Este smoothie tiene la frescura del Mediterráneo y la dulzura de un abrazo matutino.",
+          "estaciones": [
+            "primavera",
+            "verano"
+          ],
+          "eventos": [
+            "dias_laborables",
+            "fin_de_semana"
+          ]
+        },
+        {
+          "id": 2,
+          "titulo": "Tostada de Aguacate con Tomate y Semillas de Sésamo",
+          "imagen": "img/receta_2.webp",
+          "alt": "receta 2 desayuno tostada aguacate",
+          "raciones": "1 persona",
+          "tiempo_preparacion": "5 minutos",
+          "tiempo_coccion": null,
+          "ingredientes": [
+            "1 rebanada de pan integral",
+            "1/4 de aguacate",
+            "2 rodajas de tomate",
+            "1 chorrito de aceite de oliva extra",
+            "1 cucharadita de semillas de sésamo"
+          ],
+          "preparacion": [
+            "Tuesta el pan integral",
+            "Unta el aguacate sobre la rebanada",
+            "Coloca las rodajas de tomate y espolvorea con semillas de sésamo"
+          ],
+          "alergenos": [
+            "Puede contener trazas de frutos secos.",
+            "Contiene gluten."
+          ],
+          "una_mano": "Sí, con aguacate pre-preparado.",
+          "comentario": "Una tostada que combina cremosidad, frescura y el toque crujiente del sésamo.",
+          "estaciones": [
+            "primavera",
+            "verano",
+            "otono",
+            "invierno"
+          ],
+          "eventos": [
+            "dias_laborables",
+            "fin_de_semana"
+          ]
+        },
+        {
+          "id": 11,
+          "titulo": "Porridge de Manzana y Canela",
+          "imagen": "img/receta_11.webp",
+          "alt": "receta 11 desayuno porridge manzana canela 1:1",
+          "raciones": "1 persona",
+          "tiempo_preparacion": "5 minutos",
+          "tiempo_coccion": "10 minutos",
+          "ingredientes": [
+            "1/2 taza de avena integral",
+            "1 taza de leche de avena",
+            "1 manzana pelada y troceada",
+            "1 cucharadita de canela en polvo",
+            "1 cucharada de miel",
+            "1 cucharada de nueces picadas"
+          ],
+          "preparacion": [
+            "Cuece la avena con la leche de avena a fuego lento durante 5 minutos.",
+            "Añade la manzana troceada y la canela.",
+            "Cocina 5 minutos más hasta que la manzana esté tierna.",
+            "Sirve caliente con miel y nueces por encima."
+          ],
+          "alergenos": [
+            "Contiene gluten (avena).",
+            "Contiene frutos secos."
+          ],
+          "una_mano": "Sí, con manzana pre-troceada.",
+          "comentario": "Un desayuno que abraza con el calor de la canela y la dulzura natural de la manzana.",
+          "estaciones": [
+            "otono",
+            "invierno"
+          ],
+          "eventos": [
+            "dias_laborables",
+            "fin_de_semana"
+          ]
+        },
+        {
+          "id": 12,
+          "titulo": "Tostadas Dulces con Requesón y Mermelada",
+          "imagen": "img/receta_12.webp",
+          "alt": "receta 12 desayuno tostadas requeson mermelada 1:1",
+          "raciones": "1 persona",
+          "tiempo_preparacion": "5 minutos",
+          "tiempo_coccion": null,
+          "ingredientes": [
+            "2 rebanadas de pan integral",
+            "100g de requesón",
+            "2 cucharadas de mermelada sin azúcar añadido",
+            "1 cucharadita de canela en polvo",
+            "Frutas frescas para decorar"
+          ],
+          "preparacion": [
+            "Tuesta las rebanadas de pan integral.",
+            "Extiende el requesón sobre cada tostada.",
+            "Añade una cucharada de mermelada sobre cada una.",
+            "Espolvorea con canela y decora con frutas frescas."
+          ],
+          "alergenos": [
+            "Contiene gluten.",
+            "Contiene lactosa."
+          ],
+          "una_mano": "Sí, con ingredientes pre-preparados.",
+          "comentario": "La combinación perfecta entre cremoso y dulce para despertar con una sonrisa.",
+          "estaciones": [
+            "primavera",
+            "verano",
+            "otono",
+            "invierno"
+          ],
+          "eventos": [
+            "fin_de_semana"
+          ]
+        },
+        {
+          "id": 21,
+          "titulo": "Bowl de Yogur con Granola y Frutas",
+          "imagen": "img/receta_21.webp",
+          "alt": "receta 21 desayuno bowl yogur granola frutas 1:1",
+          "raciones": "1 persona",
+          "tiempo_preparacion": "5 minutos",
+          "tiempo_coccion": null,
+          "ingredientes": [
+            "1 yogur natural sin azúcar",
+            "3 cucharadas de granola casera",
+            "1/2 taza de frutas variadas (fresas, arándanos, kiwi)",
+            "1 cucharada de miel",
+            "1 cucharadita de semillas de chía"
+          ],
+          "preparacion": [
+            "Coloca el yogur en un bol.",
+            "Añade las frutas troceadas por encima.",
+            "Espolvorea la granola y las semillas de chía.",
+            "Rocía con miel antes de servir."
+          ],
+          "alergenos": [
+            "Contiene lactosa.",
+            "Puede contener frutos secos (granola)."
+          ],
+          "una_mano": "Sí, con frutas pre-cortadas.",
+          "comentario": "Un bowl lleno de color y vitalidad que convierte cada mañana en una celebración.",
+          "estaciones": [
+            "primavera",
+            "verano"
+          ],
+          "eventos": [
+            "dias_laborables",
+            "fin_de_semana"
+          ]
+        },
+        {
+          "id": 22,
+          "titulo": "Tortilla de Calabacín y Cebolla",
+          "imagen": "img/receta_22.webp",
+          "alt": "receta 22 desayuno tortilla calabacin cebolla 1:1",
+          "raciones": "2 personas",
+          "tiempo_preparacion": "10 minutos",
+          "tiempo_coccion": "15 minutos",
+          "ingredientes": [
+            "3 huevos",
+            "1 calabacín mediano en rodajas finas",
+            "1/2 cebolla en juliana",
+            "1 cucharada de aceite de oliva",
+            "Sal y pimienta al gusto",
+            "Hierbas frescas (perejil, cebollino)"
+          ],
+          "preparacion": [
+            "Sofríe la cebolla y el calabacín hasta que estén tiernos.",
+            "Bate los huevos y sazona con sal y pimienta.",
+            "Mezcla las verduras con los huevos batidos.",
+            "Cocina la tortilla en sartén antiadherente 5 minutos por cada lado.",
+            "Sirve decorada con hierbas frescas."
+          ],
+          "alergenos": [
+            "Contiene huevo."
+          ],
+          "una_mano": "No completamente (requiere voltear la tortilla).",
+          "comentario": "Una tortilla mediterránea que aporta frescura y sabor a tus mañanas.",
+          "estaciones": [
+            "primavera",
+            "verano"
+          ],
+          "eventos": [
+            "fin_de_semana"
+          ]
+        },
+        {
+          "id": 31,
+          "titulo": "Tostada Mediterránea Tomate-Aceituna",
+          "imagen": "img/receta_31.webp",
+          "alt": "receta 31 desayuno tostada mediterranea tomate aceituna 1:1",
+          "raciones": "1 persona",
+          "tiempo_preparacion": "5 minutos",
+          "tiempo_coccion": null,
+          "ingredientes": [
+            "2 rebanadas de pan integral",
+            "2 tomates maduros",
+            "6 aceitunas negras sin hueso",
+            "1 cucharada de aceite de oliva virgen extra",
+            "Sal marina al gusto",
+            "Orégano seco"
+          ],
+          "preparacion": [
+            "Tuesta las rebanadas de pan integral.",
+            "Frota los tomates sobre el pan tostado.",
+            "Trocea las aceitunas y distribúyelas sobre las tostadas.",
+            "Rocía con aceite de oliva y espolvorea sal marina y orégano."
+          ],
+          "alergenos": [
+            "Contiene gluten."
+          ],
+          "una_mano": "Sí, con ingredientes pre-preparados.",
+          "comentario": "El sabor auténtico del Mediterráneo en cada bocado, simple y delicioso.",
+          "estaciones": [
+            "primavera",
+            "verano"
+          ],
+          "eventos": [
+            "dias_laborables",
+            "fin_de_semana"
+          ]
+        },
+        {
+          "id": 32,
+          "titulo": "Porridge con Frutos Rojos y Almendras",
+          "imagen": "img/receta_32.webp",
+          "alt": "receta 32 desayuno porridge frutos rojos almendras 1:1",
+          "raciones": "1 persona",
+          "tiempo_preparacion": "5 minutos",
+          "tiempo_coccion": "8 minutos",
+          "ingredientes": [
+            "1/2 taza de avena integral",
+            "1 taza de leche de almendras",
+            "1/2 taza de frutos rojos variados",
+            "1 cucharada de almendras laminadas",
+            "1 cucharadita de miel",
+            "1/2 cucharadita de extracto de vainilla"
+          ],
+          "preparacion": [
+            "Cuece la avena con la leche de almendras y vainilla a fuego lento.",
+            "Remueve frecuentemente durante 8 minutos hasta cremoso.",
+            "Añade los frutos rojos los últimos 2 minutos.",
+            "Sirve caliente decorado con almendras laminadas y miel."
+          ],
+          "alergenos": [
+            "Contiene gluten (avena).",
+            "Contiene frutos secos."
+          ],
+          "una_mano": "Sí, con frutos rojos congelados.",
+          "comentario": "Un porridge colorido y nutritivo que despierta todos los sentidos cada mañana.",
+          "estaciones": [
+            "otono",
+            "invierno"
+          ],
+          "eventos": [
+            "dias_laborables",
+            "fin_de_semana"
+          ]
+        },
+        {
+          "id": 34,
+          "titulo": "Tostadas Cottage y Frutas",
+          "imagen": "img/receta_34.webp",
+          "alt": "receta 34 desayuno tostadas cottage frutas 1:1",
+          "raciones": "1 persona",
+          "tiempo_preparacion": "5 minutos",
+          "tiempo_coccion": null,
+          "ingredientes": [
+            "2 rebanadas de pan integral",
+            "100g de queso cottage",
+            "1/2 melocotón en rodajas",
+            "1 cucharada de nueces picadas",
+            "1 cucharadita de miel",
+            "Canela en polvo"
+          ],
+          "preparacion": [
+            "Tuesta las rebanadas de pan integral.",
+            "Extiende el queso cottage sobre cada tostada.",
+            "Coloca las rodajas de melocotón encima.",
+            "Espolvorea nueces picadas, rocía con miel y canela."
+          ],
+          "alergenos": [
+            "Contiene gluten.",
+            "Contiene lactosa.",
+            "Contiene frutos secos."
+          ],
+          "una_mano": "Sí, con melocotón pre-cortado.",
+          "comentario": "La textura cremosa del cottage se combina perfectamente con la dulzura natural de la fruta.",
+          "estaciones": [
+            "verano",
+            "otono"
+          ],
+          "eventos": [
+            "dias_laborables",
+            "fin_de_semana"
+          ]
+        },
+        {
+          "id": 41,
+          "titulo": "Gachas Navideñas con Manzana Caramelizada",
+          "imagen": "img/receta_41.webp",
+          "alt": "receta 41 desayuno gachas navidenas manzana caramelizada 1:1",
+          "raciones": "2 personas",
+          "tiempo_preparacion": "10 minutos",
+          "tiempo_coccion": "15 minutos",
+          "ingredientes": [
+            "1 taza de avena integral",
+            "2 tazas de leche de canela",
+            "2 manzanas peladas y troceadas",
+            "2 cucharadas de miel",
+            "1 cucharadita de canela en polvo",
+            "1/2 cucharadita de nuez moscada",
+            "1 cucharada de nueces picadas"
+          ],
+          "preparacion": [
+            "Cuece la avena con la leche a fuego lento durante 10 minutos.",
+            "En sartén aparte, carameliza las manzanas con miel y especias.",
+            "Sirve las gachas calientes cubiertas con manzana caramelizada.",
+            "Decora con nueces picadas y un toque extra de canela."
+          ],
+          "alergenos": [
+            "Contiene gluten (avena).",
+            "Contiene lactosa.",
+            "Contiene frutos secos."
+          ],
+          "una_mano": "No completamente (requiere caramelizar).",
+          "comentario": "El aroma navideño de la canela y nuez moscada convierte cada cucharada en una caricia invernal.",
+          "estaciones": [
+            "invierno"
+          ],
+          "eventos": [
+            "fin_de_semana",
+            "navidad"
+          ]
+        },
+        {
+          "id": 42,
+          "titulo": "Tostadas Navideñas Requesón-Miel-Nuez Moscada",
+          "imagen": "img/receta_42.webp",
+          "alt": "receta 42 desayuno tostadas navidenas requeson miel nuez moscada 1:1",
+          "raciones": "1 persona",
+          "tiempo_preparacion": "5 minutos",
+          "tiempo_coccion": null,
+          "ingredientes": [
+            "2 rebanadas de pan integral",
+            "100g de requesón",
+            "2 cucharadas de miel de romero",
+            "1/2 cucharadita de nuez moscada",
+            "1 cucharada de pasas",
+            "Canela en polvo para espolvorear"
+          ],
+          "preparacion": [
+            "Tuesta las rebanadas de pan hasta dorar.",
+            "Extiende el requesón generosamente sobre cada tostada.",
+            "Rocía con miel y espolvorea nuez moscada.",
+            "Decora con pasas y un toque final de canela."
+          ],
+          "alergenos": [
+            "Contiene gluten.",
+            "Contiene lactosa."
+          ],
+          "una_mano": "Sí, con todos los ingredientes preparados.",
+          "comentario": "Las especias navideñas transforman un desayuno simple en una experiencia festiva y reconfortante.",
+          "estaciones": [
+            "invierno"
+          ],
+          "eventos": [
+            "navidad"
+          ]
+        }
+      ]
+    },
+    "almuerzo": {
+      "titulo": "Almuerzo",
+      "descripcion": "Opciones ligeras y energéticas para el media mañana",
+      "recetas": [
+        {
+          "id": 3,
+          "titulo": "Yogur con Miel, Nueces y Frutas",
+          "imagen": "img/receta_3.webp",
+          "alt": "receta 3 almuerzo yogur frutas",
+          "raciones": "1 persona",
+          "tiempo_preparacion": "5 minutos",
+          "tiempo_coccion": null,
+          "ingredientes": [
+            "1 yogur natural (sin azúcar).",
+            "1 cucharada de miel.",
+            "1 cucharada de nueces troceadas.",
+            "1/4 de plátano en rodajas."
+          ],
+          "preparacion": [
+            "Coloca el yogur en un bol.",
+            "Añade las rodajas de plátano y espolvorea las nueces.",
+            "Rocía con miel antes de servir."
+          ],
+          "alergenos": [
+            "Contiene frutos secos.",
+            "Contiene lactosa."
+          ],
+          "una_mano": "Sí, con frutas pre-cortadas.",
+          "comentario": "El equilibrio perfecto entre dulce y nutritivo, ideal para un descanso energético.",
+          "estaciones": [
+            "primavera",
+            "verano",
+            "otono"
+          ],
+          "eventos": [
+            "dias_laborables",
+            "festivo"
+          ]
+        },
+        {
+          "id": 4,
+          "titulo": "Barrita Casera de Avena y Frutas Secas",
+          "imagen": "img/receta_4.webp",
+          "alt": "receta 4 almuerzo barrita avena",
+          "raciones": "4 barritas",
+          "tiempo_preparacion": "10 minutos",
+          "tiempo_coccion": "15 minutos",
+          "ingredientes": [
+            "1 taza de avena.",
+            "1/4 taza de pasas.",
+            "1/4 taza de almendras picadas.",
+            "2 cucharadas de miel.",
+            "1 plátano maduro (machacado)."
+          ],
+          "preparacion": [
+            "Mezcla todos los ingredientes en un bol hasta formar una masa compacta.",
+            "Extiende la mezcla en una bandeja forrada con papel de horno.",
+            "Hornea a 180°C durante 15 minutos.",
+            "Deja enfriar y corta en barritas."
+          ],
+          "alergenos": [
+            "Contiene gluten (avena).",
+            "Contiene frutos secos."
+          ],
+          "una_mano": "No completamente.",
+          "comentario": "Estas barritas son pequeñas pero potentes: un bocado y ya estás listo para conquistar el día.",
+          "estaciones": [
+            "otono",
+            "invierno"
+          ],
+          "eventos": [
+            "dias_laborables",
+            "festivo"
+          ]
+        },
+        {
+          "id": 13,
+          "titulo": "Batido de Plátano y Avena",
+          "imagen": "img/receta_13.webp",
+          "alt": "receta 13 almuerzo batido platano avena 1:1",
+          "raciones": "1 persona",
+          "tiempo_preparacion": "5 minutos",
+          "tiempo_coccion": null,
+          "ingredientes": [
+            "1 plátano maduro",
+            "1/4 taza de avena integral",
+            "1 taza de leche de almendras",
+            "1 cucharada de miel",
+            "1/2 cucharadita de canela",
+            "1 cucharada de almendras picadas"
+          ],
+          "preparacion": [
+            "Coloca todos los ingredientes en la batidora.",
+            "Bate hasta obtener una textura cremosa y homogénea.",
+            "Sirve inmediatamente en vaso alto.",
+            "Decora con almendras picadas por encima."
+          ],
+          "alergenos": [
+            "Contiene gluten (avena).",
+            "Contiene frutos secos."
+          ],
+          "una_mano": "Sí, con ingredientes pre-medidos.",
+          "comentario": "Un batido cremoso y energizante que aporta la energía necesaria para continuar el día.",
+          "estaciones": [
+            "primavera",
+            "verano",
+            "otono"
+          ],
+          "eventos": [
+            "dias_laborables"
+          ]
+        },
+        {
+          "id": 14,
+          "titulo": "Tortitas de Espelta con Frutas Frescas",
+          "imagen": "img/receta_14.webp",
+          "alt": "receta 14 almuerzo tortitas espelta frutas frescas 1:1",
+          "raciones": "2 personas",
+          "tiempo_preparacion": "10 minutos",
+          "tiempo_coccion": "10 minutos",
+          "ingredientes": [
+            "1 taza de harina de espelta",
+            "1 huevo",
+            "1 taza de leche de avena",
+            "1 cucharadita de polvo de hornear",
+            "1 cucharada de miel",
+            "Frutas variadas para decorar"
+          ],
+          "preparacion": [
+            "Mezcla la harina, polvo de hornear en un bol.",
+            "En otro bol, bate huevo, leche y miel.",
+            "Combina ambas mezclas hasta obtener masa homogénea.",
+            "Cocina pequeñas tortitas en sartén antiadherente.",
+            "Sirve calientes decoradas con frutas frescas."
+          ],
+          "alergenos": [
+            "Contiene gluten.",
+            "Contiene huevo."
+          ],
+          "una_mano": "No completamente (requiere cocinar tortitas).",
+          "comentario": "Tortitas ligeras y esponjosas que convierten cualquier merienda en una celebración.",
+          "estaciones": [
+            "primavera",
+            "verano"
+          ],
+          "eventos": [
+            "fin_de_semana"
+          ]
+        },
+        {
+          "id": 23,
+          "titulo": "Galletas de Avena y Plátano",
+          "imagen": "img/receta_23.webp",
+          "alt": "receta 23 almuerzo galletas avena platano 1:1",
+          "raciones": "12 galletas",
+          "tiempo_preparacion": "10 minutos",
+          "tiempo_coccion": "15 minutos",
+          "ingredientes": [
+            "2 plátanos maduros machacados",
+            "1 taza de avena integral",
+            "1/4 taza de pasas",
+            "1 cucharadita de canela",
+            "1 cucharada de semillas de girasol",
+            "1 cucharadita de extracto de vainilla"
+          ],
+          "preparacion": [
+            "Precalienta el horno a 180°C.",
+            "Mezcla plátanos machacados con avena y especias.",
+            "Añade pasas y semillas de girasol.",
+            "Forma galletas en bandeja con papel de horno.",
+            "Hornea 15 minutos hasta dorar ligeramente."
+          ],
+          "alergenos": [
+            "Contiene gluten (avena)."
+          ],
+          "una_mano": "No completamente (requiere horneado).",
+          "comentario": "Galletas naturalmente dulces que demuestran que lo saludable también puede ser delicioso.",
+          "estaciones": [
+            "otono",
+            "invierno"
+          ],
+          "eventos": [
+            "dias_laborables",
+            "festivo"
+          ]
+        },
+        {
+          "id": 24,
+          "titulo": "Hummus de Remolacha",
+          "imagen": "img/receta_24.webp",
+          "alt": "receta 24 almuerzo hummus remolacha 1:1",
+          "raciones": "3 personas",
+          "tiempo_preparacion": "15 minutos",
+          "tiempo_coccion": null,
+          "ingredientes": [
+            "1 lata de garbanzos cocidos",
+            "1 remolacha cocida mediana",
+            "2 cucharadas de tahini",
+            "Zumo de 1 limón",
+            "1 diente de ajo",
+            "2 cucharadas de aceite de oliva"
+          ],
+          "preparacion": [
+            "Escurre los garbanzos y reserva un poco del líquido.",
+            "Tritura todos los ingredientes en procesador de alimentos.",
+            "Añade líquido de garbanzos si necesitas textura más cremosa.",
+            "Sirve con bastones de verduras o pan integral."
+          ],
+          "alergenos": [
+            "Contiene sésamo.",
+            "Sin gluten.",
+            "Sin lactosa."
+          ],
+          "una_mano": "Sí, con verduras pre-cortadas.",
+          "comentario": "Un hummus vibrante y colorido que aporta antioxidantes y alegra cualquier mesa.",
+          "estaciones": [
+            "primavera",
+            "verano",
+            "otono",
+            "invierno"
+          ],
+          "eventos": [
+            "dias_laborables",
+            "festivo"
+          ]
+        },
+        {
+          "id": 33,
+          "titulo": "Barrita Energética Dátiles-Cacao",
+          "imagen": "img/receta_33.webp",
+          "alt": "receta 33 almuerzo barrita energetica datiles cacao 1:1",
+          "raciones": "8 barritas",
+          "tiempo_preparacion": "15 minutos",
+          "tiempo_coccion": null,
+          "ingredientes": [
+            "1 taza de dátiles deshuesados",
+            "1/2 taza de almendras crudas",
+            "2 cucharadas de cacao en polvo",
+            "1 cucharada de semillas de chía",
+            "1 cucharadita de extracto de vainilla",
+            "Pizca de sal marina"
+          ],
+          "preparacion": [
+            "Remoja los dátiles en agua caliente 10 minutos.",
+            "Procesa almendras hasta obtener harina gruesa.",
+            "Añade dátiles escurridos, cacao, chía, vainilla y sal.",
+            "Forma barritas compactas y refrigera 2 horas."
+          ],
+          "alergenos": [
+            "Contiene frutos secos."
+          ],
+          "una_mano": "Sí, una vez preparadas.",
+          "comentario": "Barritas intensas y naturales que proporcionan energía duradera sin azúcares añadidos.",
+          "estaciones": [
+            "otono",
+            "invierno"
+          ],
+          "eventos": [
+            "dias_laborables"
+          ]
+        },
+        {
+          "id": 43,
+          "titulo": "Bombones Energéticos Dátiles-Cacao-Avellana",
+          "imagen": "img/receta_43.webp",
+          "alt": "receta 43 almuerzo bombones energeticos datiles cacao avellana navidenos 1:1",
+          "raciones": "15 bombones",
+          "tiempo_preparacion": "20 minutos",
+          "tiempo_coccion": null,
+          "ingredientes": [
+            "1 taza de dátiles deshuesados",
+            "1/2 taza de avellanas tostadas",
+            "3 cucharadas de cacao en polvo",
+            "1 cucharadita de canela",
+            "1/2 cucharadita de nuez moscada",
+            "Coco rallado para rebozar"
+          ],
+          "preparacion": [
+            "Remoja los dátiles en agua tibia 15 minutos.",
+            "Procesa avellanas hasta obtener mantequilla gruesa.",
+            "Añade dátiles escurridos, cacao y especias navideñas.",
+            "Forma bolitas y rueda en coco rallado.",
+            "Refrigera 1 hora antes de servir."
+          ],
+          "alergenos": [
+            "Contiene frutos secos."
+          ],
+          "una_mano": "Sí, una vez preparados.",
+          "comentario": "Bombones festivos que combinan el chocolate con el aroma cálido de las especias navideñas.",
+          "estaciones": [
+            "invierno"
+          ],
+          "eventos": [
+            "navidad"
+          ]
+        },
+        {
+          "id": 44,
+          "titulo": "Smoothie Navideño Plátano-Canela-Castaña",
+          "imagen": "img/receta_44.webp",
+          "alt": "receta 44 almuerzo smoothie navideno platano canela castana 1:1",
+          "raciones": "1 persona",
+          "tiempo_preparacion": "5 minutos",
+          "tiempo_coccion": null,
+          "ingredientes": [
+            "1 plátano maduro",
+            "1/4 taza de castañas cocidas",
+            "1 taza de leche de avena",
+            "1 cucharadita de canela",
+            "1/2 cucharadita de nuez moscada",
+            "1 cucharada de miel"
+          ],
+          "preparacion": [
+            "Coloca todos los ingredientes en la batidora.",
+            "Bate hasta obtener textura completamente cremosa.",
+            "Sirve inmediatamente en vaso decorado.",
+            "Espolvorea canela extra por encima."
+          ],
+          "alergenos": [
+            "Contiene frutos secos (castañas)."
+          ],
+          "una_mano": "Sí, con castañas pre-cocidas.",
+          "comentario": "Un smoothie que evoca la calidez del hogar navideño con cada sorbo reconfortante.",
+          "estaciones": [
+            "invierno"
+          ],
+          "eventos": [
+            "festivo",
+            "navidad"
+          ]
+        }
+      ]
+    },
+    "comida": {
+      "titulo": "Comida",
+      "descripcion": "Platos principales nutritivos y equilibrados",
+      "recetas": [
+        {
+          "id": 5,
+          "titulo": "Ensalada de Quinoa con Verduras y Vinagreta de Limón",
+          "imagen": "img/receta_5.webp",
+          "alt": "receta 5 comida ensalada quinoa",
+          "raciones": "2 personas",
+          "tiempo_preparacion": "15 minutos",
+          "tiempo_coccion": "15 minutos",
+          "ingredientes": [
+            "1 taza de quinoa.",
+            "1 pepino en cubos.",
+            "2 tomates cherry cortados por la mitad.",
+            "1/4 de cebolla roja picada.",
+            "2 cucharadas de aceite de oliva.",
+            "Zumo de 1 limón.",
+            "Sal y pimienta al gusto."
+          ],
+          "preparacion": [
+            "Cuece la quinoa según las instrucciones del paquete y deja enfriar.",
+            "Mezcla las verduras en un bol grande.",
+            "Añade la quinoa fría a las verduras.",
+            "Prepara la vinagreta mezclando aceite, zumo de limón, sal y pimienta.",
+            "Aliña la ensalada y mezcla bien antes de servir."
+          ],
+          "alergenos": [
+            "Sin gluten.",
+            "Sin frutos secos.",
+            "Sin lactosa."
+          ],
+          "una_mano": "Sí, con verduras pre-cortadas.",
+          "comentario": "Una explosión de colores y sabores que nutre el cuerpo y alegra la vista.",
+          "estaciones": [
+            "primavera",
+            "verano"
+          ],
+          "eventos": [
+            "dias_laborables",
+            "fin_de_semana"
+          ]
+        },
+        {
+          "id": 6,
+          "titulo": "Arroz Integral con Pollo y Verduras",
+          "imagen": "img/receta_6.webp",
+          "alt": "Receta 6: Arroz integral salteado con tiras de pollo y verduras en vajilla clara, estilo Glamour 1:1 rústico-editorial",
+          "raciones": "2 personas",
+          "tiempo_preparacion": "8 minutos",
+          "tiempo_coccion": "10-12 minutos",
+          "ingredientes": [
+            "2 vasitos de arroz integral cocido sin sal (o 300 g de arroz integral ya cocido)",
+            "250 g de pechuga de pollo en tiras finas",
+            "1/2 pimiento rojo en tiras finas",
+            "1/2 cebolla picada fina",
+            "1 zanahoria pequeña en daditos finos (80-100 g)",
+            "60-80 g de guisantes congelados",
+            "2 cucharadas de aceite de oliva virgen extra",
+            "1 diente de ajo picado (opcional)",
+            "1/2 cdita de pimentón dulce",
+            "1/2 cdita de cúrcuma o curry suave",
+            "Pimienta negra al gusto",
+            "Pizca de sal (opcional)",
+            "Chorrito de limón o perejil picado para terminar"
+          ],
+          "preparacion": [
+            "Calienta 1 cda de AOVE en sartén. Sofríe cebolla, zanahoria y pimiento 4-5 minutos.",
+            "Desplaza verduras; añade pollo con 1 cda AOVE y las especias. Dora 3-4 minutos hasta hecho.",
+            "Agrega guisantes y el arroz cocido. Saltea 2-3 minutos hasta que todo quede caliente y suelto.",
+            "Ajusta pimienta y una pizca de sal si hace falta. Apaga y termina con limón o perejil."
+          ],
+          "alergenos": [
+            "Sin gluten.",
+            "Sin lactosa.",
+            "Puede contener trazas por elaboración industrial."
+          ],
+          "una_mano": "Usa verduras troceadas congeladas, arroz integral ya cocido y tijeras de cocina para el pollo. Todo va en una sola sartén con espátula antideslizante.",
+          "comentario": "Arroz humilde, pollo honesto y verduras con ganas de fiesta. Sencillo, colorido y con ritmillo mediterráneo.",
+          "estaciones": [
+            "primavera",
+            "verano",
+            "otono",
+            "invierno"
+          ],
+          "eventos": [
+            "dias_laborables",
+            "fin_de_semana"
+          ]
+        },
+        {
+          "id": 52,
+          "titulo": "Salmón al Horno con Verduras Mediterráneas",
+          "imagen": "img/receta_52.webp",
+          "alt": "receta 52 comida salmón verduras",
+          "raciones": "2 personas",
+          "tiempo_preparacion": "10 minutos",
+          "tiempo_coccion": "20 minutos",
+          "ingredientes": [
+            "2 filetes de salmón.",
+            "1 calabacín en rodajas.",
+            "1 berenjena en cubos.",
+            "1 pimiento rojo en tiras.",
+            "2 cucharadas de aceite de oliva.",
+            "1 cucharadita de hierbas provenzales.",
+            "Sal y pimienta al gusto."
+          ],
+          "preparacion": [
+            "Precalienta el horno a 200°C.",
+            "Coloca las verduras en una bandeja de horno.",
+            "Rocía con aceite y sazona con hierbas, sal y pimienta.",
+            "Añade los filetes de salmón sobre las verduras.",
+            "Hornea durante 20 minutos o hasta que el salmón esté cocido."
+          ],
+          "alergenos": [
+            "Contiene pescado.",
+            "Sin gluten.",
+            "Sin frutos secos."
+          ],
+          "una_mano": "No completamente (requiere manipular el horno).",
+          "comentario": "El Mediterráneo en tu plato: sabores auténticos que transportan a costas soleadas.",
+          "estaciones": [
+            "primavera",
+            "verano",
+            "otono"
+          ],
+          "eventos": [
+            "fin_de_semana"
+          ]
+        },
+        {
+          "id": 15,
+          "titulo": "Pollo al Limón con Arroz Integral",
+          "imagen": "img/receta_15.webp",
+          "alt": "receta 15 comida pollo limon arroz integral 1:1",
+          "raciones": "2 personas",
+          "tiempo_preparacion": "15 minutos",
+          "tiempo_coccion": "25 minutos",
+          "ingredientes": [
+            "2 pechugas de pollo",
+            "1 taza de arroz integral",
+            "Zumo de 2 limones",
+            "2 cucharadas de aceite de oliva",
+            "1 cebolla picada",
+            "2 dientes de ajo",
+            "Hierbas frescas (tomillo, romero)"
+          ],
+          "preparacion": [
+            "Cuece el arroz integral según instrucciones del paquete.",
+            "Marina el pollo con limón, ajo y hierbas durante 10 minutos.",
+            "Sofríe la cebolla hasta dorar y reserva.",
+            "Cocina el pollo en la misma sartén hasta dorar por ambos lados.",
+            "Sirve sobre arroz integral con la cebolla por encima."
+          ],
+          "alergenos": [
+            "Sin gluten.",
+            "Sin frutos secos.",
+            "Sin lactosa."
+          ],
+          "una_mano": "No completamente (requiere manipular sartén).",
+          "comentario": "Un plato completo donde el limón aporta frescura y el arroz integral sustancia nutritiva.",
+          "estaciones": [
+            "primavera",
+            "verano"
+          ],
+          "eventos": [
+            "fin_de_semana"
+          ]
+        },
+        {
+          "id": 16,
+          "titulo": "Lentejas con Verduras y Comino",
+          "imagen": "img/receta_16.webp",
+          "alt": "receta 16 comida lentejas verduras comino 1:1",
+          "raciones": "3 personas",
+          "tiempo_preparacion": "15 minutos",
+          "tiempo_coccion": "30 minutos",
+          "ingredientes": [
+            "1 taza de lentejas pardinas",
+            "1 zanahoria en cubitos",
+            "1 cebolla picada",
+            "1 pimiento rojo troceado",
+            "2 cucharaditas de comino molido",
+            "2 cucharadas de aceite de oliva",
+            "Caldo de verduras"
+          ],
+          "preparacion": [
+            "Sofríe cebolla, zanahoria y pimiento hasta ablandar.",
+            "Añade las lentejas y el comino, remueve 1 minuto.",
+            "Cubre con caldo de verduras y lleva a ebullición.",
+            "Reduce el fuego y cocina 25 minutos hasta que estén tiernas.",
+            "Ajusta sazón y sirve caliente."
+          ],
+          "alergenos": [
+            "Sin gluten.",
+            "Sin frutos secos.",
+            "Sin lactosa."
+          ],
+          "una_mano": "No completamente (requiere cocción).",
+          "comentario": "Un plato tradicional repleto de proteína vegetal y el aroma exótico del comino.",
+          "estaciones": [
+            "otono",
+            "invierno"
+          ],
+          "eventos": [
+            "festivo",
+            "fin_de_semana"
+          ]
+        },
+        {
+          "id": 25,
+          "titulo": "Albóndigas de Lentejas en Tomate",
+          "imagen": "img/receta_25.webp",
+          "alt": "receta 25 comida albondigas lentejas tomate 1:1",
+          "raciones": "3 personas",
+          "tiempo_preparacion": "20 minutos",
+          "tiempo_coccion": "25 minutos",
+          "ingredientes": [
+            "1 taza de lentejas cocidas",
+            "1/2 taza de pan rallado integral",
+            "1 huevo",
+            "1 cebolla picada fina",
+            "500ml de tomate triturado",
+            "2 cucharadas de aceite de oliva",
+            "Perejil fresco picado"
+          ],
+          "preparacion": [
+            "Tritura las lentejas dejando textura algo gruesa.",
+            "Mezcla con pan rallado, huevo y mitad de la cebolla.",
+            "Forma albóndigas pequeñas con las manos húmedas.",
+            "Sofríe la cebolla restante, añade tomate y cocina 10 minutos.",
+            "Incorpora las albóndigas y cocina 15 minutos más."
+          ],
+          "alergenos": [
+            "Contiene gluten.",
+            "Contiene huevo."
+          ],
+          "una_mano": "No completamente (requiere formar albóndigas).",
+          "comentario": "Una versión vegetal del clásico que sorprende por su sabor y textura reconfortante.",
+          "estaciones": [
+            "otono",
+            "invierno"
+          ],
+          "eventos": [
+            "festivo",
+            "fin_de_semana"
+          ]
+        },
+        {
+          "id": 26,
+          "titulo": "Arroz con Verduras y Azafrán",
+          "imagen": "img/receta_26.webp",
+          "alt": "receta 26 comida arroz verduras azafran 1:1",
+          "raciones": "3 personas",
+          "tiempo_preparacion": "15 minutos",
+          "tiempo_coccion": "20 minutos",
+          "ingredientes": [
+            "1 taza de arroz integral",
+            "1 calabacín en cubitos",
+            "1 pimiento rojo en tiras",
+            "100g de judías verdes",
+            "Una pizca de azafrán",
+            "2 cucharadas de aceite de oliva",
+            "Caldo de verduras caliente"
+          ],
+          "preparacion": [
+            "Sofríe las verduras en aceite hasta que estén tiernas.",
+            "Añade el arroz y remueve 2 minutos.",
+            "Disuelve el azafrán en un poco de caldo caliente.",
+            "Añade todo el caldo y el azafrán, no remuevas más.",
+            "Cocina 18 minutos a fuego lento hasta absorber el líquido."
+          ],
+          "alergenos": [
+            "Sin gluten.",
+            "Sin frutos secos.",
+            "Sin lactosa."
+          ],
+          "una_mano": "No completamente (requiere cocción controlada).",
+          "comentario": "El oro del azafrán transforma verduras simples en un arroz digno de celebración.",
+          "estaciones": [
+            "primavera",
+            "verano"
+          ],
+          "eventos": [
+            "fin_de_semana"
+          ]
+        },
+        {
+          "id": 28,
+          "titulo": "Ensalada de Pasta Integral con Pollo y Espárragos",
+          "imagen": "img/receta_28.webp",
+          "alt": "receta 28 comida ensalada pasta integral pollo esparragos 1:1",
+          "raciones": "2 personas",
+          "tiempo_preparacion": "15 minutos",
+          "tiempo_coccion": "12 minutos",
+          "ingredientes": [
+            "200g de pasta integral (macarrones)",
+            "1 pechuga de pollo cocida",
+            "150g de espárragos verdes",
+            "1/4 taza de tomates cherry",
+            "2 cucharadas de aceite de oliva",
+            "Zumo de 1 limón",
+            "Hojas de albahaca fresca"
+          ],
+          "preparacion": [
+            "Cuece la pasta según instrucciones del paquete y enfría.",
+            "Blanquea los espárragos 3 minutos y córtalos en trozos.",
+            "Trocea el pollo cocido y los tomates cherry.",
+            "Mezcla todos los ingredientes en bol grande.",
+            "Aliña con aceite, limón y albahaca fresca."
+          ],
+          "alergenos": [
+            "Contiene gluten."
+          ],
+          "una_mano": "Sí, con pollo pre-cocido.",
+          "comentario": "Una ensalada completa y refrescante perfecta para llevar o disfrutar en verano.",
+          "estaciones": [
+            "primavera",
+            "verano"
+          ],
+          "eventos": [
+            "dias_laborables",
+            "festivo"
+          ]
+        },
+        {
+          "id": 35,
+          "titulo": "Pechuga de Pollo al Limón con Verduras Asadas",
+          "imagen": "img/receta_35.webp",
+          "alt": "receta 35 comida pechuga pollo limon verduras asadas 1:1",
+          "raciones": "2 personas",
+          "tiempo_preparacion": "15 minutos",
+          "tiempo_coccion": "30 minutos",
+          "ingredientes": [
+            "2 pechugas de pollo",
+            "2 calabacines en rodajas",
+            "1 berenjena en cubos",
+            "1 pimiento amarillo en tiras",
+            "Zumo de 2 limones",
+            "3 cucharadas de aceite de oliva",
+            "Romero fresco"
+          ],
+          "preparacion": [
+            "Precalienta el horno a 200°C.",
+            "Marina el pollo con limón, aceite y romero 10 minutos.",
+            "Coloca verduras en bandeja de horno con aceite y sal.",
+            "Añade el pollo marinado sobre las verduras.",
+            "Asa 25-30 minutos hasta que esté todo dorado."
+          ],
+          "alergenos": [
+            "Sin gluten.",
+            "Sin frutos secos.",
+            "Sin lactosa."
+          ],
+          "una_mano": "No completamente (requiere manipular horno).",
+          "comentario": "Un plato mediterráneo completo donde cada ingrediente potencia el sabor del conjunto.",
+          "estaciones": [
+            "primavera",
+            "verano",
+            "otono"
+          ],
+          "eventos": [
+            "fin_de_semana"
+          ]
+        },
+        {
+          "id": 36,
+          "titulo": "Lasaña de Verduras",
+          "imagen": "img/receta_36.webp",
+          "alt": "receta 36 comida lasana verduras 1:1",
+          "raciones": "4 personas",
+          "tiempo_preparacion": "30 minutos",
+          "tiempo_coccion": "35 minutos",
+          "ingredientes": [
+            "Láminas de lasaña integral",
+            "2 calabacines en láminas",
+            "1 berenjena en rodajas",
+            "500ml de tomate triturado",
+            "200g de queso ricotta",
+            "100g de queso mozzarella rallado",
+            "Albahaca fresca"
+          ],
+          "preparacion": [
+            "Precalienta horno a 180°C y asa las verduras ligeramente.",
+            "Prepara salsa con tomate, sal, pimienta y albahaca.",
+            "Alterna capas: pasta, verduras, ricotta y salsa.",
+            "Termina con mozzarella rallado por encima.",
+            "Hornea 35 minutos hasta gratinar la superficie."
+          ],
+          "alergenos": [
+            "Contiene gluten.",
+            "Contiene lactosa."
+          ],
+          "una_mano": "No completamente (requiere montaje y horneado).",
+          "comentario": "Una lasaña vegetariana que demuestra que los platos sin carne pueden ser igual de satisfactorios.",
+          "estaciones": [
+            "otono",
+            "invierno"
+          ],
+          "eventos": [
+            "fin_de_semana"
+          ]
+        },
+        {
+          "id": 45,
+          "titulo": "Pechuga de Pavo con Salsa de Castañas",
+          "imagen": "img/receta_45.webp",
+          "alt": "receta 45 comida pechuga pavo salsa castanas navidena 1:1",
+          "raciones": "3 personas",
+          "tiempo_preparacion": "20 minutos",
+          "tiempo_coccion": "25 minutos",
+          "ingredientes": [
+            "600g de pechuga de pavo",
+            "200g de castañas cocidas",
+            "1 cebolla dorada picada",
+            "200ml de caldo de verduras",
+            "2 cucharadas de aceite de oliva",
+            "1 cucharadita de canela",
+            "Sal y pimienta blanca"
+          ],
+          "preparacion": [
+            "Sazona el pavo con sal, pimienta y un toque de canela.",
+            "Sella la pechuga en sartén con aceite hasta dorar.",
+            "Sofríe la cebolla y añade las castañas troceadas.",
+            "Agrega caldo y cocina hasta que el pavo esté tierno.",
+            "Tritura parte de las castañas para espesar la salsa."
+          ],
+          "alergenos": [
+            "Contiene frutos secos (castañas)."
+          ],
+          "una_mano": "No completamente (requiere cocción controlada).",
+          "comentario": "Un plato navideño elegante donde las castañas aportan dulzura y tradición festiva.",
+          "estaciones": [
+            "invierno"
+          ],
+          "eventos": [
+            "fin_de_semana",
+            "navidad"
+          ]
+        },
+        {
+          "id": 46,
+          "titulo": "Lasaña Espinacas-Ricotta-Nuez Moscada",
+          "imagen": "img/receta_46.webp",
+          "alt": "receta 46 comida lasana espinacas ricotta nuez moscada navidena 1:1",
+          "raciones": "4 personas",
+          "tiempo_preparacion": "35 minutos",
+          "tiempo_coccion": "40 minutos",
+          "ingredientes": [
+            "Láminas de lasaña integral",
+            "500g de espinacas frescas",
+            "300g de queso ricotta",
+            "100g de parmesano rallado",
+            "500ml de bechamel ligera",
+            "1 cucharadita de nuez moscada",
+            "Piñones para decorar"
+          ],
+          "preparacion": [
+            "Blanquea las espinacas y mézclalas con ricotta y nuez moscada.",
+            "Prepara bechamel con leche desnatada y especias navideñas.",
+            "Alterna capas: pasta, mezcla de espinacas, bechamel.",
+            "Termina con parmesano y piñones por encima.",
+            "Hornea 40 minutos a 180°C hasta dorar la superficie."
+          ],
+          "alergenos": [
+            "Contiene gluten.",
+            "Contiene lactosa.",
+            "Contiene frutos secos."
+          ],
+          "una_mano": "No completamente (requiere montaje elaborado).",
+          "comentario": "Una lasaña navideña sofisticada donde la nuez moscada aporta el toque festivo perfecto.",
+          "estaciones": [
+            "invierno"
+          ],
+          "eventos": [
+            "fin_de_semana",
+            "navidad"
+          ]
+        }
+      ]
+    },
+    "merienda": {
+      "titulo": "Merienda",
+      "descripcion": "Snacks saludables para recargar energías",
+      "recetas": [
+        {
+          "id": 7,
+          "titulo": "Hummus de Garbanzos con Bastones de Zanahoria",
+          "imagen": "img/receta_7.webp",
+          "alt": "receta 7 merienda hummus zanahoria",
+          "raciones": "2 personas",
+          "tiempo_preparacion": "10 minutos",
+          "tiempo_coccion": null,
+          "ingredientes": [
+            "1 lata de garbanzos cocidos (escurridos).",
+            "2 cucharadas de tahini (pasta de sésamo).",
+            "Zumo de 1 limón.",
+            "1 diente de ajo.",
+            "2 cucharadas de aceite de oliva.",
+            "2 zanahorias grandes en bastones."
+          ],
+          "preparacion": [
+            "Tritura los garbanzos con tahini, zumo de limón y ajo hasta obtener una pasta.",
+            "Añade aceite de oliva gradualmente hasta conseguir la textura deseada.",
+            "Sazona con sal al gusto.",
+            "Sirve con los bastones de zanahoria."
+          ],
+          "alergenos": [
+            "Contiene sésamo.",
+            "Sin gluten.",
+            "Sin lactosa."
+          ],
+          "una_mano": "Sí, con zanahorias pre-cortadas.",
+          "comentario": "Un clásico del Mediterráneo que convierte la merienda en un momento de puro placer.",
+          "estaciones": [
+            "primavera",
+            "verano",
+            "otono",
+            "invierno"
+          ],
+          "eventos": [
+            "dias_laborables",
+            "festivo"
+          ]
+        },
+        {
+          "id": 8,
+          "titulo": "Smoothie Bowl de Frutas Rojas",
+          "imagen": "img/receta_8.webp",
+          "alt": "receta 8 merienda smoothie bowl",
+          "raciones": "1 persona",
+          "tiempo_preparacion": "10 minutos",
+          "tiempo_coccion": null,
+          "ingredientes": [
+            "1/2 taza de fresas congeladas.",
+            "1/2 taza de arándanos congelados.",
+            "1/2 plátano.",
+            "2 cucharadas de yogur griego.",
+            "1 cucharada de granola.",
+            "1 cucharadita de semillas de chía."
+          ],
+          "preparacion": [
+            "Tritura las frutas congeladas con yogur hasta obtener una textura espesa.",
+            "Vierte en un bol.",
+            "Decora con granola y semillas de chía.",
+            "Sirve inmediatamente."
+          ],
+          "alergenos": [
+            "Contiene lactosa.",
+            "Puede contener gluten (granola)."
+          ],
+          "una_mano": "Sí, con ingredientes pre-preparados.",
+          "comentario": "Un bowl que es pura alegría: colores vibrantes y sabores que despiertan todos los sentidos.",
+          "estaciones": [
+            "primavera",
+            "verano"
+          ],
+          "eventos": [
+            "fin_de_semana"
+          ]
+        },
+        {
+          "id": 17,
+          "titulo": "Crema de Yogur y Mango",
+          "imagen": "img/receta_17.webp",
+          "alt": "receta 17 merienda crema yogur mango 1:1",
+          "raciones": "2 personas",
+          "tiempo_preparacion": "10 minutos",
+          "tiempo_coccion": null,
+          "ingredientes": [
+            "1 mango maduro pelado",
+            "200g de yogur griego natural",
+            "1 cucharada de miel",
+            "1 cucharadita de zumo de lima",
+            "Hojas de menta fresca",
+            "1 cucharada de coco rallado"
+          ],
+          "preparacion": [
+            "Tritura el mango hasta obtener puré suave.",
+            "Mezcla el puré con yogur, miel y zumo de lima.",
+            "Refrigera 30 minutos para que se asienten los sabores.",
+            "Sirve en copas decorado con menta y coco."
+          ],
+          "alergenos": [
+            "Contiene lactosa."
+          ],
+          "una_mano": "Sí, con mango pre-troceado.",
+          "comentario": "Una crema tropical que transporta a playas paradisíacas con cada cucharada refrescante.",
+          "estaciones": [
+            "primavera",
+            "verano"
+          ],
+          "eventos": [
+            "festivo",
+            "fin_de_semana"
+          ]
+        },
+        {
+          "id": 27,
+          "titulo": "Muffins Zanahoria-Naranja",
+          "imagen": "img/receta_27.webp",
+          "alt": "receta 27 merienda muffins zanahoria naranja 1:1",
+          "raciones": "8 muffins",
+          "tiempo_preparacion": "15 minutos",
+          "tiempo_coccion": "20 minutos",
+          "ingredientes": [
+            "1 taza de harina integral",
+            "1 zanahoria grande rallada",
+            "Ralladura de 1 naranja",
+            "1/4 taza de aceite de oliva suave",
+            "2 huevos",
+            "1/3 taza de miel",
+            "1 cucharadita de polvo de hornear"
+          ],
+          "preparacion": [
+            "Precalienta horno a 180°C y prepara moldes para muffins.",
+            "Mezcla ingredientes secos en un bol.",
+            "En otro bol, bate huevos, aceite, miel y ralladura.",
+            "Combina ambas mezclas junto con zanahoria rallada.",
+            "Hornea 20 minutos hasta que estén dorados."
+          ],
+          "alergenos": [
+            "Contiene gluten.",
+            "Contiene huevo."
+          ],
+          "una_mano": "No completamente (requiere horneado).",
+          "comentario": "Muffins esponjosos donde la dulzura natural de la zanahoria se potencia con cítricos frescos.",
+          "estaciones": [
+            "otono",
+            "invierno"
+          ],
+          "eventos": [
+            "festivo",
+            "fin_de_semana"
+          ]
+        },
+        {
+          "id": 30,
+          "titulo": "Rollitos de Calabacín con Queso de Cabra",
+          "imagen": "img/receta_30.webp",
+          "alt": "receta 30 merienda rollitos calabacin queso cabra 1:1",
+          "raciones": "2 personas",
+          "tiempo_preparacion": "15 minutos",
+          "tiempo_coccion": null,
+          "ingredientes": [
+            "2 calabacines grandes",
+            "100g de queso de cabra",
+            "1 cucharada de miel",
+            "1 cucharada de nueces picadas",
+            "Hojas de albahaca fresca",
+            "Aceite de oliva para pincelar"
+          ],
+          "preparacion": [
+            "Corta calabacines en láminas finas con mandolina.",
+            "Pincela ligeramente con aceite y asa en plancha 2 minutos.",
+            "Mezcla queso de cabra con miel y nueces.",
+            "Extiende la mezcla sobre cada lámina de calabacín.",
+            "Enrolla cuidadosamente y decora con albahaca."
+          ],
+          "alergenos": [
+            "Contiene lactosa.",
+            "Contiene frutos secos."
+          ],
+          "una_mano": "No completamente (requiere enrollar con cuidado).",
+          "comentario": "Elegantes rollitos que combinan la frescura del calabacín con la cremosidad del queso de cabra.",
+          "estaciones": [
+            "primavera",
+            "verano"
+          ],
+          "eventos": [
+            "festivo",
+            "fin_de_semana"
+          ]
+        },
+        {
+          "id": 47,
+          "titulo": "Galletas Navideñas Almendra-Canela",
+          "imagen": "img/receta_47.webp",
+          "alt": "receta 47 merienda galletas navidenas almendra canela 1:1",
+          "raciones": "20 galletas",
+          "tiempo_preparacion": "20 minutos",
+          "tiempo_coccion": "12 minutos",
+          "ingredientes": [
+            "2 tazas de harina de almendra",
+            "1/4 taza de miel",
+            "1 huevo",
+            "2 cucharaditas de canela",
+            "1/2 cucharadita de nuez moscada",
+            "1 cucharadita de extracto de vainilla",
+            "Almendras laminadas para decorar"
+          ],
+          "preparacion": [
+            "Mezcla harina de almendra con especias navideñas.",
+            "Bate huevo con miel y vainilla hasta cremoso.",
+            "Combina ambas mezclas hasta formar masa compacta.",
+            "Forma galletas y decora con almendras laminadas.",
+            "Hornea 12 minutos a 160°C hasta dorar ligeramente."
+          ],
+          "alergenos": [
+            "Contiene frutos secos.",
+            "Contiene huevo."
+          ],
+          "una_mano": "No completamente (requiere horneado).",
+          "comentario": "Galletas aromáticas que llenan la casa del perfume navideño de canela y almendra tostada.",
+          "estaciones": [
+            "invierno"
+          ],
+          "eventos": [
+            "navidad"
+          ]
+        },
+        {
+          "id": 48,
+          "titulo": "Muffins Zanahoria-Especias Navideñas",
+          "imagen": "img/receta_48.webp",
+          "alt": "receta 48 merienda muffins zanahoria especias navidenas 1:1",
+          "raciones": "10 muffins",
+          "tiempo_preparacion": "20 minutos",
+          "tiempo_coccion": "22 minutos",
+          "ingredientes": [
+            "1 taza de harina integral",
+            "2 zanahorias ralladas",
+            "1/3 taza de aceite de coco derretido",
+            "2 huevos",
+            "1/4 taza de miel",
+            "1 cucharadita de canela",
+            "1/2 cucharadita de nuez moscada",
+            "1/4 cucharadita de jengibre molido"
+          ],
+          "preparacion": [
+            "Precalienta horno a 180°C y prepara moldes.",
+            "Mezcla harina con todas las especias navideñas.",
+            "Bate huevos, aceite y miel hasta emulsionar.",
+            "Incorpora zanahoria rallada a la mezcla húmeda.",
+            "Combina todo y hornea 22 minutos hasta esponjosos."
+          ],
+          "alergenos": [
+            "Contiene gluten.",
+            "Contiene huevo."
+          ],
+          "una_mano": "No completamente (requiere horneado).",
+          "comentario": "Muffins especiados que capturan la esencia navideña en cada bocado aromático y reconfortante.",
+          "estaciones": [
+            "invierno"
+          ],
+          "eventos": [
+            "festivo",
+            "navidad"
+          ]
+        }
+      ]
+    },
+    "cena": {
+      "titulo": "Cena",
+      "descripcion": "Platos ligeros y nutritivos para cerrar el día",
+      "recetas": [
+        {
+          "id": 9,
+          "titulo": "Crema de Calabaza con Jengibre",
+          "imagen": "img/receta_9.webp",
+          "alt": "receta 9 cena crema calabaza",
+          "raciones": "3 personas",
+          "tiempo_preparacion": "15 minutos",
+          "tiempo_coccion": "25 minutos",
+          "ingredientes": [
+            "500g de calabaza pelada y troceada.",
+            "1 cebolla picada.",
+            "1 trozo de jengibre fresco (2cm).",
+            "500ml de caldo de verduras.",
+            "200ml de leche de coco.",
+            "Sal y pimienta al gusto."
+          ],
+          "preparacion": [
+            "Sofríe la cebolla hasta que esté transparente.",
+            "Añade la calabaza y el jengibre, rehoga 5 minutos.",
+            "Agrega el caldo y cocina 20 minutos hasta que la calabaza esté tierna.",
+            "Tritura hasta obtener una crema suave.",
+            "Incorpora la leche de coco y sazona."
+          ],
+          "alergenos": [
+            "Sin gluten.",
+            "Sin frutos secos.",
+            "Sin lactosa."
+          ],
+          "una_mano": "No completamente (requiere cocción).",
+          "comentario": "Una crema que abraza el alma: el calor de la calabaza y el toque exótico del jengibre.",
+          "estaciones": [
+            "otono",
+            "invierno"
+          ],
+          "eventos": [
+            "festivo"
+          ]
+        },
+        {
+          "id": 10,
+          "titulo": "Tortilla de Espinacas y Queso Fresco",
+          "imagen": "img/receta_10.webp",
+          "alt": "receta 10 cena tortilla espinacas",
+          "raciones": "2 personas",
+          "tiempo_preparacion": "10 minutos",
+          "tiempo_coccion": "10 minutos",
+          "ingredientes": [
+            "4 huevos.",
+            "100g de espinacas frescas.",
+            "50g de queso fresco desmenuzado.",
+            "1 cucharada de aceite de oliva.",
+            "Sal y pimienta al gusto."
+          ],
+          "preparacion": [
+            "Saltea las espinacas hasta que se reduzcan.",
+            "Bate los huevos y mézclalos con las espinacas y el queso.",
+            "Calienta aceite en una sartén antiadherente.",
+            "Vierte la mezcla y cocina a fuego medio 5 minutos por cada lado.",
+            "Sirve caliente o tibia."
+          ],
+          "alergenos": [
+            "Contiene huevo.",
+            "Contiene lactosa.",
+            "Sin gluten."
+          ],
+          "una_mano": "No completamente (requiere voltear la tortilla).",
+          "comentario": "Simple y reconfortante: una tortilla que convierte ingredientes básicos en pura satisfacción.",
+          "estaciones": [
+            "primavera",
+            "verano",
+            "otono",
+            "invierno"
+          ],
+          "eventos": [
+            "dias_laborables"
+          ]
+        },
+        {
+          "id": 18,
+          "titulo": "Ensalada de Quinoa con Granada y Nueces",
+          "imagen": "img/receta_18.webp",
+          "alt": "receta 18 cena ensalada quinoa granada nueces 1:1",
+          "raciones": "2 personas",
+          "tiempo_preparacion": "15 minutos",
+          "tiempo_coccion": "15 minutos",
+          "ingredientes": [
+            "1 taza de quinoa",
+            "1/2 granada desgranada",
+            "1/4 taza de nueces troceadas",
+            "2 cucharadas de aceite de oliva",
+            "Zumo de 1 limón",
+            "Hojas de rúcula",
+            "Sal y pimienta al gusto"
+          ],
+          "preparacion": [
+            "Cuece la quinoa según instrucciones y deja enfriar.",
+            "Mezcla quinoa fría con rúcula en bol grande.",
+            "Añade granada desgranada y nueces troceadas.",
+            "Aliña con aceite de oliva, limón, sal y pimienta.",
+            "Mezcla suavemente y sirve fresca."
+          ],
+          "alergenos": [
+            "Sin gluten.",
+            "Contiene frutos secos."
+          ],
+          "una_mano": "Sí, con granada pre-desgranada.",
+          "comentario": "Una ensalada colorida donde cada ingrediente aporta textura y sabor únicos.",
+          "estaciones": [
+            "otono",
+            "invierno"
+          ],
+          "eventos": [
+            "festivo",
+            "fin_de_semana"
+          ]
+        },
+        {
+          "id": 19,
+          "titulo": "Crema de Zanahoria y Jengibre",
+          "imagen": "img/receta_19.webp",
+          "alt": "receta 19 cena crema zanahoria jengibre 1:1",
+          "raciones": "3 personas",
+          "tiempo_preparacion": "15 minutos",
+          "tiempo_coccion": "25 minutos",
+          "ingredientes": [
+            "500g de zanahorias peladas",
+            "1 cebolla mediana",
+            "1 trozo de jengibre fresco (3cm)",
+            "500ml de caldo de verduras",
+            "2 cucharadas de aceite de oliva",
+            "Sal y pimienta blanca"
+          ],
+          "preparacion": [
+            "Sofríe cebolla picada hasta transparente.",
+            "Añade zanahorias troceadas y jengibre rallado.",
+            "Rehoga 5 minutos y agrega el caldo caliente.",
+            "Cocina 20 minutos hasta que estén muy tiernas.",
+            "Tritura hasta textura completamente lisa y sazona."
+          ],
+          "alergenos": [
+            "Sin gluten.",
+            "Sin frutos secos.",
+            "Sin lactosa."
+          ],
+          "una_mano": "No completamente (requiere cocción).",
+          "comentario": "Una crema sedosa donde el jengibre despierta los sentidos con su calidez reconfortante.",
+          "estaciones": [
+            "otono",
+            "invierno"
+          ],
+          "eventos": [
+            "festivo"
+          ]
+        },
+        {
+          "id": 20,
+          "titulo": "Espárragos al Vapor con Huevo Escalfado",
+          "imagen": "img/receta_20.webp",
+          "alt": "receta 20 cena esparragos vapor huevo escalfado 1:1",
+          "raciones": "1 persona",
+          "tiempo_preparacion": "10 minutos",
+          "tiempo_coccion": "8 minutos",
+          "ingredientes": [
+            "200g de espárragos verdes",
+            "1 huevo fresco",
+            "1 cucharada de vinagre blanco",
+            "1 cucharada de aceite de oliva",
+            "Sal marina y pimienta negra",
+            "Perejil fresco picado"
+          ],
+          "preparacion": [
+            "Cuece los espárragos al vapor 5 minutos hasta tiernos.",
+            "Hierve agua con vinagre para escalfar el huevo.",
+            "Rompe el huevo en el agua hirviendo y cuece 3 minutos.",
+            "Coloca espárragos en plato, corona con huevo escalfado.",
+            "Rocía con aceite, sal, pimienta y perejil."
+          ],
+          "alergenos": [
+            "Contiene huevo.",
+            "Sin gluten.",
+            "Sin lactosa."
+          ],
+          "una_mano": "No completamente (requiere técnica de escalfado).",
+          "comentario": "Un plato elegante y ligero donde la yema cremosa se convierte en salsa natural para los espárragos.",
+          "estaciones": [
+            "primavera"
+          ],
+          "eventos": [
+            "festivo",
+            "fin_de_semana"
+          ]
+        },
+        {
+          "id": 29,
+          "titulo": "Crema de Espárragos y Almendras",
+          "imagen": "img/receta_29.webp",
+          "alt": "receta 29 cena crema esparragos almendras 1:1",
+          "raciones": "3 personas",
+          "tiempo_preparacion": "15 minutos",
+          "tiempo_coccion": "20 minutos",
+          "ingredientes": [
+            "500g de espárragos verdes",
+            "1/4 taza de almendras crudas",
+            "1 cebolla pequeña",
+            "500ml de caldo de verduras",
+            "2 cucharadas de aceite de oliva",
+            "Sal y pimienta blanca"
+          ],
+          "preparacion": [
+            "Sofríe cebolla picada hasta dorar ligeramente.",
+            "Añade espárragos troceados y almendras.",
+            "Rehoga 5 minutos y agrega caldo caliente.",
+            "Cocina 15 minutos hasta que estén muy tiernos.",
+            "Tritura hasta cremoso y ajusta sazón."
+          ],
+          "alergenos": [
+            "Sin gluten.",
+            "Contiene frutos secos.",
+            "Sin lactosa."
+          ],
+          "una_mano": "No completamente (requiere cocción).",
+          "comentario": "Una crema sofisticada donde las almendras aportan cremosidad y realzan el sabor delicado de los espárragos.",
+          "estaciones": [
+            "primavera"
+          ],
+          "eventos": [
+            "festivo",
+            "fin_de_semana"
+          ]
+        },
+        {
+          "id": 37,
+          "titulo": "Guiso de Garbanzos con Espinacas",
+          "imagen": "img/receta_37.webp",
+          "alt": "receta 37 cena guiso garbanzos espinacas 1:1",
+          "raciones": "3 personas",
+          "tiempo_preparacion": "15 minutos",
+          "tiempo_coccion": "25 minutos",
+          "ingredientes": [
+            "1 lata de garbanzos cocidos",
+            "200g de espinacas frescas",
+            "1 cebolla picada",
+            "2 tomates maduros rallados",
+            "2 dientes de ajo",
+            "1 cucharadita de pimentón dulce",
+            "2 cucharadas de aceite de oliva"
+          ],
+          "preparacion": [
+            "Sofríe cebolla y ajo hasta dorar.",
+            "Añade tomate rallado y pimentón, cocina 5 minutos.",
+            "Incorpora garbanzos escurridos y cocina 10 minutos.",
+            "Añade espinacas troceadas y cocina hasta que se ablanden.",
+            "Sazona con sal y pimienta, sirve caliente."
+          ],
+          "alergenos": [
+            "Sin gluten.",
+            "Sin frutos secos.",
+            "Sin lactosa."
+          ],
+          "una_mano": "No completamente (requiere cocción).",
+          "comentario": "Un guiso tradicional que combina la proteína vegetal de los garbanzos con el hierro de las espinacas.",
+          "estaciones": [
+            "otono",
+            "invierno"
+          ],
+          "eventos": [
+            "festivo",
+            "fin_de_semana"
+          ]
+        },
+        {
+          "id": 38,
+          "titulo": "Ensalada Crujiente de Calabacín + Yogur",
+          "imagen": "img/receta_38.webp",
+          "alt": "receta 38 cena ensalada crujiente calabacin yogur 1:1",
+          "raciones": "2 personas",
+          "tiempo_preparacion": "15 minutos",
+          "tiempo_coccion": null,
+          "ingredientes": [
+            "2 calabacines medianos",
+            "200g de yogur griego",
+            "1 cucharada de menta fresca picada",
+            "1 cucharada de aceite de oliva",
+            "Zumo de 1/2 limón",
+            "1 cucharada de semillas de girasol",
+            "Sal marina"
+          ],
+          "preparacion": [
+            "Corta calabacines en cintas finas con pelador.",
+            "Sala ligeramente y deja reposar 10 minutos.",
+            "Escurre el exceso de agua y seca con papel.",
+            "Mezcla yogur con menta, aceite y limón.",
+            "Sirve calabacín crujiente con salsa de yogur y semillas."
+          ],
+          "alergenos": [
+            "Contiene lactosa.",
+            "Sin gluten.",
+            "Sin frutos secos."
+          ],
+          "una_mano": "Sí, con calabacín pre-cortado.",
+          "comentario": "Una ensalada refrescante que demuestra cómo el calabacín crudo puede ser sorprendentemente delicioso.",
+          "estaciones": [
+            "primavera",
+            "verano"
+          ],
+          "eventos": [
+            "festivo"
+          ]
+        },
+        {
+          "id": 39,
+          "titulo": "Crema de Brócoli y Calabacín",
+          "imagen": "img/receta_39.webp",
+          "alt": "receta 39 cena crema brocoli calabacin 1:1",
+          "raciones": "3 personas",
+          "tiempo_preparacion": "15 minutos",
+          "tiempo_coccion": "20 minutos",
+          "ingredientes": [
+            "300g de brócoli en ramilletes",
+            "2 calabacines medianos",
+            "1 cebolla pequeña",
+            "500ml de caldo de verduras",
+            "2 cucharadas de aceite de oliva",
+            "Sal y pimienta al gusto"
+          ],
+          "preparacion": [
+            "Sofríe cebolla picada hasta transparente.",
+            "Añade brócoli y calabacín troceados.",
+            "Rehoga 5 minutos y agrega caldo caliente.",
+            "Cocina 15 minutos hasta que estén muy tiernos.",
+            "Tritura hasta obtener crema lisa y sazona."
+          ],
+          "alergenos": [
+            "Sin gluten.",
+            "Sin frutos secos.",
+            "Sin lactosa."
+          ],
+          "una_mano": "No completamente (requiere cocción).",
+          "comentario": "Una crema verde vibrante que aporta vitaminas y minerales esenciales en cada cucharada reconfortante.",
+          "estaciones": [
+            "primavera",
+            "verano"
+          ],
+          "eventos": [
+            "festivo"
+          ]
+        },
+        {
+          "id": 40,
+          "titulo": "Pimientos Rellenos de Quinoa y Verduras",
+          "imagen": "img/receta_40.webp",
+          "alt": "receta 40 cena pimientos rellenos quinoa verduras 1:1",
+          "raciones": "2 personas",
+          "tiempo_preparacion": "20 minutos",
+          "tiempo_coccion": "30 minutos",
+          "ingredientes": [
+            "4 pimientos rojos medianos",
+            "1 taza de quinoa cocida",
+            "1 calabacín pequeño en cubitos",
+            "1 cebolla picada",
+            "50g de queso rallado",
+            "2 cucharadas de aceite de oliva",
+            "Hierbas frescas variadas"
+          ],
+          "preparacion": [
+            "Corta la parte superior de los pimientos y vacía el interior.",
+            "Sofríe cebolla y calabacín hasta ablandar.",
+            "Mezcla con quinoa cocida, queso y hierbas.",
+            "Rellena los pimientos con la mezcla.",
+            "Hornea 25 minutos a 180°C hasta que estén tiernos."
+          ],
+          "alergenos": [
+            "Sin gluten.",
+            "Contiene lactosa.",
+            "Sin frutos secos."
+          ],
+          "una_mano": "No completamente (requiere relleno y horneado).",
+          "comentario": "Pimientos coloridos que se convierten en recipientes naturales para un relleno nutritivo y sabroso.",
+          "estaciones": [
+            "verano",
+            "otono"
+          ],
+          "eventos": [
+            "fin_de_semana"
+          ]
+        },
+        {
+          "id": 49,
+          "titulo": "Crema de Calabaza con Jengibre y Nuez Moscada",
+          "imagen": "img/receta_49.webp",
+          "alt": "receta 49 cena crema calabaza jengibre nuez moscada navidena 1:1",
+          "raciones": "4 personas",
+          "tiempo_preparacion": "20 minutos",
+          "tiempo_coccion": "30 minutos",
+          "ingredientes": [
+            "600g de calabaza pelada",
+            "1 cebolla dorada",
+            "1 trozo de jengibre fresco (4cm)",
+            "600ml de caldo de verduras",
+            "200ml de leche de coco",
+            "1 cucharadita de nuez moscada",
+            "Semillas de calabaza tostadas"
+          ],
+          "preparacion": [
+            "Sofríe cebolla hasta caramelizar ligeramente.",
+            "Añade calabaza troceada, jengibre y nuez moscada.",
+            "Rehoga 8 minutos para intensificar sabores.",
+            "Agrega caldo y cocina 20 minutos hasta tierna.",
+            "Tritura, incorpora leche de coco y decora con semillas."
+          ],
+          "alergenos": [
+            "Sin gluten.",
+            "Sin frutos secos.",
+            "Sin lactosa."
+          ],
+          "una_mano": "No completamente (requiere cocción elaborada).",
+          "comentario": "Una crema navideña donde las especias aromáticas transforman la calabaza en pura magia invernal.",
+          "estaciones": [
+            "invierno"
+          ],
+          "eventos": [
+            "fin_de_semana",
+            "navidad"
+          ]
+        },
+        {
+          "id": 50,
+          "titulo": "Rollitos de Pavo con Espárragos y Salsa de Arándanos",
+          "imagen": "img/receta_50.webp",
+          "alt": "receta 50 cena rollitos pavo esparragos salsa arandanos navidenos 1:1",
+          "raciones": "2 personas",
+          "tiempo_preparacion": "25 minutos",
+          "tiempo_coccion": "15 minutos",
+          "ingredientes": [
+            "4 filetes finos de pavo",
+            "8 espárragos verdes",
+            "1/2 taza de arándanos frescos",
+            "2 cucharadas de miel",
+            "1 cucharada de vinagre balsámico",
+            "2 cucharadas de aceite de oliva",
+            "Sal y pimienta blanca"
+          ],
+          "preparacion": [
+            "Blanquea espárragos 3 minutos y enfría en agua helada.",
+            "Sazona filetes de pavo con sal y pimienta.",
+            "Coloca 2 espárragos sobre cada filete y enrolla.",
+            "Sella los rollitos en sartén con aceite hasta dorar.",
+            "Prepara salsa con arándanos, miel y vinagre; sirve caliente."
+          ],
+          "alergenos": [
+            "Sin gluten.",
+            "Sin frutos secos.",
+            "Sin lactosa."
+          ],
+          "una_mano": "No completamente (requiere enrollar y cocinar).",
+          "comentario": "Rollitos elegantes donde el pavo tierno abraza espárragos frescos, coronados con la dulzura festiva de los arándanos.",
+          "estaciones": [
+            "invierno"
+          ],
+          "eventos": [
+            "fin_de_semana",
+            "navidad"
+          ]
+        },
+        {
+          "id": 51,
+          "titulo": "Merluza exprés a la plancha con verduras y limón",
+          "imagen": "img/receta_51.webp",
+          "alt": "receta 51 cena merluza a la plancha con calabacín zanahoria tomate y limón 1:1",
+          "raciones": "2 personas",
+          "tiempo_preparacion": "8 minutos",
+          "tiempo_coccion": "10 minutos",
+          "ingredientes": [
+            "2 lomos de merluza (120–150 g c/u), mejor congelada, sin piel ni espinas",
+            "1 calabacín mediano en rodajas",
+            "2 zanahorias en bastones finos (o baby)",
+            "10 tomates cherry",
+            "1 limón (ralladura fina y 1/2 en zumo + 1/2 en rodajas)",
+            "1 cucharada de aceite de oliva virgen extra",
+            "1 ramita de romero o tomillo fresco",
+            "Pimienta negra al gusto",
+            "Pizca de sal (opcional)"
+          ],
+          "preparacion": [
+            "Calienta una plancha o sartén antiadherente a fuego medio-alto.",
+            "Mezcla calabacín, zanahoria y cherry con 1/2 cucharada de AOVE y pimienta. Asa 3–4 min por lado hasta dorar. Aparta a un lado.",
+            "Seca la merluza, pincela con el AOVE restante, añade ralladura y un chorrito de zumo de limón, pimienta y una pizca de sal si usas.",
+            "Cocina la merluza 3–4 min por lado (según grosor) hasta que quede blanca y jugosa. Añade las rodajas de limón y el romero al final para perfumar.",
+            "Sirve la merluza sobre la cama de verduras asadas con el limón."
+          ],
+          "alergenos": [
+            "Contiene pescado.",
+            "Sin gluten.",
+            "Sin frutos secos.",
+            "Sin lactosa."
+          ],
+          "una_mano": "Sí: filetes limpios y verduras precortadas; todo en una sola plancha usando pinzas.",
+          "comentario": "Merluza blanca y jugosa, chispa de limón y verduras marcaditas. Cena limpia de martes con sabor de domingo: va que vuela y sienta de cine.",
+          "estaciones": [
+            "primavera",
+            "verano",
+            "otono"
+          ],
+          "eventos": [
+            "dias_laborables",
+            "fin_de_semana"
+          ]
+        }
+
+      ]
+    }
+  }
+}

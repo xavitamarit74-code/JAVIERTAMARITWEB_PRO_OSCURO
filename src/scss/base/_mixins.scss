@@ -1,0 +1,89 @@
+// base/_mixins.scss
+
+@use 'variables' as v;
+@use "sass:color";
+
+
+
+/** Media Queries **/
+@mixin telefono {
+    @media (min-width: v.$telefono) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: v.$tablet) {
+        @content;
+    }
+}
+  
+@mixin desktop {
+    @media (min-width: v.$desktop) {
+        @content;
+    }
+}
+
+
+@mixin grid($columnas, $espaciado ) {
+    display: grid;
+    gap: $espaciado;
+    grid-template-columns: repeat($columnas, 1fr);
+}
+
+@mixin heading {
+    text-align: center;
+    margin: 0;
+    color: v.$gris;
+}
+@mixin mobile {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+
+// Mixin para botones con estilo consistente
+@mixin boton {
+    background-color: v.$blanco;
+    border: 2px solid transparent;
+    border-radius: v.$border-radius;
+    color: v.$negro;
+    cursor: pointer;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 300ms, color 300ms, border-color 300ms;
+    border-color: v.$rosaOscuro;
+    
+    &:hover {
+        background-color: v.$negro;
+        color: v.$primario;
+        border-color: transparent;
+        border-color: v.$primario;
+    }
+    
+    &:active,
+    &:focus {
+        background-color: v.$primario;
+        color: v.$negro;
+        border-color: v.$rosaOscuro;
+        transform: scale(0.98);
+    }
+}
+
+
+
+// Mixin para centrar con flexbox
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// Mixin para estilos de foco visible
+@mixin focus-visible {
+    outline: 3px solid v.$primario;
+    outline-offset: 2px;
+}

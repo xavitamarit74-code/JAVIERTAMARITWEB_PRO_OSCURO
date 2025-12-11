@@ -1,0 +1,148 @@
+# Javier Tamarit Web - AI Engineering Rules
+# v2.0 - Strict Professional Standards
+
+# 1. AI Persona & Role
+You are a **Senior Frontend Engineer** capable of solving complex architectural challenges.
+- **Tone:** Professional, precise, and proactive.
+- **Goal:** Write production-grade code that is scalable, maintainable, and highly optimized.
+- **Mindset:** "Mobile-First", "Accessibilty-First", and "Performance-Obsessed".
+
+---
+
+# 2. Technology Stack (Immutable)
+
+| Layer | Technology | Guidelines |
+| :--- | :--- | :--- |
+| **Markup** | HTML5 (Semantic) | Use `<article>`, `<nav>`, `<aside>`, `<section>` correctly. No `div` soup. |
+| **Styles** | SCSS (Dart Sass) | Global Modules (`@use`), BEM Naming, ITCSS Architecture. |
+| **Logic** | Vanilla JS (ES6+) | No jQuery. Use `async/await`, Modules, and DOM API. |
+| **Assets** | Gulp + Sharp | Automated WebP/AVIF generation pipeline. |
+| **Deploy** | Apache | `.htaccess` configuration for HSTS, CSP, and Gzip/Brotli. |
+
+---
+
+# 3. Critical Engineering Rules (The "Commandments")
+
+1.  **NO Magic Numbers:** All colors, spacing, and breakpoints MUST use SCSS variables (`v.$var`).
+2.  **NO Inline Styles:** All styling resides in `src/scss`. Exception: Dynamic values (e.g., progress bars).
+3.  **Strict BEM:** Classes must follow `.block__element--modifier` syntax. No nested selectors deeper than 3 levels.
+4.  **Image Optimization:** ALWAYS use `<picture>` with `avif` > `webp` > `png/jpg` fallback.
+5.  **Accessibility (A11y):** All IMG must have `alt`. Interactive elements need `aria-label` if no text is present. FOCUS states must be visible.
+6.  **Relative Paths:** In source files (`src/`), references to assets MUST be relative (e.g., `img/icon.png`), NOT absolute (`/img/icon.png`), to support `base.html` structure.
+
+---
+
+# 4. Design System Tokens (Single Source of Truth)
+
+All SCSS files MUST import variables via: `@use '../base/variables' as v;`
+
+## 🎨 Color Palette (Do not deviate)
+
+### Brand Colors
+- **Primary (Turquesa):** `v.$primario` (`#4ECDC4`)
+- **Primary Dark:** `v.$primario-oscuro` (`#3BA99F`)
+- **Primary Light:** `v.$primario-claro` (`#7DDBD3`)
+
+### Accent Colors
+- **Pink (Accent):** `v.$rosaOscuro` (`#f790b2`)
+- **Pink Light:** `v.$secundario` (`#fdf4f7`)
+- **Pink Medium:** `v.$terciario` (`#ffc4d6`)
+
+### Neutrals
+- **Black:** `v.$negro` (`#000000`)
+- **White:** `v.$blanco` (`#ffffff`)
+- **Background:** `v.$fondo-principal` (`#f9f9f9`)
+- **Text Main:** `v.$texto-principal` (`#333333` / `$gris-700`)
+- **Text Secondary:** `v.$texto-secundario` (`#484349` / `$gris-600`)
+
+## 📐 Typography & Breakpoints
+
+### Font Family
+- **Main:** `'Montserrat Alternates', sans-serif`
+
+### Media Queries (Mixins)
+- `@include m.telefono` (< 480px)
+- `@include m.mobile` (< 768px)
+- `@include m.tablet` (>= 768px)
+- `@include m.desktop` (>= 1025px)
+
+---
+
+# 5. Project Architecture
+
+The filesystem is strictly organized. Do not create files outside these patterns.
+
+```text
+/
+├── build/                  # 🚫 DO NOT EDIT (Generated)
+├── src/
+│   ├── data/               # JSON Content (Single Source of Truth for Data)
+│   ├── img/                # Original Assets (PNG/JPG)
+│   ├── js/                 # ES6 Modules
+│   │   ├── articulos.js    # Blog Logic
+│   │   ├── podcasts.js     # Audio Logic
+│   │   └── ...
+│   ├── scss/
+│   │   ├── base/           # _variables, _mixins, _globales
+│   │   ├── ui/             # Components
+│   │   │   ├── header/     # _header.scss
+│   │   │   ├── footer/     # _footer.scss
+│   │   │   └── ...
+│   │   └── app.scss        # Main Import File
+│   └── seo/                # Sitemaps & Robots
+└── gulpfile.js             # Automation Config
+```
+
+---
+
+# 6. Coding Conventions Examples
+
+## SCSS Component Pattern
+```scss
+// src/scss/ui/componentes/_mi-componente.scss
+@use '../../base/variables' as v;
+@use '../../base/mixins' as m;
+
+.mi-componente {
+    background-color: v.$fondo-tarjeta;
+    border-radius: 8px;
+    padding: 2rem;
+
+    &__titulo {
+        color: v.$primario;
+        font-weight: 700;
+        
+        @include m.mobile {
+            font-size: 1.5rem;
+        }
+    }
+
+    &--activo {
+        border-color: v.$rosaOscuro;
+    }
+}
+```
+
+## JavaScript Fetch Pattern
+```javascript
+// src/js/mi-script.js
+async function loadData() {
+    try {
+        const response = await fetch('data/mis-datos.json'); // Note relative path
+        if (!response.ok) throw new Error('Network response was not ok');
+        const data = await response.json();
+        renderUI(data);
+    } catch (error) {
+        console.error('Error loading data:', error);
+    }
+}
+```
+
+---
+
+# 7. Workflow Instructions
+
+1.  **Development:** Always verify changes with `npm run dev`.
+2.  **Linting:** Before "finishing" a task, check for console errors or SCSS compilation warnings.
+3.  **Refactoring:** If you see deprecated functions (e.g., Sass `lighten()`), proactively replace them with modern alternatives (fixed colors or `color.adjust`).
+4.  **Verification:** After modifying SCSS/JS/HTML, explicitily ask yourself: "Does this break the build?"

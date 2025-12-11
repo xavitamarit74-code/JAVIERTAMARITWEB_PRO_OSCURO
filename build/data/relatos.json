@@ -1,0 +1,60 @@
+{
+  "relatos": [
+    {
+      "id": 1,
+      "titulo": "Parte 1: El Inicio de Mis Dos Vidas.",
+      "headerTitulo": "Mi Relato Parte I",
+      "fecha": "2 de diciembre de 2024",
+      "autor": "Javier Tamarit",
+      "imagen": "img/fotoartistica",
+      "contenido": [
+        "Dicen que los gatos tienen siete vidas, pero yo, modestamente, tengo dos. La primera comenzó un 12 de diciembre de 1974 en Pego, una encantadora localidad de Alicante donde nací sin pedir permiso y, según cuentan, llorando como si ya supiera lo que me esperaba. La segunda vida arrancó el 21 de diciembre de 2022 en el Hospital Clínico de Valencia, cuando un ictus isquémico decidió que mi cerebro necesitaba un \"reinicio de fábrica\", afectando la parte izquierda. ¡Nada como un susto de salud para replantearse las cosas!",
+        "Antes del ictus, escribir una biografía no estaba ni en mi lista de compras del supermercado. Pero ahora, resulta que documentar y subir esta cosa tenemos en casa: necesario y, sorprendentemente, terapéutico. Así que aprovecho este momento de claridad mental para ordenar mis ideas, que son muchas y a veces más dispersas que las excusas de un niño que no ha hecho los deberes.",
+        "Permíteme el lector que me tome la libertad de empezar este relato por el final, al más puro estilo de esas películas que comienzan con un \"seguro te estarás preguntando cómo llegué aquí\". Hablemos de aquella tarde de diciembre que cambió todo.",
+        "Estaba terminando mis gestiones comerciales del día y, para ser honestos, prácticamente del año. Esperaba con más ansiás las vacaciones de Navidad que un escolar en junio. Como cada año, me tocaba preparar la actualización de precios para los clientes y enviar las clásicas felicitaciones navideñas. Una rutina que, vista en retrospectiva, tiene su encanto y hasta la echo de menos.",
+        "Recogí todas mis cosas, que en mi caso siempre parecen multiplicarse, y me subí al coche para hacer unas últimas compras. De repente, sentí un malestar que me hizo cambiar de planes. Decidí ir directamente a casa, pensando que era simple agotamiento y que al día siguiente podría retomar las compras. Sin embargo, a mitad de camino, perdí la visión del ojo derecho... o al menos eso creí. En ese momento, supe que algo no andaba bien, y no era precisamente el GPS...",
+        "Continurá..."
+      ]
+    },
+    {
+      "id": 2,
+      "titulo": "Parte 2: La Revelación.",
+      "headerTitulo": "Mi Relato Parte II",
+      "fecha": "24 de julio de 2025",
+      "autor": "Javier Tamarit",
+      "imagen": "img/fotoartistica",
+      "contenido": [
+        "Perder la visión de un ojo y no entrar en pánico. Esa fue mi reacción. O mejor dicho, la falta de ella. Pensé que era cansancio. Que dormir me bastaría. Como si quedarse medio ciego fuera algo que se arregla con una siesta.",
+        "Pero no. Algo dentro de mí sabía que no era normal. Que el cuerpo estaba diciendo \"alto\". Yo solo no quería escucharlo.",
+        "Después, todo fue niebla. El tiempo se volvió borroso, las caras eran sombras, y la mente no daba para más. Intentaba pensar en cómo volver a casa, pero no encontraba el camino ni dentro de mi propia cabeza. Me rendí. Literal. \"Que sea lo que Dios quiera\", pensé. Porque cuando no entiendes nada, lo único que queda es dejarse llevar.",
+        "Mamen tomó las riendas sin pedir permiso. Doce horas donde ella sufrió más que yo. Porque yo estaba desconectado, flotando. Ella no. Ella estaba ahí, firme, sosteniéndome sin saber si volvería.",
+        "No recuerdo los pasillos ni el quirófano. Solo sé lo que ella cuenta: los médicos corriendo, la urgencia en las miradas, la camilla avanzando como si el suelo se fuera a acabar.",
+        "Desperté en otro sitio. No solo físicamente. Era como estar en una película rara. Voces lejanas, luces que duelen, pensamientos que no se dejan atrapar. Y yo, atado a la camilla. Sí, atado. Como si pudiera escapar. No me movía ni un dedo, pero ahí estaba, sujeto. Supongo que por seguridad… o por si acaso.",
+        "Lo más raro fue darme cuenta de que seguía aquí. Confuso, sí. Medio roto también. Pero aquí.",
+        "Y eso… eso fue el verdadero inicio.",
+        "Lo que vino después; el hospital, los primeros días, el espejo, fue otro viaje. Uno mucho más lento. Y más duro. Pero eso… te lo cuento en la siguiente.",
+        "Continurá..."
+      ]
+    },
+    {
+      "id": 3,
+      "titulo": "Parte 3: Continuará",
+      "headerTitulo": "Mi Relato Parte III",
+      "fecha": "24 de julio de 2025",
+      "autor": "Javier Tamarit",
+      "imagen": "img/fotoartistica",
+      "contenido": [
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit vero fuga possimus? Fugit et totam, tempora excepturi omnis ipsam, vitae vel molestias alias veniam dolore, error eum nihil facere debitis Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur sapiente veritatis cum...",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "Continurá..."
+      ]
+    }
+  ]
+}

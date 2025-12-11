@@ -1,0 +1,112 @@
+OPTIMIZACIÓN GOOGLE - JAVIERTAMARITWEB.ES
+==========================================
+Actualizado: 2025-12-11 | Versión 2.0.2
+
+SITIO WEB: https://javiertamaritweb.es
+TEMA: Recuperación ictus isquémico - Experiencia personal
+AUTOR: Javier Tamarit - Superviviente de ictus desde 21/12/2022
+TIEMPO RECUPERACIÓN: 3+ años activo
+
+PALABRAS CLAVE PRINCIPALES:
+- ictus isquémico recuperación
+- vida después del ictus
+- superviviente ictus España
+- testimonio ictus real
+- recetas saludables post ictus
+- ejercicios rehabilitación ictus
+- historia recuperación ACV
+- segunda oportunidad vida
+- podcast recuperación ictus
+- gaviotas y anclas podcast
+- buscador recetas saludables
+
+PÁGINAS PRINCIPALES PARA INDEXAR:
+1. https://javiertamaritweb.es/index.html - Página principal con historia
+2. https://javiertamaritweb.es/relatos.html - Experiencia completa en relatos
+3. https://javiertamaritweb.es/relato_parte.html?parte=1 - Parte I: El Inicio
+4. https://javiertamaritweb.es/relato_parte.html?parte=2 - Parte II: La Revelación
+5. https://javiertamaritweb.es/podcasts.html - Serie "Gaviotas y Anclas"
+6. https://javiertamaritweb.es/dieta_equilibrada.html - Buscador de recetas (50+)
+7. https://javiertamaritweb.es/consejos.html - Consejos y entrenamientos
+8. https://javiertamaritweb.es/blog.html - Artículos y reflexiones
+9. https://javiertamaritweb.es/articulo.html?id=1 - "Renacido en Oro" (Kintsukuroi)
+10. https://javiertamaritweb.es/articulo.html?id=2 - "¿Dónde se guardan los nombres?"
+11. https://javiertamaritweb.es/articulo.html?id=3 - "Mis gaviotas"
+
+CONTENIDO ÚNICO Y VALIOSO:
+- Historia REAL de superviviente de ictus (3+ años documentados)
+- Más de 50 recetas adaptadas con buscador avanzado
+- Serie de podcasts "Gaviotas y Anclas" con reflexiones profundas
+- Ejercicios específicos que funcionaron en su rehabilitación
+- 4 artículos de blog con filosofía personal (Kintsukuroi)
+- Testimonio auténtico y verificable con contador de tiempo real
+- Recursos para familias y cuidadores
+- Comunidad activa en Instagram, TikTok, YouTube
+
+AUDIENCIA ESPECÍFICA:
+- Supervivientes de ictus y ACV
+- Familiares y cuidadores
+- Profesionales de rehabilitación
+- Personas en proceso de recuperación neurológica
+- Comunidad hispanohablante de superación personal
+- Oyentes de podcasts motivacionales
+
+EXPERTISE DEMOSTRABLE:
+- Experiencia personal vivida (3+ años)
+- Recuperación documentada día a día
+- Recursos prácticos probados
+- Comunidad activa en redes sociales (4 plataformas)
+- Contenido multimedia: relatos + blog + podcasts + videos
+- Arquitectura técnica profesional (Gulp, Sharp, SCSS)
+
+SEÑALES DE CALIDAD TÉCNICA:
+- Stack moderno: Gulp 4.x + Sharp + Plyr.js
+- Imágenes optimizadas WebP/AVIF (-30% a -50% tamaño)
+- PWA con manifest y favicons multi-plataforma
+- 5 sitemaps especializados (páginas, imágenes, noticias, podcasts)
+- Schema.org JSON-LD implementado
+- Open Graph + Twitter Cards completos
+- HTTP/2 Server Push + Gzip/Brotli
+- HSTS + CSP headers
+- Accesibilidad AAA
+
+SEÑALES DE CALIDAD DE CONTENIDO:
+- Contenido original basado en experiencia real
+- Actualizaciones regulares (última: 2025-12-11)
+- Interacción activa en redes sociales
+- Testimonios de usuarios
+- Recursos descargables (recetas, guías)
+- Multimedia: texto + audio + video + imágenes
+
+LONG-TAIL KEYWORDS ESTRATÉGICAS:
+- "historia real recuperación ictus joven España"
+- "que comer después de un ictus recetas"
+- "ejercicios casa rehabilitación ictus"
+- "testimonio superviviente ictus España 2022"
+- "recetas dieta mediterránea post ACV"
+- "apoyo familia cuidador ictus"
+- "podcast recuperación ictus español"
+- "gaviotas y anclas superación personal"
+- "buscador recetas saludables filtros"
+- "kintsukuroi recuperación ictus"
+- "segundas oportunidades después ictus"
+
+CONTENIDO ESTACIONAL/ESPECIAL:
+- Recetas de Navidad saludables post-ictus
+- Recetas por estaciones (primavera, verano, otoño, invierno)
+- Episodios podcast sobre fechas significativas
+- Reflexiones en aniversarios de recuperación
+
+RICH SNIPPETS IMPLEMENTADOS:
+- FAQ Schema
+- Person Schema (Javier Tamarit)
+- Website Schema
+- BlogPosting Schema
+- Recipe Schema (en desarrollo)
+- Podcast Schema (en desarrollo)
+
+MÉTRICAS DE ENGAGEMENT:
+- Tiempo de permanencia esperado: Alto (contenido largo y profundo)
+- Páginas por sesión: 2-3 (navegación entre relatos/recetas/podcasts)
+- Tasa de rebote esperada: Baja (contenido relevante y bien estructurado)
+- Compartibilidad: Alta (historia emotiva + redes sociales)

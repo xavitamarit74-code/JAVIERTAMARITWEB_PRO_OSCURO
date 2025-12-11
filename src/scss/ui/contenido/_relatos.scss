@@ -1,0 +1,360 @@
+//
+
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+@use 'sass:color';
+
+.relatos {
+    padding: 2rem 1rem;
+    
+    @include m.tablet {
+        padding: 4rem;
+    }
+    @include m.desktop {
+        padding: 5rem;
+    }
+    
+    &__title {
+        font-size: 2.5rem;
+        margin-top: 2rem;
+        margin-bottom: 3rem;
+        text-align: left;
+        color: v.$negro;
+        
+        @include m.tablet {
+            font-size: 3rem;
+            margin-bottom: 4rem;
+        }
+        @include m.desktop {
+            font-size: 3.8rem;
+            margin-bottom: 5rem;
+        }
+    }
+
+    &__miniatura {
+        display: block;
+        margin: 2rem auto;
+        max-width: 12rem;
+        max-height: 12rem;
+        border-radius: 1rem;
+        box-shadow: 0px 4px 15px rgba(53, 52, 52, 0.15);
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: translateY(-5px);
+        }
+
+        @include m.tablet {
+            max-width: 18rem;
+            max-height: 18rem;
+            margin: 3rem auto;
+        }
+        @include m.desktop {
+            max-width: 20rem;
+            max-height: 20rem;
+            margin: 4rem auto;
+        }
+
+        // Para las páginas de contenido individual (dentro de author-titulo)
+        .relatos__author-titulo & {
+            margin: 0;
+            max-width: 8rem;
+            
+            @include m.tablet {
+                max-width: 10rem;
+            }
+            @include m.desktop {
+                max-width: 12rem;
+            }
+        }
+    }
+
+    &__descripcion {
+        text-align: center;
+        margin: 3rem auto;
+        max-width: 60rem;
+        background-color: transparent;
+        padding: 2rem;
+        border-radius: 1rem;
+        
+        p {
+            font-size: 1.8rem;
+            color: v.$grisOscuro;
+            font-style: italic;
+            line-height: 1.6;
+            
+            @include m.tablet {
+                font-size: 2rem;
+            }
+            @include m.desktop {
+                font-size: 2.2rem;
+            }
+        }
+        
+        @include m.tablet {
+            margin: 4rem auto;
+        }
+        @include m.desktop {
+            margin: 5rem auto;
+        }
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        margin-top: 4rem;
+        
+        @include m.tablet {
+            grid-template-columns: 1fr;
+            gap: 4rem;
+            margin-top: 5rem;
+        }
+        @include m.desktop {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 4rem;
+            margin-top: 6rem;
+        }
+    }
+
+    // Estilos específicos para páginas individuales (parte_1.html, parte_2.html)
+    &__contenido {
+        margin-top: 2rem;
+    }
+
+    &__author-titulo {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        margin-bottom: 3rem;
+        
+        @include m.tablet {
+            gap: 3rem;
+            margin-bottom: 4rem;
+        }
+    }
+
+    &__author {
+        font-size: 1.6rem;
+        color: v.$grisOscuro;
+        font-weight: 500;
+        margin: 0;
+        
+        @include m.tablet {
+            font-size: 1.8rem;
+        }
+        @include m.desktop {
+            font-size: 2rem;
+        }
+    }
+
+    &__fecha-publicacion {
+        color: v.$primario;
+        font-size: 1.4rem;
+        margin-bottom: 2rem;
+        background-color: rgba(59, 220, 195, 0.1);
+        padding: 0.8rem 1.5rem;
+        border-radius: 2rem;
+        display: inline-block;
+
+        @include m.tablet {
+            font-size: 1.5rem;
+        }
+        @include m.desktop {
+            font-size: 1.6rem;
+        }
+    }
+
+    // Clase para párrafos de contenido generados por JS
+    &__parrafo {
+        margin-bottom: 1.4rem;
+        line-height: 1.7;
+        text-align: justify;
+        text-indent: 3rem;
+        font-size: 1.6rem;
+        color: v.$negro;
+        font-weight: 600;
+
+        @include m.tablet {
+            font-size: 1.7rem;
+        }
+        @include m.desktop {
+            font-size: 1.8rem;
+        }
+    }
+}
+
+.relato {
+    background: linear-gradient(135deg, v.$blanco 0%, v.$secundario 100%);
+    padding: 3rem;
+    border-radius: 1.5rem;
+    border: 2px solid v.$rosaSuave;
+    box-shadow: 0px 8px 25px rgba(53, 52, 52, 0.12);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    
+    // Convertir en flex container para alinear footers
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    // Efecto de hover
+    &:hover {
+        transform: translateY(-8px);
+        box-shadow: 0px 15px 35px rgba(53, 52, 52, 0.2);
+        border-color: v.$rosaOscuro;
+    }
+
+    // Elemento decorativo de fondo
+    &::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        right: -50%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(45deg, transparent, rgba(247, 144, 178, 0.1));
+        border-radius: 50%;
+        transition: all 0.3s ease;
+        z-index: 0;
+    }
+
+    &:hover::before {
+        top: -30%;
+        right: -30%;
+    }
+
+    // Contenido por encima del decorativo
+    * {
+        position: relative;
+        z-index: 1;
+    }
+
+    @include m.tablet {
+        padding: 4rem;
+    }   
+    @include m.desktop {
+        padding: 4rem;
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 2rem;
+        gap: 2rem;
+        
+        @include m.tablet {
+            margin-bottom: 2.5rem;
+        }
+        @include m.desktop {
+            margin-bottom: 3rem;
+        }
+    }
+
+    &__numero {
+        background: linear-gradient(135deg, v.$primario, v.$rosaOscuro);
+        color: v.$blanco;
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        font-weight: 700;
+        flex-shrink: 0;
+        box-shadow: 0px 4px 12px rgba(59, 220, 195, 0.3);
+        
+        @include m.tablet {
+            width: 6rem;
+            height: 6rem;
+            font-size: 2.2rem;
+        }
+        @include m.desktop {
+            width: 6.5rem;
+            height: 6.5rem;
+            font-size: 2.4rem;
+        }
+    }
+
+    &__titulo {
+        font-size: 2rem;
+        font-weight: 600;
+        color: v.$negro;
+        line-height: 1.3;
+        margin: 0;
+    
+        
+        @include m.tablet {
+            font-size: 2.3rem;
+        }
+        @include m.desktop {
+            font-size: 2.5rem;
+        }
+    }
+
+    &__texto {
+        font-size: 1.6rem;
+        color: v.$grisOscuro;
+        line-height: 1.7;
+        text-align: justify;
+        margin-bottom: 3rem;
+        font-weight: 600;
+        text-indent: 3rem;
+        flex-grow: 1; // Esto hace que el texto ocupe el espacio disponible
+        
+        @include m.tablet {
+            font-size: 1.7rem;
+            margin-bottom: 3.5rem;
+        }
+        @include m.desktop {
+            font-size: 1.8rem;
+            margin-bottom: 4rem;
+        }
+    }
+
+    &__footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+        margin-top: auto; // Esto empuja el footer hacia abajo
+    }
+
+    &__fecha {
+        color: v.$primario;
+        font-weight: 600;
+        font-size: 1.4rem;
+        padding: 0.8rem 1.5rem;
+        background-color: rgba(59, 220, 195, 0.1);
+        border-radius: 2rem;
+        border: 1px solid rgba(59, 220, 195, 0.3);
+        
+        @include m.tablet {
+            font-size: 1.5rem;
+        }
+        @include m.desktop {
+            font-size: 1.6rem;
+        }
+    }
+
+    &__enlace {
+        @include m.boton;
+        padding: 1.2rem 2.5rem;
+        font-size: 1.4rem;
+        font-weight: 600;
+        text-decoration: none;
+        border-radius: 3rem;
+
+        @include m.tablet {
+            font-size: 1.5rem;
+            padding: 1.3rem 3rem;
+        }
+        @include m.desktop {
+            font-size: 1.6rem;
+            padding: 1.4rem 3.5rem;
+        }
+    }
+}

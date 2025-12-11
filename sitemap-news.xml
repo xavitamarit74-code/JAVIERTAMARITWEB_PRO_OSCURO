@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+  <url>
+    <loc>https://javiertamaritweb.es/articulo.html?id=1</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Javier Tamarit Web</news:name>
+        <news:language>es</news:language>
+      </news:publication>
+      <news:publication_date>2024-06-05</news:publication_date>
+      <news:title>Renacido en Oro</news:title>
+      <news:keywords>ictus, recuperación, kintsugi, kintsukuroi, superación personal, resiliencia</news:keywords>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://javiertamaritweb.es/articulo.html?id=2</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Javier Tamarit Web</news:name>
+        <news:language>es</news:language>
+      </news:publication>
+      <news:publication_date>2024-07-25</news:publication_date>
+      <news:title>¿Dónde se guardan los nombres?</news:title>
+      <news:keywords>memoria, nombres, ictus, neurología, experiencia personal, afasia</news:keywords>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://javiertamaritweb.es/articulo.html?id=3</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Javier Tamarit Web</news:name>
+        <news:language>es</news:language>
+      </news:publication>
+      <news:publication_date>2025-11-05</news:publication_date>
+      <news:title>Mis gaviotas</news:title>
+      <news:keywords>gaviotas, miedos, recuperación, superación, resiliencia, salud mental,
+        mindfulness</news:keywords>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://javiertamaritweb.es/articulo.html?id=4</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Javier Tamarit Web</news:name>
+        <news:language>es</news:language>
+      </news:publication>
+      <news:publication_date>2024-12-05</news:publication_date>
+      <news:title>Próximamente</news:title>
+      <news:keywords>próximamente, en preparación</news:keywords>
+    </news:news>
+  </url>
+</urlset>

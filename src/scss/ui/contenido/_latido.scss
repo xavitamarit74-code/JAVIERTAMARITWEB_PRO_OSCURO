@@ -1,0 +1,75 @@
+// contenido/latido.scss
+
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+.segunda-vida {
+  padding: 3rem 1rem;
+  max-width: 800px;
+  margin: auto;
+  
+
+  h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+
+
+    span {
+      display: block;
+      font-weight: normal;
+      font-style: italic;
+      color: #a33;
+    }
+  }
+
+  .frase {
+    text-align: center;
+    font-style: italic;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: #555;
+  }
+
+  .texto {
+    p {
+      margin-bottom: 1.4rem;
+      line-height: 1.7;
+      color: #333;
+    }
+
+    p:last-child {
+      font-weight: bold;
+      color: #222;
+    }
+  }
+}
+.texto-enlinea{
+    white-space: nowrap;
+
+}
+.segunda-vida h2 span {
+  display: inline;
+}
+.imagen-latido {
+    float: left; 
+    margin: 0 2rem 2rem 0;
+    max-width: 50%;
+    height: auto;
+    border-radius: 1rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+    @include m.tablet {
+        float: left;
+        max-width: 50%;
+        height: auto;
+        margin: 0 2rem 2rem 0;
+    }
+    @include m.desktop {
+        float: left;
+        max-width: 30%;
+        height: auto;
+        margin: 0 2rem 2rem 0;
+    }
+}

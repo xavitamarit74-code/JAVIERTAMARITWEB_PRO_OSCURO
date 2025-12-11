@@ -1,0 +1,304 @@
+# ============================================
+# .htaccess - Optimizaciones de Performance
+# JavierTamaritWeb v2.0.5
+# Última actualización: 11 Dic 2025
+# ============================================
+
+# ============================================
+# 1. COMPRESIÓN GZIP/BROTLI
+# ============================================
+<IfModule mod_deflate.c>
+  # Comprimir HTML, CSS, JavaScript, Text, XML y fuentes
+  AddOutputFilterByType DEFLATE text/html
+  AddOutputFilterByType DEFLATE text/css
+  AddOutputFilterByType DEFLATE text/javascript
+  AddOutputFilterByType DEFLATE application/javascript
+  AddOutputFilterByType DEFLATE application/x-javascript
+  AddOutputFilterByType DEFLATE text/xml
+  AddOutputFilterByType DEFLATE application/xml
+  AddOutputFilterByType DEFLATE application/xhtml+xml
+  AddOutputFilterByType DEFLATE text/plain
+  AddOutputFilterByType DEFLATE application/json
+  AddOutputFilterByType DEFLATE application/ld+json
+  AddOutputFilterByType DEFLATE application/manifest+json
+  AddOutputFilterByType DEFLATE image/svg+xml
+  AddOutputFilterByType DEFLATE font/ttf
+  AddOutputFilterByType DEFLATE font/otf
+  AddOutputFilterByType DEFLATE font/woff
+  AddOutputFilterByType DEFLATE font/woff2
+</IfModule>
+
+# ============================================
+# 2. CACHE CONTROL - EXPIRES HEADERS OPTIMIZADO
+# ============================================
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault "access plus 1 year"
+
+  # HTML - Cache muy corto (inmutable con revalidación)
+  ExpiresByType text/html "access plus 0 seconds"
+  
+  # Imágenes - Cache inmutable (1 año)
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/jpg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/avif "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
+  
+  # Audio - Cache largo (6 meses, podcasts)
+  ExpiresByType audio/mpeg "access plus 6 months"
+  ExpiresByType audio/mp4 "access plus 6 months"
+  ExpiresByType audio/mp3 "access plus 6 months"
+  ExpiresByType audio/m4a "access plus 6 months"
+  
+  # CSS y JavaScript - Cache inmutable (1 año)
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType text/javascript "access plus 1 year"
+  
+  # Fuentes - Cache inmutable (1 año)
+  ExpiresByType font/ttf "access plus 1 year"
+  ExpiresByType font/otf "access plus 1 year"
+  ExpiresByType font/woff "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType application/font-woff "access plus 1 year"
+  ExpiresByType application/font-woff2 "access plus 1 year"
+  ExpiresByType application/vnd.ms-fontobject "access plus 1 year"
+  
+  # Datos - Cache corto con revalidación
+  ExpiresByType application/pdf "access plus 1 month"
+  ExpiresByType application/json "access plus 0 seconds"
+  ExpiresByType application/manifest+json "access plus 1 week"
+  ExpiresByType text/xml "access plus 0 seconds"
+  ExpiresByType application/xml "access plus 0 seconds"
+</IfModule>
+
+# ============================================
+# 3. CACHE-CONTROL HEADERS OPTIMIZADO
+# ============================================
+<IfModule mod_headers.c>
+  # Imágenes y recursos estáticos - Cache inmutable (1 año)
+  <FilesMatch "\.(webp|avif|png|jpg|jpeg|svg|ico|gif)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+    Header set Vary "Accept-Encoding"
+  </FilesMatch>
+  
+  # Fuentes - Cache inmutable (1 año) + CORS
+  <FilesMatch "\.(woff|woff2|ttf|otf|eot)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+    Header set Access-Control-Allow-Origin "*"
+  </FilesMatch>
+  
+  # CSS y JavaScript - Cache inmutable (1 año)
+  <FilesMatch "\.(css|js)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+    Header set Vary "Accept-Encoding"
+  </FilesMatch>
+  
+  # HTML - Sin cache (siempre revalidar)
+  <FilesMatch "\.(html|htm|php)$">
+    Header set Cache-Control "public, max-age=0, must-revalidate"
+    Header set Vary "Accept-Encoding"
+  </FilesMatch>
+  
+  # JSON y datos dinámicos - Sin cache
+  <FilesMatch "\.(json|xml)$">
+    Header set Cache-Control "public, max-age=0, must-revalidate"
+  </FilesMatch>
+  
+  # Audio - Cache largo (6 meses, podcasts)
+  <FilesMatch "\.(mp3|m4a|mpeg|mp4)$">
+    Header set Cache-Control "public, max-age=15552000"
+    Header set Access-Control-Allow-Origin "*"
+    Header set Vary "Accept-Encoding"
+  </FilesMatch>
+  
+  # Service Worker - Sin cache (crítico)
+  <FilesMatch "sw\.js$">
+    Header set Cache-Control "no-cache, no-store, must-revalidate"
+    Header set Pragma "no-cache"
+    Header set Expires "0"
+  </FilesMatch>
+</IfModule>
+
+# ============================================
+# 4. SEGURIDAD - HEADERS AVANZADOS
+# ============================================
+<IfModule mod_headers.c>
+  # HSTS - Fuerza HTTPS (elimina redirección en visitas posteriores)
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+  
+  # Content Security Policy (CSP) - Protección robusta contra XSS
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.youtube.com https://www.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https: blob:; font-src 'self' data:; connect-src 'self' https://www.google-analytics.com; media-src 'self' blob:; frame-src 'self' https://www.youtube.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests"
+  
+  # Prevenir clickjacking
+  Header always set X-Frame-Options "SAMEORIGIN"
+  
+  # XSS Protection
+  Header always set X-XSS-Protection "1; mode=block"
+  
+  # Prevenir MIME sniffing
+  Header always set X-Content-Type-Options "nosniff"
+  
+  # Referrer Policy
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  
+  # Permissions Policy (antes Feature Policy)
+  Header always set Permissions-Policy "geolocation=(), microphone=(), camera=(), payment=(), usb=(), magnetometer=(), gyroscope=(), accelerometer=()"
+  
+  # Cross-Origin Policies
+  Header always set Cross-Origin-Embedder-Policy "require-corp"
+  Header always set Cross-Origin-Opener-Policy "same-origin"
+  Header always set Cross-Origin-Resource-Policy "same-origin"
+</IfModule>
+
+# ============================================
+# 4.1. OPTIMIZACIÓN HTTP/2 Y HTTP/3
+# ============================================
+<IfModule mod_headers.c>
+  # Server Push Hints para recursos críticos (HTTP/2)
+  <FilesMatch "\.html$">
+    # Preload CSS crítico
+    Header add Link "</dist/css/app.min.css>; rel=preload; as=style"
+    # Preload fuentes críticas
+    Header add Link "</dist/fonts/Poppins-Regular.woff2>; rel=preload; as=font; type=font/woff2; crossorigin"
+    # Preload scripts críticos
+    Header add Link "</dist/js/script.min.js>; rel=preload; as=script"
+  </FilesMatch>
+  
+  # Early Hints para recursos críticos (HTTP/2/3)
+  Header always set Accept-CH "Viewport-Width, Width, DPR"
+  
+  # Alt-Svc header para HTTP/3 (QUIC)
+  # Header always set Alt-Svc 'h3=":443"; ma=86400'
+</IfModule>
+
+# HTTP/2 Server Push (requiere mod_http2)
+<IfModule mod_http2.c>
+  # Habilitar HTTP/2
+  Protocols h2 h2c http/1.1
+  
+  # Optimizaciones HTTP/2
+  H2Push on
+  H2PushPriority * after
+  H2PushPriority text/css before
+  H2PushPriority image/webp after 32
+  H2PushPriority image/avif after 32
+  H2PushPriority application/javascript interleaved
+</IfModule>
+
+# ============================================
+# 5. REDIRECCIONES OPTIMIZADAS - SIN CADENAS
+# ============================================
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  
+  # CONSOLIDADO: Forzar HTTPS + eliminar www + eliminar index.html en UNA SOLA regla
+  # Esto evita cadenas de redirecciones que penalizan el Performance Score
+  
+  # Caso 1: HTTP (con o sin www) con index.html → HTTPS sin www sin index.html
+  RewriteCond %{HTTPS} off
+  RewriteCond %{THE_REQUEST} /index\.html [NC]
+  RewriteRule ^(.*)index\.html$ https://javiertamaritweb.es/$1 [R=301,L]
+  
+  # Caso 2: HTTP (con o sin www) sin index.html → HTTPS sin www
+  RewriteCond %{HTTPS} off
+  RewriteRule ^(.*)$ https://javiertamaritweb.es/$1 [R=301,L]
+  
+  # Caso 3: HTTPS con www con index.html → HTTPS sin www sin index.html
+  RewriteCond %{HTTPS} on
+  RewriteCond %{HTTP_HOST} ^www\. [NC]
+  RewriteCond %{THE_REQUEST} /index\.html [NC]
+  RewriteRule ^(.*)index\.html$ https://javiertamaritweb.es/$1 [R=301,L]
+  
+  # Caso 4: HTTPS con www sin index.html → HTTPS sin www
+  RewriteCond %{HTTPS} on
+  RewriteCond %{HTTP_HOST} ^www\. [NC]
+  RewriteRule ^(.*)$ https://javiertamaritweb.es/$1 [R=301,L]
+  
+  # Caso 5: HTTPS sin www pero con index.html → HTTPS sin www sin index.html
+  RewriteCond %{HTTPS} on
+  RewriteCond %{HTTP_HOST} !^www\. [NC]
+  RewriteCond %{THE_REQUEST} /index\.html [NC]
+  RewriteRule ^(.*)index\.html$ https://javiertamaritweb.es/$1 [R=301,L]
+  
+  # Eliminar trailing slash SOLO para archivos (no directorios)
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_URI} (.+)/$
+  RewriteRule ^ %1 [R=301,L]
+</IfModule>
+
+# ============================================
+# 6. TIPOS MIME
+# ============================================
+<IfModule mod_mime.c>
+  # JavaScript
+  AddType application/javascript js
+  AddType text/javascript js
+  
+  # JSON
+  AddType application/json json
+  AddType application/manifest+json webmanifest
+  
+  # Imágenes modernas
+  AddType image/webp webp
+  AddType image/avif avif
+  AddType image/svg+xml svg svgz
+  
+  # Fuentes
+  AddType font/woff woff
+  AddType font/woff2 woff2
+  AddType font/ttf ttf
+  AddType font/otf otf
+  
+  # Audio (Podcasts)
+  AddType audio/mpeg mp3
+  AddType audio/mp4 m4a
+  AddType audio/mpeg mpeg
+  
+  # Charset UTF-8 para archivos de texto
+  AddDefaultCharset UTF-8
+  AddCharset UTF-8 .html .css .js .xml .json .webmanifest
+</IfModule>
+
+# ============================================
+# 7. ETags (opcional - mejorar cache)
+# ============================================
+<IfModule mod_headers.c>
+  # Habilitar ETags para mejor cache
+  FileETag MTime Size
+</IfModule>
+
+# ============================================
+# 8. PREVENIR ACCESO A ARCHIVOS SENSIBLES
+# ============================================
+<FilesMatch "(^#.*#|\.(bak|conf|dist|fla|in[ci]|log|orig|psd|sh|sql|sw[op])|~)$">
+  # Apache 2.4+
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+  # Apache 2.2
+  <IfModule !mod_authz_core.c>
+    Order allow,deny
+    Deny from all
+  </IfModule>
+</FilesMatch>
+
+# Proteger .htaccess
+<Files .htaccess>
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+  <IfModule !mod_authz_core.c>
+    Order allow,deny
+    Deny from all
+  </IfModule>
+</Files>
+
+# ============================================
+# FIN DE CONFIGURACIÓN
+# ============================================
+

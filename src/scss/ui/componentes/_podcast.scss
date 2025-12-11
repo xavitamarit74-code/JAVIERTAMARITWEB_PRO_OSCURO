@@ -1,0 +1,1102 @@
+// scss/components/_podcast.scss
+@use 'sass:color';
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+@use 'ui/contenido/botones' as btn;
+
+// ===================================
+// Main Container
+// ===================================
+.podcast-main {
+  padding: 3rem 0;
+  
+  @include m.tablet {
+    padding: 4rem 0;
+  }
+  
+  @include m.desktop {
+    padding: 5rem 0;
+  }
+}
+
+// ===================================
+// Hero Section
+// ===================================
+.podcast-hero {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: v.$podcast-gradient;
+  border: 2px solid transparent;
+  border-radius: v.$border-radius;
+  margin-bottom: 4rem;
+  box-shadow: 0 4px 15px rgba(247, 144, 178, 0.3);
+  
+  @include m.desktop {
+    text-align: left; // ✅ Alineado a la izquierda en desktop >1199px
+  }
+  
+  &__content {
+    max-width: 700px;
+    margin: 0 auto;
+    
+    @include m.desktop {
+      max-width: 100%; // Ancho completo en desktop >1199px
+    }
+  }
+  
+  &__icon {
+    font-size: 4rem;
+    display: block;
+    margin-bottom: 1.5rem;
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  &__title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: v.$blanco;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    text-align: center; // ✅ Siempre centrado en todas las pantallas
+    
+    @include m.tablet {
+      font-size: 3.5rem;
+    }
+    
+    @include m.desktop {
+      font-size: 4rem;
+    }
+  }
+  
+  &__description {
+    font-size: v.$fuenteTextoPhone;
+    color: v.$blanco;
+    line-height: 1.7;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    text-align: center; // Centrado por defecto
+    
+    @include m.tablet {
+      font-size: v.$fuenteTextoTablet;
+    }
+    
+    @include m.desktop {
+      font-size: v.$fuenteTextoDesktop;
+      max-width: 100%; // Ocupa todo el ancho disponible
+      margin: 0; // Sin márgenes laterales
+      text-align: left; // ✅ Izquierda solo en desktop
+    }
+  }
+}
+
+// ===================================
+// Category Section
+// ===================================
+.podcast-category {
+  margin-bottom: 4rem;
+  background-color: v.$blanco;
+  border-radius: v.$border-radius;
+  box-shadow: v.$box-shadow;
+  transition: all 0.3s ease;
+  border: 2px solid v.$primario;
+  padding: 2rem;
+  
+  @include m.tablet {
+    padding: 3rem;
+  }
+  
+  @include m.desktop {
+    padding: 4rem;
+  }
+  
+  &__header {
+    text-align: center;
+    margin-bottom: 3rem;
+    
+    @include m.desktop {
+      text-align: left;
+    }
+  }
+  
+  &__title {
+    font-size: 2.8rem;
+    font-weight: 600;
+    color: v.$rosaOscuro;
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: v.$podcast-gradient;
+      border-radius: 2px;
+    }
+    
+    @include m.tablet {
+      font-size: 3.2rem;
+    }
+    
+    @include m.desktop {
+      &::after {
+        left: 0;
+        right: auto;
+        transform: translateX(0);
+      }
+    }
+  }
+  
+  &__description {
+    font-size: v.$fuenteTextoPhone;
+    color: v.$gris;
+    line-height: 1.8;
+    max-width: 600px;
+    margin: 2rem auto 0;
+    
+    @include m.tablet {
+      font-size: v.$fuenteTextoTablet;
+    }
+    
+    @include m.desktop {
+      font-size: v.$fuenteTextoDesktop;
+      margin: 2rem 0 0 0;
+      max-width: 100%;
+    }
+  }
+}
+
+// ===================================
+// Episodes List
+// ===================================
+.podcast-episodes {
+  display: grid;
+  gap: 2rem;
+  
+  @include m.tablet {
+    gap: 2.5rem;
+  }
+  
+  @include m.desktop {
+    gap: 3rem;
+  }
+}
+
+// ===================================
+// Episode Card
+// ===================================
+.podcast-episode {
+  border: 1px solid v.$rosaOscuro;
+  background: v.$blanco;
+  border-radius: v.$border-radius;
+  box-shadow: v.$box-shadow;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+    border-color: v.$rosaOscuro;
+    border-width: 2px;
+  }
+  
+  @include m.desktop {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 0;
+  }
+}
+
+.podcast-episode__image-container {
+  background-color: rgba(59, 220, 195, 0.15);
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1/1;
+  overflow: visible;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem; // Espacio interno para la imagen
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  
+  @include m.desktop {
+    height: 100%;
+    aspect-ratio: auto;
+  }
+  
+  // Estado reproduciendo - añadido por JavaScript
+  &.is-playing {
+    animation: backgroundPulse 4.5s ease-in-out infinite;
+  }
+  
+  // Accesibilidad: Respetar preferencias de movimiento reducido
+  @media (prefers-reduced-motion: reduce) {
+    &.is-playing {
+      animation: none;
+      background-color: rgba(247, 144, 178, 0.15); // Rosa fijo cuando reproduce
+    }
+  }
+}
+
+.podcast-episode__image {
+  width: 60%; // Slightly larger microphone icon
+  height: 60%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  
+  @include m.tablet {
+    width: 55%;
+    height: 55%;
+  }
+  
+  @include m.desktop {
+    width: 70%;
+    height: 70%;
+    max-width: 200px;
+    max-height: 200px;
+  }
+  
+  .podcast-episode:hover & {
+    transform: scale(1.05);
+  }
+}
+
+.podcast-episode__badge {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 0.5rem 1.2rem;
+  border-radius: 20px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: v.$rosaOscuro;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.podcast-episode__content {
+  padding: 2.5rem;
+  background-color: v.$blanco;
+  
+  @include m.tablet {
+    padding: 3rem;
+  }
+}
+
+.podcast-episode__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+  color: v.$gris;
+  transition: color 0.3s ease;
+  
+  // Estado cuando el reproductor está activo
+  .podcast-episode.is-playing & {
+    color: v.$gris;
+  }
+}
+
+.podcast-episode__date,
+.podcast-episode__duration {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  
+  .material-icons {
+    font-size: 1.8rem;
+    color: v.$primario;
+  }
+}
+
+.podcast-episode__title {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: v.$negro;
+  margin-bottom: 1.5rem;
+  line-height: 1.3;
+  
+  @include m.tablet {
+    font-size: 2.8rem;
+  }
+}
+
+.podcast-episode__description {
+  font-size: v.$fuenteTextoPhone;
+  color: v.$gris;
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+  
+  @include m.tablet {
+    font-size: v.$fuenteTextoTablet;
+  }
+}
+
+// ===================================
+// Audio Player Container
+// ===================================
+.podcast-player-container {
+  margin-top: 2.5rem;
+  padding: 2rem;
+  background: linear-gradient(to bottom, rgba(59, 220, 195, 0.05), rgba(247, 144, 178, 0.05));
+  border-radius: v.$border-radius;
+  border: 2px solid rgba(247, 144, 178, 0.2);
+}
+
+// ===================================
+// Custom Plyr Styles
+// ===================================
+.plyr {
+  border-radius: 8px;
+  
+  &--audio {
+    .plyr__controls {
+      background: transparent;
+      border-radius: 8px;
+      padding: 1.5rem;
+      
+      @include m.tablet {
+        padding: 2rem;
+      }
+    }
+  }
+  
+  &__control {
+    color: v.$rosaOscuro;
+    transition: all 0.3s ease;
+    
+    // Hover y touch para todos los controles
+    &:hover,
+    &:active,
+    &:focus {
+      background: v.$rosaOscuro !important; // Fondo rosa #f790b2
+      color: v.$blanco !important; // Texto/iconos blancos
+      
+      // Hacer los iconos SVG blancos
+      svg {
+        fill: v.$blanco !important;
+        color: v.$blanco !important;
+      }
+    }
+    
+    // Estado pressed (cuando está reproduciendo)
+    &[aria-pressed="true"] {
+      background: rgba(247, 144, 178, 0.15);
+      
+      &:hover,
+      &:active {
+        background: v.$rosaOscuro !important;
+        
+        svg {
+          fill: v.$blanco !important;
+          color: v.$blanco !important;
+        }
+      }
+    }
+    
+    &--overlaid {
+      background: v.$podcast-gradient;
+      
+      &:hover {
+        background: v.$rosaOscuro !important;
+        
+        svg {
+          fill: v.$blanco !important;
+          color: v.$blanco !important;
+        }
+      }
+    }
+  }
+  
+  &__control--pressed {
+    background: rgba(247, 144, 178, 0.2);
+    color: v.$rosaOscuro;
+    
+    &:hover,
+    &:active {
+      background: v.$rosaOscuro !important;
+      color: v.$blanco !important;
+      
+      svg {
+        fill: v.$blanco !important;
+        color: v.$blanco !important;
+      }
+    }
+  }
+  
+  // Barra de progreso - Diseño elegante
+  &__progress {
+    input[type="range"] {
+      color: v.$rosaOscuro; // #f790b2 solo para la parte reproducida
+    }
+    
+    // Color de la barra de buffer (carga)
+    &__buffer {
+      color: rgba(0, 0, 0, 0.1); // Gris muy suave
+    }
+  }
+  
+  // Barra de volumen - Color turquesa forzado
+  &__volume {
+    input[type="range"] {
+      color: v.$primario!important; // #3bdcc3 turquesa
+    }
+  }
+  
+  // Asegurar que el color se aplique correctamente
+  &--full-ui input[type="range"] {
+    color: v.$rosaOscuro;
+  }
+  
+  // Tiempo y controles - Sin rosa excesivo
+  &__time {
+    color: #666;
+    font-weight: 500;
+  }
+}
+
+// Estilos refinados para las barras - Plyr usa la propiedad 'color' del input
+.plyr--audio {
+  .plyr__controls {
+    // Estilos base para todos los inputs range
+    input[type="range"] {
+      &::-webkit-slider-thumb {
+        border: 2px solid white;
+        width: 16px;
+        height: 16px;
+      }
+      
+      &::-moz-range-thumb {
+        border: 2px solid white;
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+  
+  // Barra de progreso - Rosa
+  .plyr__progress {
+    input[type="range"] {
+      // Plyr usa 'color' para generar la barra automáticamente
+      color: v.$rosaOscuro; // Rosa #f790b2
+      
+      &::-webkit-slider-thumb {
+        background: v.$rosaOscuro;
+        box-shadow: 0 2px 6px rgba(247, 144, 178, 0.4);
+      }
+      
+      &::-moz-range-thumb {
+        background: v.$rosaOscuro;
+        box-shadow: 0 2px 6px rgba(247, 144, 178, 0.4);
+      }
+    }
+  }
+  
+  // Barra de volumen - Turquesa
+  .plyr__volume {
+    input[type="range"] {
+      // Plyr usa 'color' para generar la barra automáticamente
+      color: v.$primario !important; // Turquesa #3bdcc3
+      
+      &::-webkit-slider-thumb {
+        background: v.$primario !important;
+        box-shadow: 0 2px 6px rgba(59, 220, 195, 0.5) !important;
+      }
+      
+      &::-moz-range-thumb {
+        background: v.$primario !important;
+        box-shadow: 0 2px 6px rgba(59, 220, 195, 0.5) !important;
+      }
+    }
+  }
+}
+
+// ===================================
+// Audio Equalizer Animation
+// ===================================
+.podcast-equalizer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 1.5px; // Mobile (<768px): 40 barras - muy compacto
+  height: 40px;
+  margin: 1.5rem 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  
+  &.active {
+    opacity: 1;
+  }
+  
+  // Tablet (768-1199px): 80 barras - compacto
+  @include m.tablet {
+    gap: 1.5px;
+  }
+  
+  // Desktop >1199px: 100 barras - compacto
+  @include m.desktop {
+    gap: 2px;
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .podcast-equalizer__bar {
+      animation: none !important;
+    }
+  }
+}
+
+.podcast-equalizer__bar {
+  width: 2px; // Mobile (<768px): 40 barras - muy delgadas
+  background: v.$podcast-gradient;
+  border-radius: 2px;
+  animation: equalize 0.8s ease-in-out infinite;
+  transform-origin: bottom;
+  
+  @include m.tablet {
+    width: 2.5px; // Tablet (768-1199px): 80 barras - delgadas
+  }
+  
+  // Barras para desktop >1199px (100 barras)
+  @include m.desktop {
+    width: 3px; // Desktop: 100 barras
+  }
+  
+  // Animaciones variadas para crear efecto natural
+  // Usando nth-child con fórmulas para soportar 100 barras
+  @for $i from 1 through 100 {
+    &:nth-child(#{$i}) {
+      // Delays variados entre 0s y 0.6s
+      animation-delay: #{($i * 0.02) % 0.6}s;
+      // Duraciones variadas entre 0.5s y 1.3s
+      animation-duration: #{0.5 + (($i * 0.031) % 0.8)}s;
+    }
+  }
+}
+
+// ===================================
+// Loading State
+// ===================================
+.podcast-loading {
+  text-align: center;
+  padding: 4rem 2rem;
+  
+  &__spinner {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 4px solid rgba(247, 144, 178, 0.2);
+    border-top-color: v.$rosaOscuro;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 1.5rem;
+  }
+  
+  &__text {
+    display: block;
+    font-size: v.$fuenteTextoPhone;
+    color: v.$gris;
+  }
+}
+
+// ===================================
+// Error State
+// ===================================
+.podcast-error {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: rgba(255, 59, 48, 0.05);
+  border: 2px solid rgba(255, 59, 48, 0.2);
+  border-radius: v.$border-radius;
+  
+  &__icon {
+    font-size: 4rem;
+    color: #ff3b30;
+    margin-bottom: 1.5rem;
+  }
+  
+  &__title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #ff3b30;
+    margin-bottom: 1rem;
+  }
+  
+  &__message {
+    font-size: v.$fuenteTextoPhone;
+    color: v.$gris;
+  }
+}
+
+// ===================================
+// Animations
+// ===================================
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes equalize {
+  0%, 100% {
+    height: 8px;
+  }
+  50% {
+    height: 35px;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+// ===================================
+// Accessibility
+// ===================================
+.podcast-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+// Focus styles for keyboard navigation
+.podcast-episode,
+.plyr__control {
+  &:focus {
+    outline: 3px solid v.$rosaOscuro;
+    outline-offset: 2px;
+  }
+  
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+  
+  &:focus-visible {
+    outline: 3px solid v.$rosaOscuro;
+    outline-offset: 2px;
+  }
+}
+
+// ===================================
+// Keyframe: Animación de fondo del contenedor de imagen
+// ===================================
+@keyframes backgroundPulse {
+  0%, 100% {
+    background-color: rgba(59, 220, 195, 0.15); // Turquesa sutil
+  }
+  50% {
+    background-color: rgba(247, 144, 178, 0.15); // Rosa sutil
+  }
+}
+
+// ===================================
+// PODCASTS PREVIEW - Para index.html
+// ===================================
+
+.podcasts-preview {
+  padding: 4rem 0;
+  border-radius: v.$border-radius;
+  margin: 3rem auto;
+  
+  @include m.tablet {
+    padding: 5rem 0;
+  }
+  
+  @include m.desktop {
+    padding: 8rem 0;
+  }
+  
+  // Header
+  &__header {
+    text-align: left;
+    margin-bottom: 3rem;
+    
+    @include m.desktop {
+      margin-bottom: 4rem;
+    }
+  }
+  
+  &__title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: v.$negro;
+    margin: 0 0 1rem 0;
+    
+    @include m.tablet {
+      font-size: 3rem;
+    }
+    
+    @include m.desktop {
+      font-size: 3.5rem;
+    }
+  }
+  
+  &__subtitle {
+    font-size: 1.2rem;
+    color: v.$grisOscuro;
+    margin: 0;
+    
+    @include m.tablet {
+      font-size: 1.8rem;
+    }
+  }
+  
+  // Subsección de categoría (Gaviotas y Anclas)
+  &__category {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 2px solid rgba(v.$podcast-primary, 0.2);
+    
+    @include m.tablet {
+      margin-top: 2.5rem;
+      padding-top: 2.5rem;
+    }
+    
+    @include m.desktop {
+      margin-top: 3rem;
+      padding-top: 3rem;
+    }
+  }
+  
+  &__category-title {
+    color: v.$rosaOscuro;
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0 0 1rem;
+    position: relative;
+    display: inline-block;
+    
+    // Línea decorativa debajo del título
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(135deg, v.$podcast-primary, v.$podcast-secondary);
+      border-radius: 2px;
+    }
+    
+    @include m.tablet {
+      font-size: 2.3rem;
+    }
+    
+    @include m.desktop {
+      font-size: 2.6rem;
+    }
+  }
+  
+  &__category-description {
+    color: v.$grisOscuro;
+    font-size: 1.4rem;
+    line-height: 1.7;
+    margin: 1.5rem 0 0;
+    text-align: left;
+    
+    @include m.tablet {
+      font-size: 1.6rem;
+      line-height: 1.8;
+    }
+    
+    @include m.desktop {
+      font-size: 1.8rem;
+      max-width: 100%;
+    }
+  }
+  
+  // Grid de episodios
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    
+    @include m.tablet {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2.5rem;
+    }
+    
+    @include m.desktop {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3rem;
+    }
+  }
+  
+  // Empty state
+  &__empty {
+    text-align: center;
+    padding: 3rem 2rem;
+    color: v.$grisOscuro;
+    
+    p {
+      margin: 0;
+      font-size: 1.1rem;
+    }
+  }
+  
+  // Error state
+  &__error {
+    text-align: center;
+    padding: 3rem 2rem;
+    background: rgba(255, 0, 0, 0.05);
+    border-radius: v.$border-radius;
+    
+    p {
+      margin: 0.5rem 0;
+      color: v.$grisOscuro;
+      
+      &:first-child {
+        font-weight: 600;
+      }
+    }
+    
+    a {
+      color: v.$rosaOscuro;
+      text-decoration: underline;
+      
+      &:hover {
+        color: color.scale(v.$rosaOscuro, $lightness: -13%);
+      }
+    }
+  }
+  
+  // CTA al final
+  &__cta {
+    text-align: center;
+    margin-top: 3rem;
+    
+    @include m.desktop {
+      margin-top: 4rem;
+      
+    }
+  }
+  
+  &__button {
+    // Usar mixin centralizado de _botones.scss
+    @include btn.boton-moderno-podcast('medium');
+  }
+}
+
+// ===================================
+// PODCAST PREVIEW CARD (Compacta)
+// ===================================
+
+.podcast-preview-card {
+  display: flex;
+  flex-direction: column;
+  background: v.$blanco;
+  border-radius: v.$border-radius;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(247, 144, 178, 0.2);
+    border-color: transparent;
+  }
+  
+  &__link {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+    
+    &:focus {
+      outline: 3px solid v.$rosaOscuro;
+      outline-offset: 3px;
+    }
+  }
+  
+  // Contenedor de imagen
+  &__image-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    background: rgba(59, 220, 195, 0.1);
+  }
+  
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    
+    .podcast-preview-card:hover & {
+      transform: scale(1.05);
+    }
+  }
+  
+  &__badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: v.$podcast-gradient;
+    color: v.$blanco;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  // Contenido de la card
+  &__content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 1.5rem;
+    background: transparent;
+    
+  }
+  
+  &__title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: v.$negro;
+    margin: 0 0 0.8rem 0;
+    line-height: 1.4;
+    
+    @include m.tablet {
+      font-size: 1.5rem;
+    }
+    @include m.desktop {
+      font-size: 1.8rem;
+    }
+  }
+  
+  &__description {
+    font-size: 0.95rem;
+    color: v.$grisOscuro;
+    line-height: 1.6;
+    margin: 0 0 1rem 0;
+    flex: 1;
+    
+    @include m.tablet {
+      font-size: 1.2rem;
+    }
+    @include m.desktop {
+      font-size: 1.5rem;
+    }
+  }
+  
+  // Meta información
+  &__meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    font-size: 0.85rem;
+    color: v.$grisOscuro;
+    transition: color 0.3s ease;
+    
+    .podcast-preview-card:hover & {
+      color: v.$grisOscuro;
+    }
+  }
+  
+  &__date {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    
+    &::before {
+      content: '📅';
+    }
+    @include m.tablet {
+      font-size: 1rem;
+    }
+    @include m.desktop {
+      font-size: 1.3rem;
+    }
+  }
+  
+  &__duration {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-weight: 500;
+    @include m.tablet {
+      font-size: 1rem;
+    }
+    @include m.desktop {
+      font-size: 1.3rem;
+    }
+  }
+  
+  // CTA de la card
+  &__cta {
+    // Usar mixin centralizado de _botones.scss
+    @include btn.boton-moderno-podcast('small');
+    
+    // Efecto adicional cuando la card hace hover
+    .podcast-preview-card:hover & {
+      transform: translateX(5px) scale(1.05);
+    }
+  }
+}
+
+// ===================================
+// Accesibilidad: Screen Reader Only
+// ===================================
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+
+
+
+
+.podcasts-preview__category-gaviotas {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0 2rem;
+  background-color: v.$secundario;
+  border-radius: v.$border-radius;
+  box-shadow: v.$box-shadow;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 2px solid v.$primario;
+
+  @include m.tablet {
+    padding: 2rem 2rem;
+  }
+  @include m.desktop {
+    padding: 2rem 4rem;
+  }
+}

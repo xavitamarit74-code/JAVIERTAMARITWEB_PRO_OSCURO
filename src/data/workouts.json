@@ -1,0 +1,58 @@
+[
+  {
+    "date": "2025-06-23",
+    "treadmillTime": 60,
+    "treadmillSpeed": 5,
+    "treadmillIncline": 3,
+    "heartRate": 130,
+    "bionessTime": 300,
+    "activities": "",
+    "complementaryTime": 0,
+    "complementaryIntensity": "",
+    "gymExType": "",
+    "gymExTime": 0,
+    "gymExIntensity": ""
+  },
+  {
+    "date": "2025-06-26",
+    "treadmillTime": 0,
+    "treadmillSpeed": 0,
+    "treadmillIncline": 0,
+    "heartRate": 0,
+    "bionessTime": 300,
+    "activities": "Ejercicios en el agua",
+    "complementaryTime": 45,
+    "complementaryIntensity": "Suave",
+    "gymExType": "",
+    "gymExTime": 0,
+    "gymExIntensity": ""
+  },
+  {
+    "date": "2025-06-30",
+    "treadmillTime": 60,
+    "treadmillSpeed": 5,
+    "treadmillIncline": 3,
+    "heartRate": 133,
+    "bionessTime": 300,
+    "activities": "",
+    "complementaryTime": 0,
+    "complementaryIntensity": "Suave",
+    "gymExType": "",
+    "gymExTime": 0,
+    "gymExIntensity": ""
+  },
+   {
+    "date": "2025-07-07",
+    "treadmillTime": 60,
+    "treadmillSpeed": 5.5,
+    "treadmillIncline": 0,
+    "heartRate": 130,
+    "bionessTime": 200,
+    "activities": "",
+    "complementaryTime": 0,
+    "complementaryIntensity": "Suave",
+    "gymExType": "",
+    "gymExTime": 0,
+    "gymExIntensity": ""
+  }
+]

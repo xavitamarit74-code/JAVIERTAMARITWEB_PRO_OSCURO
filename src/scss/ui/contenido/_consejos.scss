@@ -1,0 +1,128 @@
+// ui/contenido/_consejos.scss
+
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+@use 'sass:color';
+
+.consejos{
+
+    padding: 2rem 0;
+    @include m.tablet {
+        padding: 5rem 4rem;
+    }
+
+
+    &__title {
+        font-size: 2rem;
+        padding-top: 3rem;
+        padding-left: 1rem;
+        @include m.tablet {
+            font-size: 3rem;
+        }
+        @include m.desktop {
+            font-size: 3.8rem;
+        }
+    }
+    &__texto{
+        padding-bottom: 4rem;
+        font-size: v.$fuenteTextoPhone;
+        font-weight: 500;
+        color: v.$negro;
+        text-align: justify;
+        text-indent: 3rem;
+        margin-bottom: 5rem;
+        @include m.tablet {
+            padding-bottom: 0;  
+            font-size: v.$fuenteTextoTablet;         
+        }
+        @include m.desktop {
+            padding-bottom: 0;
+            font-size: v.$fuenteTextoDesktop;
+        }
+    }
+    &__flex{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5rem;
+        @include m.tablet {
+            
+            justify-content: center;
+        }
+        @include m.desktop {
+            
+            flex-direction: row;
+            justify-content: center;
+        }    
+    }
+    
+    
+}
+.consejo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    flex-direction: column;
+    position: relative;
+    
+    @include m.tablet {
+        flex-direction: row;
+        gap: 2rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__imagen{
+        max-width: 20rem;
+        height: auto; // Preserva la proporción original
+        aspect-ratio: auto; // Mantiene el aspect ratio natural
+        border-radius: 1rem;
+        box-shadow: 0px 0px 2.6rem -0.8rem color.adjust(v.$grisClaro, $lightness: -30%);
+        transition: transform 0.3s ease;
+        
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+    
+    &__heading{
+        padding: 2rem;
+        border-radius: 1rem;
+        box-shadow: 0px 0px 2.6rem -0.8rem color.adjust(v.$grisClaro, $lightness: -30%);
+    }
+    &__enlace{
+        @include m.boton;
+        padding: 1.2rem 2.5rem;
+        font-size: 1.4rem;
+        font-weight: 600;
+        border-radius: 3rem;
+        white-space: nowrap;
+        transition: all 0.3s ease;
+        
+        @include m.tablet {
+            font-size: 1.5rem;
+            padding: 1.3rem 3rem;
+            position: absolute;
+            left: 10%;
+            top: 85%;
+            transform: translateX(-50%);
+            z-index: 2;
+        }
+        @include m.desktop {
+            font-size: 1.6rem;
+            padding: 1.4rem 3.5rem;
+            left: 5%;
+            top: 90%;
+        }
+        
+        &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            
+            @include m.tablet {
+                transform: translateX(-50%) translateY(-2px);
+            }
+        }
+    }  
+}

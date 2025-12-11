@@ -1,0 +1,75 @@
+// _redes.scss - Estilos para la sección de redes sociales y videos
+
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.redes {
+    padding: 4rem 1rem;
+    
+    @include m.tablet {
+        padding: 6rem 2rem;
+    }
+    @include m.desktop {
+        padding: 8rem 4rem;
+    }
+    
+    &__title {
+        font-size: 2.4rem;
+        font-weight: 700;
+        color: v.$negro;
+        margin-bottom: 2rem;
+        font-family: v.$font-family;
+        
+        @include m.tablet {
+            font-size: 3rem;
+            margin-bottom: 2.5rem;
+        }
+        @include m.desktop {
+            font-size: 3.6rem;
+            margin-bottom: 3rem;
+        }
+    }
+}
+
+// Video container component
+.video {
+    max-width: 100rem;
+    margin: 0 auto;
+    
+    &__title {
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: v.$negro;
+        text-align: center;
+        margin-bottom: 1.5rem;
+        font-family: v.$font-family;
+        
+        @include m.tablet {
+            font-size: 2.2rem;
+            margin-bottom: 2rem;
+        }
+        @include m.desktop {
+            font-size: 2.6rem;
+            margin-bottom: 2.5rem;
+        }
+    }
+    
+    &__wrapper {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        background-color: v.$negro;
+        border-radius: v.$radius;
+        overflow: hidden;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+    }
+}

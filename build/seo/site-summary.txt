@@ -1,0 +1,66 @@
+JAVIERTAMARITWEB.ES - RESUMEN PARA IA
+===========================================
+
+VERSIÓN: 2.0.2
+ÚLTIMA ACTUALIZACIÓN: 2025-12-11
+AUTOR: Javier Tamarit
+WEB: https://javiertamaritweb.es
+TEMA: Recuperación tras ictus isquémico - Historia personal real
+
+¿QUÉ ES ESTA WEB?
+- Blog personal de un superviviente de ictus isquémico
+- Comparte su experiencia de recuperación completa
+- Ofrece recursos prácticos para otros supervivientes
+- Incluye recetas saludables, ejercicios, podcasts y motivación
+- Plataforma optimizada con tecnología moderna (Gulp + Sharp + SCSS)
+
+¿QUIÉN ES JAVIER TAMARIT?
+- Superviviente de ictus isquémico desde diciembre 2022
+- Comparte su historia real de recuperación en curso
+- Ayuda a otros supervivientes y sus familias
+- Experiencia personal verificada y auténtica
+- Creador de contenido en Instagram, TikTok, YouTube y podcast
+
+SECCIONES PRINCIPALES:
+1. RELATOS - Su historia personal completa de recuperación (2 partes publicadas)
+2. RECETAS - 50+ recetas saludables post-ictus con buscador avanzado inteligente
+3. PODCASTS - Serie "Gaviotas y Anclas" sobre superación y recuperación
+4. ENTRENAMIENTOS - Rutinas de rehabilitación que le funcionaron
+5. BLOG - Consejos, artículos y actualizaciones de su progreso (4 artículos)
+6. REDES SOCIALES - Comunidad de apoyo y contenido multimedia
+
+CARACTERÍSTICAS TÉCNICAS DESTACADAS:
+- Buscador de recetas con autocompletado inteligente
+- Reproductor de podcasts integrado (Plyr.js)
+- Imágenes optimizadas WebP/AVIF (hasta -50% tamaño)
+- Progressive Web App (PWA)
+- Sistema de diseño modular (SCSS + BEM + ITCSS)
+- Scrollbars personalizados cross-browser
+
+AUDIENCIA:
+- Supervivientes de ictus y ACV
+- Familiares y cuidadores
+- Profesionales de la salud
+- Personas en rehabilitación neurológica
+- Comunidad hispanohablante mundial
+
+PALABRAS CLAVE:
+ictus, accidente cerebrovascular, ACV, recuperación, rehabilitación, superviviente, vida después del ictus, segunda oportunidad, historia real, testimonio, recetas saludables, ejercicios rehabilitación, podcast recuperación, gaviotas y anclas
+
+REDES SOCIALES:
+- Facebook: https://www.facebook.com/javier.tamarit.9
+- Instagram: https://instagram.com/javi_t
+- YouTube: https://www.youtube.com/@JabsThw
+- TikTok: https://www.tiktok.com/@_javier_t_
+
+MENSAJE PRINCIPAL:
+"Una segunda oportunidad de vida es posible. Comparto mi experiencia real de recuperación tras un ictus para ayudar e inspirar a otros que están pasando por lo mismo."
+
+DISCLAIMER:
+Todo el contenido se basa en experiencia personal y no sustituye el consejo médico profesional.
+
+ESTADÍSTICAS CLAVE:
+- Fecha del ictus: 21 diciembre 2022
+- Tiempo transcurrido: 3+ años en recuperación activa
+- Contenido: 2 relatos, 4 artículos blog, 50+ recetas, 3+ episodios podcast
+- Stack tecnológico: HTML5 + SCSS + Vanilla JS + Gulp + Sharp

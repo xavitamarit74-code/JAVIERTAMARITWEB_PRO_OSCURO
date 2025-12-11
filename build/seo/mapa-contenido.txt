@@ -1,0 +1,136 @@
+MAPA DE CONTENIDO - JAVIERTAMARITWEB.ES
+======================================
+Actualizado: 2025-12-11 | Versión 2.0.2
+
+🏠 PÁGINA PRINCIPAL (index.html)
+- Historia completa de Javier Tamarit
+- Introducción a su experiencia con ictus desde dic 2022
+- Contador de tiempo transcurrido (3+ años)
+- Navegación a todas las secciones
+- Preview de podcasts "Gaviotas y Anclas"
+- Testimonios y motivación
+
+📚 RELATOS (relatos.html + relato_parte.html?parte=X)
+- Historia detallada de la experiencia (2 partes publicadas)
+- Parte I: "El Inicio de Mis Dos Vidas"
+- Parte II: "La Revelación"
+- Desde primeros síntomas hasta recuperación
+- Dividida en partes navegables con parámetros URL
+- Contenido emocional y educativo
+- Datos en: data/relatos.json
+
+🎙️ PODCASTS (podcasts.html)
+- Serie "Gaviotas y Anclas" - Reflexiones sobre recuperación
+- Reproductor personalizado con Plyr.js
+- Visualizador de audio animado (ecualizador CSS)
+- Episodios con categorías y etiquetas
+- Audio narrativo con música y reflexiones personales
+- Datos en: data/podcasts.json
+
+🍽️ RECETAS SALUDABLES (dieta_equilibrada.html)
+- Más de 50 recetas adaptadas post-ictus
+- **Buscador avanzado con autocompletado inteligente**
+- Filtros jerárquicos acumulativos:
+  * Momento del día (Desayuno, Comida, Cena, Merienda)
+  * Estación (Primavera, Verano, Otoño, Invierno)
+  * Eventos (Navidad, Cumpleaños, Especiales)
+- Búsqueda por títulos, ingredientes y comentarios
+- Filtros acumulativos con deselección individual
+- Botones independientes: "Limpiar todo" y "Limpiar búsqueda"
+- Datos en: data/recetas-cocina.json
+- Scripts: buscador-recetas-cocina.js, recetas-cocina.js
+
+💪 ENTRENAMIENTOS (consejos.html → entrenos.html)
+- Rutinas de rehabilitación física
+- Ejercicios que ayudaron en su recuperación
+- Adaptados para diferentes niveles
+- Consejos de fisioterapia
+- Datos en: data/workouts.json
+- Script: entrenos.js
+
+📝 BLOG (blog.html + articulo.html?id=X)
+- Artículos sobre recuperación (4 publicados)
+- Artículos destacados:
+  * "Renacido en Oro" (Kintsukuroi)
+  * "¿Dónde se guardan los nombres?"
+  * "Mis gaviotas"
+- Consejos prácticos y reflexiones personales
+- Actualizaciones de progreso
+- Tips para familias y cuidadores
+- Lightbox para imágenes a pantalla completa
+- Datos en: data/articulos.json
+- Script: articulos.js
+
+🌐 REDES SOCIALES (redes.html)
+- Enlaces a todas sus redes sociales activas
+- Videos de YouTube integrados (iframes responsivos)
+- Comunidad de apoyo
+- Contenido multimedia
+- Conexión con otros supervivientes
+
+RECURSOS TÉCNICOS Y CARACTERÍSTICAS:
+=====================================
+
+🔧 Build System:
+- Gulp 4.x con automatización completa
+- Tareas: css, js, images, data, html, seo, favicon, etc.
+- Sharp para procesamiento de imágenes
+- Conversión automática WebP/AVIF (-30% a -50% tamaño)
+
+🎨 Sistema de Diseño:
+- SCSS modular con namespaces (@use)
+- Arquitectura BEM + ITCSS
+- Variables centralizadas (_variables.scss)
+- Colores: Turquesa #4ECDC4, Rosa #f790b2
+- Tipografía: Montserrat Alternates
+- Sistema utilitario completo (_tipografia.scss)
+- Scrollbars personalizados cross-browser
+
+📱 PWA y Favicons:
+- Manifest: site.webmanifest
+- Iconos multi-plataforma:
+  * apple-touch-icon.png (180x180) - iOS
+  * android-chrome-192x192.png - Android
+  * android-chrome-512x512.png - Android
+  * mstile-150x150.png - Windows
+  * browserconfig.xml - Windows config
+  * favicon-16x16.png, favicon-32x32.png
+
+⚡ Performance:
+- Lazy loading nativo en imágenes
+- Preload de recursos críticos (hero.avif, CSS)
+- HTTP/2 Server Push (Apache)
+- Caché inmutable (1 año para assets)
+- Gzip/Brotli compression
+- CSS y JS minificados
+
+🔍 SEO Avanzado:
+- 5 Sitemaps especializados:
+  * sitemap-index.xml (índice)
+  * sitemap.xml (páginas)
+  * sitemap-images.xml (imágenes)
+  * sitemap-news.xml (artículos)
+  * sitemap-podcasts.xml (audio)
+- robots.txt optimizado
+- .htaccess con HSTS, CSP, caché headers
+- Schema.org JSON-LD (Person, Website, BlogPosting)
+- Open Graph + Twitter Cards completos
+- Metadatos AI para LLMs (ChatGPT, Claude, Gemini)
+
+🤖 Optimización IA:
+- Archivos en /seo/:
+  * site-summary.txt
+  * preguntas-frecuentes.txt
+  * ai-training-data.json
+  * google-optimization.txt
+  * mapa-contenido.txt (este archivo)
+- Metatags: ai-purpose, ai-audience, ai-expertise
+- Contenido estructurado y contextualizado
+
+DATOS ESTRUCTURADOS:
+====================
+- Schema.org implementado
+- FAQ markup para IA
+- Datos de persona y organización
+- Rich snippets optimizados
+- Microdata en artículos y relatos

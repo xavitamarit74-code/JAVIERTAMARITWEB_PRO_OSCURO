@@ -1,0 +1,142 @@
+# robots.txt para https://javiertamaritweb.es
+# Última actualización: 2024-11-20
+# Blog personal sobre recuperación de ictus y segunda vida
+# Incluye sección de Podcasts con Gaviotas y Anclas
+# Optimizado para IA (ChatGPT, Claude, Bard, etc.)
+# --------------------------------------------------
+
+############ Reglas GENERALES ############
+User-agent: *
+
+# --- Permitir recursos esenciales ---
+Allow: /css/
+Allow: /js/
+Allow: /img/
+Allow: /data/
+Allow: /contents/
+Allow: /podcasts/
+Allow: /seo/
+Allow: /seo/site-summary.txt
+Allow: /seo/preguntas-frecuentes.txt
+Allow: /seo/mapa-contenido.txt
+Allow: /seo/google-optimization.txt
+Allow: /seo/google-about.txt
+Allow: /seo/google-indexing-guide.txt
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.webp$
+Allow: /*.avif$
+Allow: /*.svg$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.pdf$
+
+# --- Permitir páginas principales ---
+Allow: /index.html
+Allow: /relatos.html
+Allow: /relato_parte.html
+Allow: /blog.html
+Allow: /podcast.html
+Allow: /consejos.html
+Allow: /redes.html
+Allow: /articulo.html
+Allow: /dieta_equilibrada.html
+Allow: /entrenos.html
+Allow: /latido.html
+
+# --- Zonas privadas o de mantenimiento ---
+Disallow: /admin/
+Disallow: /wp-admin/
+Disallow: /login/
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /backup/
+Disallow: /staging/
+Disallow: /private/
+Disallow: /.git/
+Disallow: /node_modules/
+Disallow: /scss/
+Disallow: /.vscode/
+Disallow: /.github/
+Disallow: /gulpfile.js
+Disallow: /package.json
+Disallow: /package-lock.json
+
+# --- Archivos temporales y logs ---
+Disallow: /*.log$
+Disallow: /*tmp*
+Disallow: /*cache*
+Disallow: /*.bak$
+
+# --- Resultados de búsqueda internos y URLs con parámetros de tracking ---
+Disallow: /buscar?
+Disallow: /search?
+Disallow: /*?*utm_*
+Disallow: /*?*fbclid=*
+Disallow: /*?*print=*
+
+# --- Bloqueo de recursos de desarrollo / pruebas ---
+Disallow: /src/
+Disallow: /node_modules/
+Disallow: /*.map$
+Disallow: /tests/
+
+# --- Si no quieres indexar PDFs, descomenta la línea siguiente ---
+# Disallow: /*.pdf$
+
+# Intervalo entre peticiones (motores que lo respeten, p. ej. Bing, Yandex)
+Crawl-delay: 2
+
+############ Reglas ESPECÍFICAS ############
+# Googlebot
+User-agent: Googlebot
+# Mantén las imágenes accesibles
+Allow: /images/
+# Bloquea originales de diseño pesados
+Disallow: /*.psd$
+Disallow: /*.ai$
+
+# Bingbot
+User-agent: Bingbot
+Disallow: /old/
+Disallow: /test/
+Crawl-delay: 2
+
+# IA Crawlers (Actualizado)
+
+# 1. OpenAI (ChatGPT) - Entrenamiento y Navegación
+User-agent: GPTBot
+Allow: /
+Allow: /seo/
+
+User-agent: ChatGPT-User
+Allow: /
+Allow: /seo/
+
+# 2. Anthropic (Claude)
+User-agent: anthropic-ai
+Allow: /
+Allow: /seo/
+
+User-agent: Claude-Web
+Allow: /
+Allow: /seo/
+
+# 3. Google AI
+User-agent: Google-Extended
+Allow: /
+Allow: /seo/
+
+# 4. Common Crawl (Base de datos para muchas IAs)
+User-agent: CCBot
+Allow: /
+Allow: /seo/
+
+############ SITEMAPS ############
+Sitemap: https://javiertamaritweb.es/sitemap-index.xml
+Sitemap: https://javiertamaritweb.es/sitemap.xml
+Sitemap: https://javiertamaritweb.es/sitemap-images.xml
+Sitemap: https://javiertamaritweb.es/sitemap-news.xml
+
+# --------------------------------------------------
+# Fin del archivo robots.txt

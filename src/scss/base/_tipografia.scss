@@ -1,0 +1,320 @@
+// ============================================
+// TIPOGRAFÍA CENTRALIZADA
+// ============================================
+
+@use 'variables' as v;
+@use 'mixins' as m;
+
+// ============================================
+// 1. CONFIGURACIÓN BASE
+// ============================================
+
+html {
+    font-size: 62.5%; // 1rem = 10px
+}
+
+body {
+    font-family: v.$font-family;
+    font-size: 1.6rem; // 16px por defecto
+    line-height: 1.6;
+    color: v.$texto-principal;
+}
+
+// ============================================
+// 2. HEADINGS (h1-h6)
+// ============================================
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: v.$font-family;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0;
+    color: v.$negro;
+}
+
+h1 {
+    font-size: 4rem;
+    
+    @include m.tablet {
+        font-size: 4.8rem;
+    }
+    
+    @include m.desktop {
+        font-size: 5.6rem;
+    }
+}
+
+h2 {
+    font-size: 3.2rem;
+    
+    @include m.tablet {
+        font-size: 3.6rem;
+    }
+    
+    @include m.desktop {
+        font-size: 4rem;
+    }
+}
+
+h3 {
+    font-size: 2.4rem;
+    
+    @include m.tablet {
+        font-size: 2.8rem;
+    }
+    
+    @include m.desktop {
+        font-size: 3.2rem;
+    }
+}
+
+h4 {
+    font-size: 2rem;
+    
+    @include m.tablet {
+        font-size: 2.2rem;
+    }
+    
+    @include m.desktop {
+        font-size: 2.4rem;
+    }
+}
+
+h5 {
+    font-size: 1.8rem;
+    
+    @include m.tablet {
+        font-size: 1.9rem;
+    }
+    
+    @include m.desktop {
+        font-size: 2rem;
+    }
+}
+
+h6 {
+    font-size: 1.6rem;
+    
+    @include m.tablet {
+        font-size: 1.7rem;
+    }
+    
+    @include m.desktop {
+        font-size: 1.8rem;
+    }
+}
+
+// ============================================
+// 3. ELEMENTOS DE TEXTO
+// ============================================
+
+p {
+    margin: 0 0 1.6rem 0;
+    line-height: 1.6;
+}
+
+a {
+    color: v.$primario;
+    text-decoration: none;
+    transition: color v.$transition-default;
+    
+    &:hover {
+        color: v.$primario-oscuro;
+    }
+}
+
+strong, b {
+    font-weight: 700;
+}
+
+em, i {
+    font-style: italic;
+}
+
+// ============================================
+// 4. CLASES UTILITARIAS - TAMAÑOS
+// ============================================
+
+.text-xs {
+    font-size: 0.8rem;
+}
+
+.text-sm {
+    font-size: 1rem;
+}
+
+.text-base {
+    font-size: 1.2rem;
+}
+
+.text-md {
+    font-size: 1.4rem;
+}
+
+.text-lg {
+    font-size: 1.6rem;
+}
+
+.text-xl {
+    font-size: 1.8rem;
+}
+
+.text-2xl {
+    font-size: 2rem;
+}
+
+.text-3xl {
+    font-size: 2.4rem;
+}
+
+.text-4xl {
+    font-size: 3.2rem;
+}
+
+// ============================================
+// 5. CLASES UTILITARIAS - PESO
+// ============================================
+
+.font-extralight {
+    font-weight: 200;
+}
+
+.font-light {
+    font-weight: 300;
+}
+
+.font-normal {
+    font-weight: 400;
+}
+
+.font-medium {
+    font-weight: 500;
+}
+
+.font-semibold {
+    font-weight: 600;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.font-extrabold {
+    font-weight: 800;
+}
+
+.font-black {
+    font-weight: 900;
+}
+
+// ============================================
+// 6. CLASES UTILITARIAS - TRANSFORMACIÓN
+// ============================================
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.lowercase {
+    text-transform: lowercase;
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+
+.normal-case {
+    text-transform: none;
+}
+
+// ============================================
+// 7. CLASES UTILITARIAS - ALINEACIÓN
+// ============================================
+
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+// ============================================
+// 8. CLASES UTILITARIAS - ESTILO
+// ============================================
+
+.italic {
+    font-style: italic;
+}
+
+.not-italic {
+    font-style: normal;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.no-underline {
+    text-decoration: none;
+}
+
+// ============================================
+// 9. CLASES UTILITARIAS - ESPACIADO DE LETRAS
+// ============================================
+
+.tracking-tight {
+    letter-spacing: -0.05em;
+}
+
+.tracking-normal {
+    letter-spacing: 0;
+}
+
+.tracking-wide {
+    letter-spacing: 0.05em;
+}
+
+.tracking-wider {
+    letter-spacing: 0.1em;
+}
+
+.tracking-widest {
+    letter-spacing: 0.2em;
+}
+
+// ============================================
+// 10. CLASES UTILITARIAS - ALTURA DE LÍNEA
+// ============================================
+
+.leading-none {
+    line-height: 1;
+}
+
+.leading-tight {
+    line-height: 1.2;
+}
+
+.leading-snug {
+    line-height: 1.4;
+}
+
+.leading-normal {
+    line-height: 1.6;
+}
+
+.leading-relaxed {
+    line-height: 1.8;
+}
+
+.leading-loose {
+    line-height: 2;
+}

@@ -1,0 +1,151 @@
+// =============================================================================
+// VARIABLES SCSS - Sistema de Diseño
+// =============================================================================
+// Este archivo contiene todas las variables del proyecto.
+// Organizado en secciones: Colores, Tipografía, Espaciado, etc.
+// =============================================================================
+
+// ==========================================
+// 1. COLORES PRIMITIVOS (La Paleta Base)
+// ==========================================
+
+// Colores Base
+$negro: #000000;
+$blanco: #ffffff;
+
+// Escala de Grises (de más oscuro a más claro)
+$gris-900: #1a1a1a; // Casi negro
+$gris-800: #2d2d2d;
+$gris-700: #333333; // Texto principal
+$gris-600: #484349; // Texto secundario
+$gris-500: #555555; // Texto terciario
+$gris-400: #666666; // Iconos, placeholders
+$gris-300: #a0aec0;
+$gris-200: #e1e5e9; // Bordes claros
+$gris-100: #f2f2f2; // Fondos claros
+$gris-50: #f9f9f9;  // Fondo principal
+
+// ==========================================
+// Colores de Marca (Turquesa - Primario)
+// ==========================================
+$primario: #4ECDC4;            // Color base de marca
+$primario-oscuro: #3BA99F;     // Hover, acentos oscuros
+$primario-mas-oscuro: #2A7A73; // Estados activos
+$primario-claro: #7DDBD3;      // Highlights
+$primario-muy-claro: #B8EAE5;  // Fondos sutiles
+
+// ==========================================
+// Colores Rosa (Secundarios y Terciarios)
+// ==========================================
+$rosaOscuro: #f790b2;  // Acentos, CTAs secundarios
+$secundario: #fdf4f7;  // Fondo secundario (rosa muy claro)
+$terciario: #ffc4d6;   // Detalles decorativos
+
+// ==========================================
+// Otros Colores de Acento
+// ==========================================
+$beigeOscuro: #f0d1b2;     // Calidez, acentos neutros
+$amarilloMuyClaro: #fff4c4; // Highlights suaves
+$amarilloSuave: #FFE66D;    // Destacados, badges
+
+// ==========================================
+// Colores de Estado/Actividad
+// ==========================================
+$violeta: #6f42c1; // Información, categorías especiales
+$naranja: #fd7e14; // Advertencias, acciones secundarias
+$rojo: #dc3545;    // Errores, eliminar, peligro
+
+// ==========================================
+// 2. ALIAS PARA COMPATIBILIDAD (Legacy)
+// ==========================================
+// Mantener estos alias mientras se migra el código antiguo
+
+$gris: $gris-600;
+$grisClaro: $gris-100;
+$grisOscuro: $gris-700;
+$rosaSuave: $secundario;
+$verdeClaro: $primario-claro;
+
+// ==========================================
+// 3. TOKENS SEMÁNTICOS (Uso por Contexto)
+// ==========================================
+
+// Colores de Texto
+$texto-principal: $gris-700;
+$texto-secundario: $gris-600;
+$texto-terciario: $gris-500;
+$texto-claro: $blanco;
+
+// Colores de Fondo
+$fondo-principal: $gris-50;
+$fondo-tarjeta: $blanco;
+$fondo-oscuro: $gris-900;
+
+// Bordes y Sombras
+$borde-claro: $gris-200;
+$borde-foco: rgba($primario, 0.3);
+$box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+$shadow-light: 0 4px 8px rgba(0, 0, 0, 0.05);
+$shadow-strong: 0 8px 16px rgba(0, 0, 0, 0.1);
+
+// ==========================================
+// 4. TIPOGRAFÍA
+// ==========================================
+
+$font-family: 'Montserrat Alternates', sans-serif;
+
+// Tamaños de fuente responsivos
+$fuenteTextoPhone: 1.6rem;
+$fuenteTextoTablet: 1.7rem;
+$fuenteTextoDesktop: 1.9rem;
+
+// ==========================================
+// 5. ESPACIADO Y LAYOUT
+// ==========================================
+
+// Transiciones
+$transition-default: 0.3s ease;
+
+// Breakpoints (Mobile First)
+$telefono: 480px;
+$tablet: 768px;
+$desktop: 1025px;
+
+// Border Radius
+$border-radius: 20px;  // Cards, modales
+$radius: 1rem;         // Botones, inputs
+$radius-sm: 0.8rem;    // Elementos pequeños
+
+// ==========================================
+// 6. MAPAS DE COLORES (Componentes Específicos)
+// ==========================================
+
+// Colores para el componente de Entrenos/Treadmill
+$treadmill-colors: (
+  primary: $primario,
+  secondary: $primario-oscuro,
+  tertiary: $primario-mas-oscuro,
+  light: #e3f9f5,
+  medium: #d1f2eb,
+  dark: #b8e6d6,
+  darker: #a0d4c7,
+);
+
+// Colores para tipos de actividad
+$activity-colors: (
+  bioness: $violeta,
+  complementary: $naranja,
+  gym: $rojo,
+);
+
+// ==========================================
+// 7. PODCAST (Componente Específico)
+// ==========================================
+
+$podcast-primary: $primario;
+$podcast-secondary: $rosaOscuro;
+$podcast-gradient: linear-gradient(
+  135deg,
+  $podcast-primary 0%,
+  $podcast-secondary 100%
+);

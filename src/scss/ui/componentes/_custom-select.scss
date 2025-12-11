@@ -1,0 +1,438 @@
+// ui/componentes/_custom-select.scss
+// Estilos para el componente CustomSelect accesible
+@use '../../base/mixins' as m;
+@use '../../base/variables' as v;
+@use 'sass:color';
+
+// Variables específicas del componente
+$custom-select-font: 'Montserrat Alternates', sans-serif;
+$custom-select-border-radius: 0.8rem;
+$custom-select-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+$custom-select-shadow: 0 0.4rem 1.2rem rgba(0, 0, 0, 0.1);
+$custom-select-shadow-focus: 0 0 0 0.3rem rgba(59, 220, 195, 0.3);
+$custom-select-min-height: 44px; // Mínimo área táctil
+$custom-select-z-dropdown: 1000;
+
+// Contenedor principal
+.custom-select {
+    position: relative;
+    width: 100%;
+    font-family: v.$font-family;
+    font-size: 1.6rem;
+    font-weight: 500;
+    
+    // Estados del componente
+    &:focus {
+        outline: 0.2rem solid v.$primario;
+        outline-offset: 0.2rem;
+        
+        @media (prefers-reduced-motion: no-preference) {
+            outline: none;
+            box-shadow: $custom-select-shadow-focus;
+        }
+    }
+    
+    &:focus-visible {
+        outline: 0.2rem solid v.$primario;
+        outline-offset: 0.2rem;
+    }
+    
+    // Selector abierto
+    &--open {
+        .custom-select__trigger {
+            border-color: v.$primario;
+            box-shadow: $custom-select-shadow-focus;
+            
+            .custom-select__arrow {
+                transform: rotate(180deg);
+            }
+        }
+        
+        .custom-select__list {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0) scale(1);
+        }
+    }
+    
+    // Estado deshabilitado
+    &[aria-disabled="true"] {
+        opacity: 0.6;
+        pointer-events: none;
+        cursor: not-allowed;
+        
+        .custom-select__trigger {
+            background-color: color.mix(v.$gris, #fff, 20%);
+            color: v.$gris;
+            cursor: not-allowed;
+        }
+    }
+}
+
+// Trigger (elemento clicable)
+.custom-select__trigger {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    min-height: $custom-select-min-height;
+    padding: 1.2rem 1.6rem;
+    background: #fff;
+    border: 0.2rem solid #e1e5e9;
+    border-radius: $custom-select-border-radius;
+    cursor: pointer;
+    transition: $custom-select-transition;
+    font-family: $custom-select-font;
+    font-size: inherit;
+    font-weight: inherit;
+    color: #2c3e50;
+    
+    &:hover {
+        border-color: v.$primario;
+        box-shadow: 0 0.2rem 0.8rem rgba(59, 220, 195, 0.2);
+    }
+    
+    &:active {
+        transform: translateY(0.1rem);
+    }
+    
+    @include m.tablet {
+        padding: 1rem 1.4rem;
+        font-size: 1.5rem;
+    }
+    
+    @include m.mobile {
+        padding: 1.2rem 1.6rem;
+        font-size: 1.6rem;
+        min-height: 48px; // Mayor área táctil en móvil
+    }
+}
+
+// Texto seleccionado
+.custom-select__selected {
+    flex: 1;
+    text-align: left;
+    font-family: $custom-select-font;
+    font-weight: inherit;
+    line-height: 1.4;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    
+    // Placeholder state
+    .custom-select[data-value=""] & {
+        color: #6c757d;
+        font-style: italic;
+    }
+}
+
+// Flecha indicadora
+.custom-select__arrow {
+    margin-left: 1.2rem;
+    color: #6c757d;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+    pointer-events: none;
+    
+    @include m.mobile {
+        font-size: 1.4rem;
+    }
+}
+
+// Lista desplegable
+.custom-select__list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: $custom-select-z-dropdown;
+    margin-top: 0.4rem;
+    background: #fff;
+    border: 0.2rem solid #e1e5e9;
+    border-radius: $custom-select-border-radius;
+    box-shadow: $custom-select-shadow;
+    max-height: 25rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+    
+    // Estados iniciales
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-0.8rem) scale(0.95);
+    transition: $custom-select-transition;
+    
+    // Lista vacía
+    &:empty::after {
+        content: "No hay opciones disponibles";
+        display: block;
+        padding: 1.6rem;
+        text-align: center;
+        color: #6c757d;
+        font-style: italic;
+    }
+    
+    // Scrollbar personalizada
+    &::-webkit-scrollbar {
+        width: 0.8rem;
+    }
+    
+    &::-webkit-scrollbar-track {
+        background: #f8f9fa;
+        border-radius: 0.4rem;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        background: color.mix(v.$primario, #fff, 60%);
+        border-radius: 0.4rem;
+        
+        &:hover {
+            background: color.mix(v.$primario, #fff, 40%);
+        }
+    }
+    
+    // Firefox scrollbar
+    scrollbar-width: thin;
+    scrollbar-color: color.mix(v.$primario, #fff, 60%) #f8f9fa;
+}
+
+// Opciones individuales
+.custom-select__option {
+    display: flex;
+    align-items: center;
+    padding: 1.2rem 1.6rem;
+    cursor: pointer;
+    transition: $custom-select-transition;
+    font-family: $custom-select-font;
+    font-size: inherit;
+    font-weight: 400;
+    color: #2c3e50;
+    line-height: 1.4;
+    min-height: $custom-select-min-height;
+    
+    // Estados de interacción
+    &:hover,
+    &--focused {
+        background: color.mix(v.$primario, #fff, 10%);
+        color: v.$primario;
+    }
+    
+    &[aria-selected="true"] {
+        background: v.$primario;
+        color: #fff;
+        font-weight: 600;
+        
+        &::after {
+            content: "✓";
+            margin-left: auto;
+            font-size: 1.4rem;
+        }
+    }
+    
+    &:active {
+        background: color.mix(v.$primario, #000, 90%);
+        transform: translateY(0.1rem);
+    }
+    
+    // Opción deshabilitada
+    &[aria-disabled="true"] {
+        opacity: 0.5;
+        cursor: not-allowed;
+        pointer-events: none;
+    }
+    
+    @include m.tablet {
+        padding: 1rem 1.4rem;
+        font-size: 1.5rem;
+    }
+    
+    @include m.mobile {
+        padding: 1.4rem 1.6rem;
+        font-size: 1.6rem;
+        min-height: 48px;
+    }
+}
+
+// Icono de la opción
+.custom-select__icon {
+    margin-right: 1rem;
+    font-size: 1.8rem;
+    flex-shrink: 0;
+    
+    @include m.mobile {
+        font-size: 2rem;
+    }
+}
+
+// Label de la opción
+.custom-select__label {
+    flex: 1;
+    font-family: $custom-select-font;
+    font-weight: inherit;
+}
+
+// Select oculto para degradación progresiva
+.custom-select__hidden {
+    position: absolute;
+    left: -9999px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+// Estados de alto contraste
+@media (prefers-contrast: high) {
+    .custom-select__trigger {
+        border-width: 0.3rem;
+    }
+    
+    .custom-select__option {
+        &--focused {
+            outline: 0.2rem solid currentColor;
+            outline-offset: -0.2rem;
+        }
+        
+        &[aria-selected="true"] {
+            outline: 0.2rem solid #fff;
+            outline-offset: -0.2rem;
+        }
+    }
+}
+
+// Reducir animaciones si se prefiere
+@media (prefers-reduced-motion: reduce) {
+    .custom-select,
+    .custom-select__trigger,
+    .custom-select__list,
+    .custom-select__option,
+    .custom-select__arrow {
+        transition: none;
+    }
+    
+    .custom-select--open .custom-select__list {
+        transform: none;
+    }
+}
+
+// Modo oscuro
+@media (prefers-color-scheme: dark) {
+    .custom-select__trigger {
+        background: #2d3748;
+        border-color: #4a5568;
+        color: #f7fafc;
+    }
+    
+    .custom-select__list {
+        background: #2d3748;
+        border-color: #4a5568;
+    }
+    
+    .custom-select__option {
+        color: #f7fafc;
+        
+        &:hover,
+        &--focused {
+            background: color.mix(v.$primario, #2d3748, 20%);
+        }
+    }
+    
+    .custom-select__selected {
+        .custom-select[data-value=""] & {
+            color: #a0aec0;
+        }
+    }
+}
+
+// Estilos específicos para diferentes tamaños
+.custom-select {
+    // Tamaño compacto
+    &--compact {
+        .custom-select__trigger {
+            min-height: 36px;
+            padding: 0.8rem 1.2rem;
+            font-size: 1.4rem;
+        }
+        
+        .custom-select__option {
+            padding: 0.8rem 1.2rem;
+            min-height: 36px;
+            font-size: 1.4rem;
+        }
+    }
+    
+    // Tamaño grande
+    &--large {
+        .custom-select__trigger {
+            min-height: 56px;
+            padding: 1.6rem 2rem;
+            font-size: 1.8rem;
+        }
+        
+        .custom-select__option {
+            padding: 1.6rem 2rem;
+            min-height: 56px;
+            font-size: 1.8rem;
+        }
+    }
+}
+
+// Integración con el sistema de filtros existente
+.buscador-recetas {
+    .custom-select {
+        .custom-select__trigger {
+            background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+            border-color: color.mix(v.$primario, #fff, 30%);
+            
+            &:hover {
+                background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            }
+        }
+        
+        &--open .custom-select__trigger {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+        
+        .custom-select__option[aria-selected="true"] {
+            background: linear-gradient(135deg, v.$primario 0%, color.mix(v.$primario, #000, 85%) 100%);
+        }
+    }
+}
+
+// Animaciones de entrada/salida
+@keyframes customSelectFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-0.8rem) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes customSelectFadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-0.8rem) scale(0.95);
+    }
+}
+
+// Aplicar animaciones si no hay preferencia por movimiento reducido
+@media (prefers-reduced-motion: no-preference) {
+    .custom-select--open .custom-select__list {
+        animation: customSelectFadeIn 0.3s ease-out;
+    }
+}
+
+// Estilos específicos para CustomSelect dentro del buscador de recetas en móviles
+@include m.mobile {
+    .buscador-recetas__filtros-avanzados .custom-select {
+        width: 100%;
+        
+        .custom-select__trigger {
+            width: 100%;
+        }
+    }
+}

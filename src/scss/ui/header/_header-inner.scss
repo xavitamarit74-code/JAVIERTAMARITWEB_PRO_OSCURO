@@ -1,0 +1,177 @@
+@use '../../base/variables' as v;
+@use '../../base/mixins' as m;
+
+.header-inner {
+    background-color: v.$primario;
+    width: 100%;
+    padding: 2rem 0;
+
+    &__contenido {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__brand {
+        display: flex;
+        align-items: center;
+        // Removed background and padding from container
+    }
+
+    &__icon {
+        width: 55px;
+        height: 75px;
+        background-color: #FFC1CC; // Rosa más saturado como en la imagen
+        border: 3px solid v.$negro;
+        border-radius: 8px;
+        flex-shrink: 0;
+        position: relative;
+        z-index: 10;
+        
+        // Pequeños detalles del lomo (opcional, para realismo)
+        &::before, &::after {
+            content: '';
+            position: absolute;
+            right: -3px;
+            width: 4px;
+            height: 12px;
+            background-color: v.$negro;
+            border-radius: 2px;
+        }
+        &::before { top: 10px; }
+        &::after { bottom: 10px; }
+    }
+
+    &__title-container {
+        background-color: v.$blanco;
+        padding: 0.8rem 2rem 0.8rem 2rem;
+        border-radius: 0 15px 15px 0;
+        margin-left: -10px; // Superposición
+        display: flex;
+        align-items: center;
+        min-height: 50px;
+    }
+
+    &__title {
+        font-size: 2rem;
+        font-weight: 900; // Extra bold
+        color: v.$negro;
+        margin: 0;
+        text-transform: none;
+        letter-spacing: -0.5px;
+
+        @media (min-width: 1200px) {
+            font-size: 4rem;
+        }
+    }
+
+    &__social {
+        display: flex;
+        gap: 1.5rem;
+        align-items: center;
+    }
+
+    &__social-link {
+        color: v.$negro;
+        font-size: 1.5rem;
+        text-decoration: none;
+        transition: color v.$transition-default, transform v.$transition-default;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.5rem;
+
+        &:hover {
+            color: v.$blanco;
+            transform: translateY(-3px);
+        }
+
+        &:focus {
+            @include m.focus-visible;
+        }
+
+        &:focus:not(:focus-visible) {
+            outline: none;
+        }
+
+        &:focus-visible {
+            @include m.focus-visible;
+        }
+    }
+
+    // Responsive
+    @media (max-width: v.$tablet) {
+        padding: 2rem 1rem;
+
+        &__contenido {
+            flex-direction: column;
+            gap: 0;
+            max-width: 320px;
+            margin: 0 auto;
+            padding: 0;
+            border: 3px solid v.$negro;
+            border-radius: 20px;
+            overflow: hidden;
+            background-color: v.$blanco;
+            box-shadow: 5px 5px 0px rgba(0,0,0,0.2); // Sombra sutil para profundidad
+        }
+
+        &__brand {
+            flex-direction: column;
+            width: 100%;
+            padding: 0;
+            gap: 0;
+        }
+
+        &__icon {
+            width: 100%;
+            height: 80px;
+            border: none;
+            border-bottom: 3px solid v.$negro;
+            border-radius: 0;
+            background-color: #FFC1CC;
+            z-index: 1;
+            
+            // Eliminar detalles del lomo en móvil
+            &::before, &::after {
+                display: none;
+            }
+        }
+
+        &__title-container {
+            width: 100%;
+            border-radius: 0;
+            margin: 0;
+            padding: 2rem 1rem;
+            justify-content: center;
+            background-color: v.$blanco;
+            border-bottom: 3px solid v.$negro;
+            min-height: auto;
+        }
+
+        &__title {
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
+        &__social {
+            width: 100%;
+            padding: 1rem;
+            justify-content: center;
+            gap: 1rem;
+            background-color: v.$blanco;
+        }
+
+        &__social-link {
+            font-size: 1.2rem;
+            
+            &:hover {
+                transform: none; // Desactivar hover en móvil
+                color: v.$negro;
+            }
+        }
+    }
+}

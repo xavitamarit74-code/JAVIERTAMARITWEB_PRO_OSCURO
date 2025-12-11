@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://javiertamaritweb.es/index.html</loc>
+    <image:image>
+      <image:loc>https://javiertamaritweb.es/img/hero.webp</image:loc>
+      <image:caption>Imagen hero principal de JavierTamaritWeb</image:caption>
+      <image:title>Hero JavierTamaritWeb</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://javiertamaritweb.es/img/fotoartistica.avif</image:loc>
+      <image:caption>Foto artística personal de Javier Tamarit</image:caption>
+      <image:title>Foto artística Javier</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://javiertamaritweb.es/img/brain-neon-sin-fondo.png</image:loc>
+      <image:caption>Logo Brain Neon de JavierTamaritWeb</image:caption>
+      <image:title>Logo Brain Neon</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://javiertamaritweb.es/articulo.html?id=1</loc>
+    <image:image>
+      <image:loc>https://javiertamaritweb.es/img/kintsuki.webp</image:loc>
+      <image:caption>Imagen de Kintsugi representando la recuperación y renacimiento</image:caption>
+      <image:title>Kintsugi - Renacido en Oro</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://javiertamaritweb.es/articulo.html?id=2</loc>
+    <image:image>
+      <image:loc>https://javiertamaritweb.es/img/nombres_2.webp</image:loc>
+      <image:caption>Imagen conceptual sobre la memoria y los nombres</image:caption>
+      <image:title>¿Dónde se guardan los nombres?</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://javiertamaritweb.es/articulo.html?id=3</loc>
+    <image:image>
+      <image:loc>https://javiertamaritweb.es/img/mis_gaviotas.webp</image:loc>
+      <image:caption>Gaviotas simbolizando miedos y superación personal</image:caption>
+      <image:title>Mis gaviotas - Reflexiones sobre recuperación</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://javiertamaritweb.es/articulo.html?id=4</loc>
+    <image:image>
+      <image:loc>https://javiertamaritweb.es/img/brain_marca_agua.webp</image:loc>
+      <image:caption>Imagen de próximo artículo en preparación</image:caption>
+      <image:title>Próximamente</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://javiertamaritweb.es/podcasts.html</loc>
+    <image:image>
+      <image:loc>https://javiertamaritweb.es/img/podcasts.webp</image:loc>
+      <image:caption>Imagen de la serie de podcasts Gaviotas y Anclas</image:caption>
+      <image:title>Podcasts - Gaviotas y Anclas</image:title>
+    </image:image>
+  </url>
+</urlset>

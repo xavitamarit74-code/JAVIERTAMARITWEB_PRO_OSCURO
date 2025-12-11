@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Página principal de Podcasts - Gaviotas y Anclas -->
+  <url>
+    <loc>https://javiertamaritweb.es/podcasts.html</loc>
+    <lastmod>2025-12-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Categoría: Gaviotas y Anclas -->
+  <url>
+    <loc>https://javiertamaritweb.es/podcasts.html#gaviotas-anclas</loc>
+    <lastmod>2025-12-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Episodio 1: Reinicio de fábrica tras ictus -->
+  <url>
+    <loc>https://javiertamaritweb.es/podcasts/Javier_Tamarit_Reinicio_de_fábrica_tras_ictus.m4a</loc>
+    <lastmod>2025-11-18</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Episodio 2: Gaviotas (si existe) -->
+  <!-- Agregar futuros episodios aquí -->
+
+</urlset>

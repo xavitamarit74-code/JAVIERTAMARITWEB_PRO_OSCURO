@@ -1,0 +1,296 @@
+{
+  "website": {
+    "name": "JavierTamaritWeb.es",
+    "url": "https://javiertamaritweb.es",
+    "version": "2.0.2",
+    "purpose": "Plataforma de apoyo y recursos para recuperación post-ictus",
+    "language": "es",
+    "last_updated": "2025-12-11"
+  },
+  "author": {
+    "name": "Javier Tamarit",
+    "role": "Superviviente de ictus isquémico",
+    "stroke_date": "2022-12-21",
+    "recovery_status": "En proceso activo (3+ años)",
+    "experience": "Experiencia personal verificada en recuperación neurológica",
+    "expertise": [
+      "Recuperación post-ictus",
+      "Rehabilitación neurológica",
+      "Vida saludable después de ACV",
+      "Motivación y superación personal",
+      "Alimentación adaptada",
+      "Ejercicios de rehabilitación",
+      "Creación de contenido motivacional"
+    ],
+    "credentials": "Testimonio real y experiencia vivida",
+    "social_media": {
+      "facebook": "https://www.facebook.com/javier.tamarit.9",
+      "instagram": "https://instagram.com/javi_t",
+      "youtube": "https://www.youtube.com/@JabsThw",
+      "tiktok": "https://www.tiktok.com/@_javier_t_"
+    }
+  },
+  "content_categories": {
+    "relatos": {
+      "description": "Historia personal completa de recuperación tras ictus isquémico",
+      "url": "/relatos.html",
+      "content_type": "testimonial",
+      "parts_published": 2,
+      "target_audience": ["supervivientes", "familias", "cuidadores"],
+      "key_topics": [
+        "primeros síntomas",
+        "diagnóstico",
+        "hospitalización",
+        "rehabilitación",
+        "recuperación emocional",
+        "adaptación vida diaria",
+        "segundas oportunidades"
+      ]
+    },
+    "podcasts": {
+      "description": "Serie 'Gaviotas y Anclas' - Reflexiones sobre recuperación y superación",
+      "url": "/podcasts.html",
+      "content_type": "audio_content",
+      "series_name": "Gaviotas y Anclas",
+      "format": "Audio narrativo con música y reflexiones personales",
+      "player": "Plyr.js con visualizador de audio animado",
+      "key_topics": [
+        "superación personal",
+        "reflexiones de vida",
+        "proceso de recuperación",
+        "segundas oportunidades",
+        "motivación diaria"
+      ]
+    },
+    "recetas": {
+      "description": "Más de 50 recetas saludables adaptadas para recuperación post-ictus",
+      "url": "/dieta_equilibrada.html",
+      "content_type": "practical_resources",
+      "total_recipes": "50+",
+      "features": [
+        "buscador avanzado con autocompletado inteligente",
+        "filtros jerárquicos acumulativos",
+        "búsqueda por títulos, ingredientes y comentarios",
+        "filtros por momento del día (desayuno, comida, cena, merienda)",
+        "filtros por estación (primavera, verano, otoño, invierno)",
+        "eventos especiales (incluye Navidad, cumpleaños, etc.)",
+        "deselección individual de filtros",
+        "botones independientes de limpiar"
+      ],
+      "categories": [
+        "desayunos saludables",
+        "almuerzos equilibrados", 
+        "cenas ligeras",
+        "meriendas nutritivas",
+        "recetas estacionales",
+        "comidas especiales",
+        "recetas navideñas"
+      ],
+      "data_file": "data/recetas-cocina.json"
+    },
+    "ejercicios": {
+      "description": "Rutinas de rehabilitación física adaptadas",
+      "url": "/consejos.html",
+      "content_type": "rehabilitation_guide",
+      "focus_areas": [
+        "movilidad",
+        "coordinación",
+        "fuerza muscular",
+        "equilibrio",
+        "flexibilidad",
+        "ejercicio cardiovascular adaptado"
+      ],
+      "data_file": "data/workouts.json"
+    },
+    "blog": {
+      "description": "Artículos sobre recuperación, consejos y actualizaciones",
+      "url": "/blog.html",
+      "content_type": "educational_articles",
+      "articles_published": 4,
+      "topics": [
+        "consejos de recuperación",
+        "reflexiones personales",
+        "testimonios de progreso",
+        "recursos para familias",
+        "motivación diaria",
+        "filosofía kintsukuroi (renacido en oro)"
+      ],
+      "featured_articles": [
+        "Renacido en Oro (Kintsukuroi)",
+        "¿Dónde se guardan los nombres?",
+        "Mis gaviotas"
+      ],
+      "data_file": "data/articulos.json"
+    },
+    "redes_sociales": {
+      "description": "Conexión con comunidad de apoyo",
+      "url": "/redes.html",
+      "content_type": "community_building",
+      "purpose": "Crear red de apoyo entre supervivientes y familias",
+      "multimedia": "Videos de YouTube integrados"
+    }
+  },
+  "target_audience": {
+    "primary": [
+      "Supervivientes de ictus",
+      "Familiares de pacientes con ictus",
+      "Cuidadores principales"
+    ],
+    "secondary": [
+      "Profesionales sanitarios",
+      "Fisioterapeutas",
+      "Terapeutas ocupacionales",
+      "Nutricionistas",
+      "Personas interesadas en prevención",
+      "Comunidad de superación personal"
+    ],
+    "demographics": {
+      "age_range": "25-75 años",
+      "geographic": "España y países hispanohablantes",
+      "interests": [
+        "salud y bienestar",
+        "recuperación médica",
+        "vida saludable",
+        "superación personal",
+        "apoyo comunitario",
+        "podcasts motivacionales"
+      ]
+    }
+  },
+  "medical_context": {
+    "condition": "Ictus Isquémico (Accidente Cerebrovascular)",
+    "alternative_names": [
+      "ACV",
+      "Accidente Cerebrovascular",
+      "Derrame cerebral",
+      "Infarto cerebral",
+      "Stroke"
+    ],
+    "recovery_phases": [
+      "fase aguda (hospitalización)",
+      "fase subaguda (rehabilitación intensiva)",
+      "fase crónica (adaptación a largo plazo)",
+      "fase de mantenimiento y mejora continua"
+    ],
+    "disclaimer": "Todo el contenido se basa en experiencia personal y no sustituye el consejo médico profesional. Siempre consulte con su equipo médico."
+  },
+  "key_messages": [
+    "La recuperación es posible con dedicación y apoyo",
+    "Cada persona tiene un proceso único de recuperación",
+    "La alimentación saludable es fundamental en la recuperación",
+    "El ejercicio adaptado acelera la rehabilitación",
+    "El apoyo emocional y comunitario es esencial",
+    "Una segunda oportunidad de vida es posible",
+    "Compartir tu historia ayuda a otros y a ti mismo",
+    "Las gaviotas buscan horizontes, las anclas te dan estabilidad"
+  ],
+  "technical_features": {
+    "build_system": {
+      "tool": "Gulp 4.x",
+      "automation": "Compilación CSS, procesamiento JS, optimización imágenes",
+      "image_processing": "Sharp - Conversión automática WebP/AVIF",
+      "compression": "Hasta -50% en tamaño de imágenes"
+    },
+    "search_functionality": {
+      "type": "advanced_recipe_search",
+      "features": [
+        "autocompletado inteligente",
+        "filtros jerárquicos (Momento del día → Estación → Eventos)",
+        "búsqueda por títulos, ingredientes y comentarios",
+        "filtros acumulativos con deselección individual",
+        "eventos especiales (incluye Navidad)",
+        "botón de limpiar todo y limpiar texto independientes"
+      ],
+      "files": [
+        "js/buscador-recetas-cocina.js",
+        "js/recetas-cocina.js",
+        "data/recetas-cocina.json"
+      ]
+    },
+    "podcast_player": {
+      "library": "Plyr.js",
+      "features": "Visualizador de audio animado (ecualizador CSS)",
+      "files": [
+        "js/podcasts.js",
+        "js/playermm.js",
+        "data/podcasts.json"
+      ]
+    },
+    "design_system": {
+      "methodology": "BEM (Block Element Modifier) + ITCSS",
+      "preprocessor": "SCSS with namespaces (@use)",
+      "colors": {
+        "primary": "#4ECDC4 (Turquesa)",
+        "accent": "#f790b2 (Rosa)",
+        "text": "#333333 (Gris oscuro)"
+      },
+      "custom_features": [
+        "Scrollbars personalizados cross-browser",
+        "Animaciones CSS puras",
+        "Sistema de tipografía utilitaria"
+      ]
+    },
+    "pwa": {
+      "manifest": "site.webmanifest",
+      "icons": [
+        "apple-touch-icon.png (180x180)",
+        "android-chrome-192x192.png",
+        "android-chrome-512x512.png",
+        "mstile-150x150.png (Windows)",
+        "browserconfig.xml"
+      ],
+      "theme_color": "#4ECDC4"
+    },
+    "accessibility": [
+      "diseño responsive (Mobile-First)",
+      "navegación por teclado",
+      "alt text en imágenes",
+      "contraste optimizado (AAA)",
+      "texto escalable",
+      "roles ARIA"
+    ],
+    "performance": [
+      "imágenes WebP/AVIF optimizadas (-30% a -50%)",
+      "lazy loading nativo",
+      "preload estratégico de recursos críticos",
+      "CSS y JavaScript minificados",
+      "HTTP/2 Server Push (Apache)",
+      "Gzip/Brotli compression",
+      "Cache inmutable (1 año para assets estáticos)"
+    ],
+    "seo": [
+      "5 sitemaps especializados (index, images, news, podcasts, pages)",
+      "Schema.org JSON-LD",
+      "Open Graph + Twitter Cards",
+      "Metadatos AI (ai-purpose, ai-audience)",
+      "robots.txt optimizado",
+      ".htaccess con HSTS y CSP"
+    ]
+  },
+  "content_quality_indicators": {
+    "authenticity": "Contenido basado en experiencia real verificada",
+    "expertise": "Conocimiento práctico de recuperación post-ictus",
+    "trustworthiness": "Transparencia sobre limitaciones y recomendaciones médicas",
+    "helpfulness": "Recursos prácticos y aplicables",
+    "freshness": "Actualizaciones regulares basadas en progreso continuo"
+  },
+  "ai_optimization": {
+    "content_structure": "Organizado para fácil comprensión por IA",
+    "semantic_markup": "Schema.org implementado",
+    "clear_context": "Contexto médico y personal claramente definido",
+    "actionable_content": "Consejos específicos y aplicables",
+    "emotional_support": "Contenido empático y motivacional",
+    "multimedia_integration": "Podcasts, videos, imágenes optimizadas"
+  },
+  "statistics": {
+    "stroke_date": "2022-12-21",
+    "recovery_time": "3+ años activo",
+    "content_published": {
+      "relatos": 2,
+      "blog_articles": 4,
+      "recipes": "50+",
+      "podcast_episodes": "3+",
+      "workout_routines": "Múltiples"
+    }
+  }
+}

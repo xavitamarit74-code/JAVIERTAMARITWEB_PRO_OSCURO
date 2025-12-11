@@ -1,0 +1,169 @@
+@use '../../base/variables' as v;
+@use '../../base/mixins' as m;
+
+.header {
+
+    background-color: v.$primario;
+    padding: 4rem 0;
+
+    @media (max-width: v.$telefono) {
+        padding: 2rem 2rem;
+    }
+    @media (max-width: v.$tablet) {
+        padding: 2rem 2rem;
+    }
+
+    &-hero {
+        display: flex;
+        background-color: v.$blanco;
+        border-radius: v.$border-radius;
+        overflow: hidden;
+        max-width: 1200px;
+        width: 100%;
+        margin: 0 auto; // Centrar horizontalmente
+        border: 3px solid v.$negro;
+        box-shadow: 
+            0 2px 4px rgba(0, 0, 0, 0.04),
+            0 4px 8px rgba(0, 0, 0, 0.06),
+            0 8px 16px rgba(0, 0, 0, 0.06),
+            0 16px 32px rgba(0, 0, 0, 0.08);
+
+        @media (min-width: 1200px) {
+            width: 1200px; // Ancho fijo en pantallas grandes
+        }
+
+        // Element: header__image
+        &__image {
+            flex: 1.5;
+            min-height: 350px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+            }
+        }
+
+        // Element: header__content
+        &__content {
+            flex: 0.8;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 40px 50px;
+            position: relative;
+        }
+
+        // Element: header__brand
+        &__brand {
+            margin-bottom: auto;
+            padding-top: 30px;
+        }
+
+        // Element: header__title
+        &__title {
+            font-size: 5.6rem;
+            font-weight: 700;
+            color: v.$negro;
+            letter-spacing: -1px;
+        }
+
+        // Element: header__subtitle
+        &__subtitle {
+            font-size: 5rem;
+            font-weight: 600;
+            color: v.$primario;
+            margin-top: -5px;
+            padding-left: 10.5ch;
+        }
+
+        // Element: header__social
+        &__social {
+            margin-top: auto;
+            padding-bottom: 10px;
+            align-self: flex-end;
+            padding-right: 4ch;
+        }
+
+        // Element: header__social-link
+        &__social-link {
+            color: v.$negro;
+            font-size: 2.5rem;
+            margin-left: 3px;
+            text-decoration: none;
+            transition: color v.$transition-default, transform v.$transition-default;
+            display: inline-block;
+            padding: 6px;
+            border-radius: 4px;
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            &:hover {
+                color: v.$primario;
+                transform: translateY(-3px);
+            }
+
+            &:focus {
+                @include m.focus-visible;
+            }
+
+            &:focus:not(:focus-visible) {
+                outline: none;
+            }
+
+            &:focus-visible {
+                @include m.focus-visible;
+            }
+        }
+
+        // Responsive
+        @media (max-width: v.$tablet) {
+            flex-direction: column;
+
+            &__image {
+                min-height: 300px;
+            }
+
+            &__content {
+                padding: 30px;
+                align-items: center;
+            }
+
+            &__brand {
+                text-align: left;
+                padding-top: 0;
+            }
+
+            &__title {
+                font-size: 2rem;
+            }
+
+            &__subtitle {
+                font-size: 1.8rem;
+                padding-left: 8.5ch;
+            }
+
+            &__social {
+                align-self: center;
+                padding-right: 0;
+                margin-top: 25px;
+            }
+
+            &__social-link {
+                font-size: 1.1rem;
+                margin-left: -10px;
+                min-width: 38px;
+                min-height: 44px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                padding: 2px;
+            }
+        }
+    }
+
+}

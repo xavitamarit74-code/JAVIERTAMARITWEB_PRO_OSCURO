@@ -1,0 +1,28 @@
+{
+  "categorias": [
+    {
+      "id": "gaviotas-anclas",
+      "nombre": "Gaviotas y Anclas",
+      "descripcion": "Historias de superación personal, reflexiones sobre la vida después del ictus y el camino hacia la recuperación. Un espacio donde comparto mis experiencias, miedos y aprendizajes.",
+      "imagen": "gaviotas-anclas-cover.webp",
+      "color": "#f790b2"
+    }
+  ],
+  "episodios": [
+    {
+      "id": 1,
+      "categoriaId": "gaviotas-anclas",
+      "titulo": "Reinicio de fábrica tras ictus",
+      "descripcion": "Mi viaje personal de recuperación y aprendizaje después del ictus.",
+      "archivo": "Javier_Tamarit_Reinicio_de_fábrica_tras_ictus.m4a",
+      "duracion": "12:30",
+      "fecha": "2025-11-18",
+      "temporada": 1,
+      "episodio": 1,
+      "imagen": "podcasts_2.svg",
+      "keywords": ["ictus", "superación", "salud", "rehabilitación", "segunda oportunidad"],
+      "transcripcion": "contents/podcast-ep1-transcripcion.txt"
+    }
+  ]
+}
+

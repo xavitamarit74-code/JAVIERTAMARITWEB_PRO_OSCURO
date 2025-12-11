@@ -1,0 +1,915 @@
+// ui/contenido/_buscador_recetas_cocina.scss
+// Estilos mejorados para el buscador de recetas con autocompletado
+@use '../../base/mixins' as m;
+@use '../../base/variables' as v;
+@use 'sass:color';
+
+.buscador-recetas {
+    margin: 4rem 0;
+    
+    &__contenedor {
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        border-radius: 1.5rem;
+        padding: 3rem 2rem;
+        box-shadow: 0 0.8rem 2.5rem rgba(0, 0, 0, 0.1);
+        border: 0.15rem solid v.$primario;
+        
+        @include m.tablet {
+            padding: 2.5rem 1.5rem;
+        }
+        
+        @include m.mobile {
+            padding: 2rem 1rem;
+            margin: 2rem 0;
+        }
+    }
+    
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2.5rem;
+        
+        @include m.tablet {
+            margin-bottom: 2rem;
+        }
+        
+        @include m.mobile {
+            margin-bottom: 1.5rem;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: center;
+        }
+    }
+    
+    &__titulo {
+        font-size: 2.4rem;
+        font-weight: 600;
+        color: #2c3e50;
+        margin: 0;
+        
+        @include m.tablet {
+            font-size: 2rem;
+        }
+        
+        @include m.mobile {
+            font-size: 1.8rem;
+            text-align: center;
+        }
+    }
+    
+    // Contenedor principal de búsqueda (campo + botón limpiar todo)
+    &__busqueda-container {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        margin-bottom: 2rem;
+    
+        
+        @include m.tablet {
+            margin-bottom: 1.5rem;
+        }
+        
+        @include m.mobile {
+            // En móviles, poner el botón debajo del campo de búsqueda
+            flex-direction: column;
+            gap: 1rem;
+            align-items: stretch; // Hacer que ambos elementos ocupen el ancho completo
+        }
+    }
+    
+    // Campo de búsqueda con autocompletado
+    &__campo {
+        position: relative;
+        flex: 1;
+        border: 0.1rem solid v.$primario;
+        border-radius: 1rem;
+        transition: all 0.3s ease;
+        
+        // En móviles (< 768px) ocupar todo el ancho disponible
+        @include m.mobile {
+            width: 100%;
+            max-width: 100%;
+        }
+        
+        // Efecto focus cuando el input interno tiene focus
+        &:focus-within {
+            border-color: v.$primario;
+            box-shadow: 0 0 0 0.3rem rgba(59, 220, 195, 0.25);
+        }
+    }
+    
+    &__input {
+        width: 100%;
+        padding: 1.2rem 3.5rem 1.2rem 1.5rem; // Espacio solo para botón X interno
+        border: none; // Sin borde, lo maneja el contenedor campo
+        border-radius: 0.8rem;
+        font-size: 1.6rem;
+        font-family: v.$font-family;
+        background: white;
+        transition: all 0.3s ease;
+        
+        // Ocultar la X nativa del navegador en campos de búsqueda
+        &::-webkit-search-cancel-button,
+        &::-webkit-search-decoration {
+            -webkit-appearance: none;
+            appearance: none;
+        }
+        
+        // Para Firefox
+        &::-moz-search-cancel-button {
+            -moz-appearance: none;
+            appearance: none;
+        }
+        
+        // Para Edge/IE
+        &::-ms-clear {
+            display: none;
+        }
+        
+        @include m.mobile {
+            width: 100%;
+        }
+        
+        &:focus {
+            outline: none;
+            // El focus se maneja en el contenedor campo
+        }
+        
+        &::placeholder {
+            color: #6c757d;
+        }
+        
+        @include m.tablet {
+            padding: 1rem 3.2rem 1rem 1.2rem;
+            font-size: 1.5rem;
+        }
+        
+        @include m.mobile {
+            padding: 1rem 2.8rem 1rem 1rem;
+            font-size: 1.4rem;
+        }
+    }
+
+    // Botón X para limpiar texto del input (DENTRO del campo)
+    &__limpiar-texto {
+        position: absolute;
+        right: 1rem; // Dentro del campo de búsqueda
+        top: 50%;
+        transform: translateY(-50%);
+        background: #e9ecef;
+        color: #6c757d;
+        border: none;
+        width: 2.4rem;
+        height: 2.4rem;
+        cursor: pointer;
+        font-size: 1.4rem;
+        line-height: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s ease;
+        border-radius: 50%;
+        z-index: 10;
+
+        &:hover {
+            color: #495057;
+            background: #dee2e6;
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        &:active {
+            transform: translateY(-50%) scale(0.95);
+        }
+
+        @include m.tablet {
+            right: 0.8rem;
+            width: 2.2rem;
+            height: 2.2rem;
+            font-size: 1.3rem;
+        }
+
+        @include m.mobile {
+            right: 0.6rem;
+            width: 2rem;
+            height: 2rem;
+            font-size: 1.2rem;
+        }
+    }
+
+    
+
+    
+    // Botón de Reset/Limpiar - Ajustar ancho solo en móviles
+    &__reset {
+        background: linear-gradient(135deg, #6c757d, #495057);
+        color: white;
+        border: 1px solid #495057;
+        padding: 1.2rem 2rem; // Misma altura que el input (1.2rem)
+        font-size: 1.4rem;
+        font-weight: 600;
+        font-family: v.$font-family;
+        border-radius: 0.8rem; // Mismo border-radius que el input
+        white-space: nowrap;
+        cursor: pointer;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); // Transición suave
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        
+        &:hover {
+            background: v.$primario;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(59, 220, 195, 0.3);
+            border-color: v.$terciario;
+        }
+        
+        &:active {
+            background: v.$primario;
+            color: v.$rosaOscuro;
+            transform: translateY(-1px);
+            box-shadow: 0 3px 6px rgba(255, 196, 214, 0.4);
+            border-color: v.$rosaOscuro;
+        }
+        
+        @include m.mobile {
+            width: 100%; // Ocupar todo el ancho disponible en móviles
+            padding: 1rem 1.5rem;
+            font-size: 1.2rem;
+            min-width: unset; // Quitar el ancho mínimo
+            flex-shrink: unset; // Permitir que se ajuste al contenedor
+        }
+        
+        @include m.tablet {
+            padding: 1.1rem 1.8rem;
+            font-size: 1.3rem;
+        }
+    }
+    
+    // Eliminar el contenedor del reset que ya no se usa
+    &__reset-container {
+        display: none;
+    }
+    
+    // Filtros por categoría
+    &__filtros {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+        margin-bottom: 3rem;
+        
+        @include m.tablet {
+            gap: 0.8rem;
+            margin-bottom: 2.5rem;
+        }
+        
+        @include m.mobile {
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+        }
+    }
+    
+    &__filtro {
+        padding: 1rem 2rem;
+        border: 0.2rem solid #e9ecef;
+        background: white;
+        border-radius: 2.5rem;
+        font-size: 1.4rem;
+        font-weight: 500;
+        color: #6c757d;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-family: v.$font-family;
+        
+        &:hover {
+            border-color: v.$primario;
+            color: v.$primario;
+            transform: translateY(-0.2rem);
+            box-shadow: 0 0.4rem 1rem rgba(59, 220, 195, 0.3);
+        }
+        
+        &--activo {
+            background: linear-gradient(135deg, v.$primario 0%, color.adjust(v.$primario, $lightness: 10%) 100%);
+            border-color: v.$primario;
+            color: white;
+            box-shadow: 0 0.4rem 1.5rem rgba(59, 220, 195, 0.4);
+
+            &:hover,
+            &:active {
+                color: v.$rosaOscuro;
+                font-weight: 700;
+                transform: translateY(-0.2rem) scale(1.05);
+            }
+        }
+        
+        @include m.tablet {
+            padding: 0.8rem 1.5rem;
+            font-size: 1.3rem;
+        }
+        
+        @include m.mobile {
+            padding: 0.6rem 1.2rem;
+            font-size: 1.2rem;
+        }
+    }
+    
+    // Resultados
+    &__resultados {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+        gap: 2rem;
+        
+        @include m.tablet {
+            grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+            gap: 1.5rem;
+        }
+        
+        @include m.mobile {
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+    }
+    
+    &__info,
+    &__no-resultados {
+        grid-column: 1 / -1;
+        text-align: center;
+        font-size: 1.6rem;
+        color: #6c757d;
+        padding: 2rem;
+        
+        @include m.mobile {
+            font-size: 1.4rem;
+            padding: 1.5rem;
+        }
+    }
+    
+    // Items de resultados
+    &__item {
+        background: white;
+        border-radius: 1.2rem;
+        overflow: hidden;
+        box-shadow: 0 0.4rem 1.5rem rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        border: 0.1rem solid rgba(59, 220, 195, 0.1);
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        
+        &:hover {
+            transform: translateY(-0.5rem);
+            box-shadow: 0 0.8rem 2.5rem rgba(59, 220, 195, 0.2);
+        }
+    }
+    
+    &__item-imagen {
+        height: 20rem;
+        overflow: hidden;
+        
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        @include m.tablet {
+            height: 18rem;
+        }
+        
+        @include m.mobile {
+            height: 15rem;
+        }
+    }
+    
+    &__item:hover &__item-imagen img {
+        transform: scale(1.05);
+    }
+    
+    &__item-info {
+        padding: 1.5rem;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    &__item-titulo {
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: #2c3e50;
+        margin-bottom: 0.8rem;
+        line-height: 1.3;
+        min-height: 4.8rem; // Altura mínima fija para 2 líneas de texto
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        line-clamp: 2; // Define también la propiedad estándar "line-clamp" por compatibilidad
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        
+        @include m.tablet {
+            font-size: 1.6rem;
+            min-height: 4.2rem;
+        }
+        
+        @include m.mobile {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            min-height: 3.9rem;
+        }
+    }
+    
+    &__item-categoria {
+        font-size: 1.3rem;
+        color: v.$primario;
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+        
+        @include m.mobile {
+            font-size: 1.2rem;
+        }
+    }
+    
+    &__item-tiempo {
+        font-size: 1.2rem;
+        color: #6c757d;
+        margin-bottom: auto; // Empuja el botón hacia abajo
+        
+        @include m.mobile {
+            font-size: 1.1rem;
+        }
+    }
+    
+        &__item-btn {
+        @include m.boton;
+        width: 100%;
+        padding: 1.2rem 1rem;
+        font-size: 1.4rem;
+        font-weight: 600;
+        font-family: v.$font-family;
+        border-radius: 0.8rem;
+        margin-top: 1.5rem;
+        min-height: 4.8rem; // Altura mínima fija para el botón
+        flex-shrink: 0; // No se encoge
+        
+        @include m.mobile {
+            font-size: 1.3rem;
+            padding: 1rem 0.8rem;
+            margin-top: 1rem;
+            min-height: 4.2rem;
+        }
+        
+        @include m.tablet {
+            min-height: 4.5rem;
+        }
+    }
+}
+
+// Modal para mostrar receta completa
+.modal-receta {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    
+    @include m.mobile {
+        padding: 1rem;
+    }
+    
+    &__contenido {
+        background: white;
+        border-radius: 1.5rem;
+        max-width: 90rem;
+        max-height: 90vh;
+        overflow-y: auto;
+        position: relative;
+        box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.3);
+        
+        @include m.tablet {
+            max-width: 95%;
+        }
+        
+        @include m.mobile {
+            max-width: 100%;
+            max-height: 95vh;
+            border-radius: 1rem;
+        }
+    }
+    
+    &__cerrar {
+        position: sticky;
+        top: 0;
+        right: 0;
+        float: right;
+        background: #dc3545;
+        color: white;
+        border: none;
+        border-radius: 0 1.5rem 0 1rem;
+        width: 4rem;
+        height: 4rem;
+        cursor: pointer;
+        font-size: 1.8rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1001;
+        transition: all 0.3s ease;
+        
+        &:hover {
+            background: #c82333;
+            transform: scale(1.1);
+        }
+        
+        @include m.mobile {
+            width: 3.5rem;
+            height: 3.5rem;
+            font-size: 1.5rem;
+            border-radius: 0 1rem 0 0.8rem;
+        }
+    }
+    
+    &__cuerpo {
+        padding: 0 2rem 2rem;
+        
+        @include m.mobile {
+            padding: 0 1rem 1rem;
+        }
+    }
+}
+
+// Scrollbar personalizada para el modal
+.modal-receta__contenido::-webkit-scrollbar {
+    width: 0.8rem;
+}
+
+.modal-receta__contenido::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 0.4rem;
+}
+
+.modal-receta__contenido::-webkit-scrollbar-thumb {
+    background: v.$primario;
+    border-radius: 0.4rem;
+    
+    &:hover {
+        background: color.adjust(v.$primario, $lightness: -10%);
+    }
+}
+
+// Estilos para autocompletado
+.buscador-sugerencias {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border: 0.2rem solid v.$primario;
+    border-top: none;
+    border-radius: 0 0 0.8rem 0.8rem;
+    max-height: 30rem;
+    overflow-y: auto;
+    z-index: 100;
+    box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.15);
+    display: none;
+    
+    @include m.mobile {
+        position: absolute; // Cambiar de fixed a absolute
+        top: calc(100% - 0.2rem); // Posicionar justo debajo del campo
+        left: 0;
+        right: 0;
+        max-height: 25rem; // Reducir altura máxima en móviles
+    }
+}
+
+.sugerencia-item {
+    padding: 1.2rem 1.5rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.2s ease;
+    border-bottom: 0.1rem solid #f0f0f0;
+    
+    &:last-child {
+        border-bottom: none;
+    }
+    
+    &:hover,
+    &--activa {
+        background-color: rgba(59, 220, 195, 0.1);
+    }
+    
+    mark {
+        background-color: #3bdcc3;
+        color: white;
+        padding: 0.1rem 0.3rem;
+        border-radius: 0.2rem;
+        font-weight: 600;
+    }
+}
+
+.sugerencia-texto {
+    flex: 1;
+    font-size: 1.4rem;
+    color: #333;
+    
+    @include m.mobile {
+        font-size: 1.3rem;
+    }
+}
+
+.sugerencia-tipo {
+    font-size: 1.2rem;
+    color: #6c757d;
+    background-color: #f8f9fa;
+    padding: 0.3rem 0.8rem;
+    border-radius: 1rem;
+    margin-left: 1rem;
+    
+    @include m.mobile {
+        font-size: 1.1rem;
+    }
+}
+
+// Contador de filtros
+.filtros-contador {
+    display: inline-flex;
+    align-items: center;
+    background: v.$primario;
+    color: white;
+    padding: 0.4rem 0.8rem;
+    border-radius: 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    animation: fadeIn 0.3s ease;
+    
+    @include m.mobile {
+        font-size: 1rem;
+        padding: 0.3rem 0.6rem;
+    }
+}
+
+// Filtros avanzados
+.buscador-recetas__filtros-avanzados {
+    margin: 1.5rem 0;
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 1rem;
+    display: flex;
+    gap: 1rem;
+    align-items: flex-end;
+    flex-wrap: wrap;
+
+    @include m.mobile {
+        padding: 1rem;
+        margin: 1rem 0 0 0; // Solo margen superior para separar del botón limpiar
+        background: transparent; // Sin fondo en móviles
+        border-radius: 0;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem; // Espacio entre selectores
+    }
+}
+
+.filtros-seccion {
+    margin: 0;
+    flex: 1 1 20rem; // ancho mínimo por filtro más compacto
+    min-width: 18rem; // Asegurar que no se compriman demasiado
+    
+    @include m.mobile {
+        width: 100%; // Ocupar todo el ancho en móviles (misma longitud que botón limpiar)
+        min-width: 100%;
+        margin-bottom: 0;
+        flex: none; // No usar flex en móviles
+    }
+}
+
+.filtros-titulo {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    
+    @include m.mobile {
+        font-size: 1.4rem;
+        margin-bottom: 0.5rem;
+        font-weight: 600; // Mantener peso para mejor legibilidad
+        gap: 0.5rem;
+    }
+}
+
+.filtros-grupo {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 0.8rem;
+    
+    @include m.mobile {
+        gap: 0; // Sin gap horizontal en móviles
+        flex-direction: column; // Cada selector en su propia línea
+    }
+}
+
+// Selects de filtros
+.filtro-select {
+    width: 100%;
+    padding: 1rem 1.2rem;
+    border: 0.2rem solid #e9ecef;
+    border-radius: 0.8rem;
+    font-size: 1.4rem;
+    font-family: v.$font-family;
+    background: #fff;
+    color: #333;
+    outline: none;
+    transition: all 0.3s ease;
+    
+    // Estilos para las opciones del select
+    option {
+        font-family: v.$font-family !important;
+        font-size: 1.4rem;
+        padding: 0.5rem;
+        background: white;
+        color: #333;
+    }
+    
+    // Forzar la fuente en el elemento select
+    &, & * {
+        font-family: 'Montserrat Alternates', sans-serif !important;
+    }
+    
+    @include m.mobile {
+        padding: 0.6rem 0.8rem; // Padding más compacto
+        font-size: 1.2rem; // Fuente más pequeña
+        border-width: 0.1rem; // Borde más delgado
+        margin-bottom: 0.5rem; // Pequeño margen inferior entre selectores
+        
+        // Opciones en móvil
+        option {
+            font-size: 1.2rem;
+        }
+    }
+
+    &:focus {
+        border-color: v.$primario;
+        box-shadow: 0 0 0 0.3rem rgba(59, 220, 195, 0.2);
+    }
+    
+    // Estado activo (cuando tiene un valor seleccionado)
+    &.activo {
+        background: v.$primario;
+        color: white;
+        border-color: v.$primario;
+        font-weight: 600;
+        
+        &:focus {
+            box-shadow: 0 0 0 0.3rem rgba(59, 220, 195, 0.4);
+        }
+    }
+    
+    // Estado deshabilitado (jerarquía)
+    &:disabled {
+        background: #f8f9fa;
+        color: #6c757d;
+        border-color: #e9ecef;
+        cursor: not-allowed;
+        opacity: 0.7;
+        
+        &.activo {
+            background: #adb5bd;
+            color: white;
+            border-color: #6c757d;
+        }
+    }
+}
+
+.filtro-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    background: white;
+    border: 0.2rem solid #e9ecef;
+    border-radius: 2rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #495057;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: v.$font-family;
+    
+    &:hover {
+        border-color: v.$primario;
+        background-color: rgba(59, 220, 195, 0.05);
+        transform: translateY(-0.2rem);
+        box-shadow: 0 0.4rem 1rem rgba(59, 220, 195, 0.2);
+    }
+    
+    &--activo {
+        background: v.$primario;
+        border-color: v.$primario;
+        color: white;
+        box-shadow: 0 0.4rem 1.5rem rgba(59, 220, 195, 0.3);
+        
+        &:hover {
+            background: color.adjust(v.$primario, $lightness: -5%);
+            border-color: color.adjust(v.$primario, $lightness: -5%);
+            transform: translateY(-0.2rem) scale(1.02);
+        }
+    }
+    
+    @include m.mobile {
+        padding: 0.6rem 1.2rem;
+        font-size: 1.2rem;
+    }
+}
+
+.filtro-icono {
+    font-size: 1.4rem;
+    
+    @include m.mobile {
+        font-size: 1.2rem;
+    }
+}
+
+// Etiquetas en las tarjetas de recetas
+.buscador-recetas__item-etiquetas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 0.8rem 0;
+}
+
+.etiqueta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.3rem 0.8rem;
+    border-radius: 1rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    
+    &--categoria {
+        background-color: rgba(59, 220, 195, 0.15);
+        color: #00897b;
+    }
+    
+    &--estacion {
+        background-color: rgba(255, 193, 7, 0.15);
+        color: #f57c00;
+    }
+    
+    &--evento {
+        background-color: rgba(156, 39, 176, 0.15);
+        color: #7b1fa2;
+    }
+    
+    &__close {
+        margin-left: 0.4rem;
+        font-weight: 700;
+        line-height: 1;
+        opacity: 0.6;
+        transition: opacity 0.2s ease, transform 0.2s ease;
+    }
+    
+
+    
+    @include m.mobile {
+        font-size: 1rem;
+        padding: 0.2rem 0.6rem;
+    }
+}
+
+// Estilos adicionales para móviles - Agrupación visual de filtros
+@include m.mobile {
+    .buscador-recetas__filtros-avanzados {
+        // Hacer que los CustomSelect ocupen todo el ancho y tengan espaciado individual
+        .filtros-seccion {
+            .custom-select {
+                width: 100%;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+// Animaciones
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-0.5rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
