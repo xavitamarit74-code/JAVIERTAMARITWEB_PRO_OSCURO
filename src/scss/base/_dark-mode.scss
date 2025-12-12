@@ -31,11 +31,11 @@
 // BASE - BODY & HTML
 // ============================================
 html[data-theme="dark"] {
-    background-color: v.$negro;
+    background: v.$negro;
 }
 
 [data-theme="dark"] body {
-    background-color: v.$negro;
+    background: v.$negro;
     color: v.$blanco;
 }
 
@@ -43,10 +43,10 @@ html[data-theme="dark"] {
 // HEADER
 // ============================================
 [data-theme="dark"] .header {
-    background-color: v.$negro;
+    background: v.$negro;
     
     &-hero {
-        background-color: v.$gris-900;
+        background: v.$gris-900;
         border-color: v.$primario;
         box-shadow: 
             0 2px 4px rgba(78, 205, 196, 0.1),
@@ -54,7 +54,7 @@ html[data-theme="dark"] {
             0 8px 16px rgba(0, 0, 0, 0.2);
         
         &__content {
-            background-color: v.$gris-900;
+            background: v.$gris-900;
         }
         
         &__title {
@@ -79,7 +79,7 @@ html[data-theme="dark"] {
 // NAVEGACIÓN
 // ============================================
 [data-theme="dark"] .navegacion {
-    background-color: v.$negro;
+    background: v.$negro;
     border-color: v.$primario;
     
     &__link {
@@ -110,7 +110,7 @@ html[data-theme="dark"] {
     }
     
     &__header {
-        background-color: transparent;
+        background: transparent;
     }
     
     &__title {
@@ -219,7 +219,7 @@ html[data-theme="dark"] {
         
         // Activar hover del botón cuando se hace hover en el card
         .relato__enlace {
-            background-color: v.$negro;
+            background: v.$negro;
             color: v.$primario;
             border-color: v.$primario;
         }
@@ -240,17 +240,17 @@ html[data-theme="dark"] {
     
     &__fecha {
         color: v.$primario;
-        background-color: rgba(78, 205, 196, 0.15);
+        background: rgba(78, 205, 196, 0.15);
         border-color: rgba(78, 205, 196, 0.3);
     }
     
     &__enlace {
-        background-color: v.$gris-800;
+        background: v.$gris-800;
         color: v.$blanco;
         border-color: v.$rosaOscuro;
         
         &:hover {
-            background-color: v.$negro;
+            background: v.$negro;
             color: v.$primario;
             border-color: v.$primario;
         }
@@ -267,7 +267,7 @@ html[data-theme="dark"] {
 }
 
 [data-theme="dark"] .blog {
-    background-color: v.$gris-900;
+    background: v.$gris-900;
     border-color: v.$rosaOscuro;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
     transition: all 0.3s ease;
@@ -280,7 +280,7 @@ html[data-theme="dark"] {
         
         // Activar hover del botón cuando se hace hover en el card
         .blog__enlace {
-            background-color: v.$negro;
+            background: v.$negro;
             color: v.$primario;
             border-color: v.$primario;
         }
@@ -307,12 +307,12 @@ html[data-theme="dark"] {
     }
     
     &__enlace {
-        background-color: v.$gris-800;
+        background: v.$gris-800;
         color: v.$blanco;
         border-color: v.$rosaOscuro;
         
         &:hover {
-            background-color: v.$negro;
+            background: v.$negro;
             color: v.$primario;
             border-color: v.$primario;
         }
@@ -350,12 +350,12 @@ html[data-theme="dark"] {
 }
 
 [data-theme="dark"] .consejo__enlace {
-    background-color: v.$gris-800;
+    background: v.$gris-800;
     color: v.$blanco;
     border-color: v.$rosaOscuro;
     
     &:hover {
-        background-color: v.$negro;
+        background: v.$negro;
         color: v.$primario;
         border-color: v.$primario;
     }
@@ -385,27 +385,44 @@ html[data-theme="dark"] {
     }
     
     &__button {
-        background-color: v.$gris-800;
+        background: v.$gris-800;
         color: v.$blanco;
         border-color: v.$rosaOscuro;
         
         &:hover {
-            background-color: v.$negro;
+            background: v.$negro;
             color: v.$primario;
             border-color: v.$primario;
         }
     }
     
     &__category-gaviotas {
-        background-color: v.$gris-900 !important;
+        background: v.$gris-900 !important;
         border-color: v.$primario !important;
         box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.4) !important;
     }
 }
 
+// Hero de podcast en modo oscuro
+[data-theme="dark"] .podcast-hero {
+    background: linear-gradient(135deg, v.$gris-900 0%, v.$negro 50%, v.$gris-800 100%);
+    border-color: v.$primario;
+    box-shadow: 
+        0 6px 25px rgba(0, 0, 0, 0.5),
+        0 0 30px rgba(78, 205, 196, 0.1);
+    
+    &__title {
+        color: v.$blanco;
+        text-shadow: 0 0 10px rgba(78, 205, 196, 0.3);
+    }
+    
+    &__description {
+        color: v.$blanco;
+    }
+}
 
 [data-theme="dark"] .podcast-category {
-    background-color: v.$gris-900;
+    background: v.$gris-900;
     border-color: v.$primario;
     
     &__title {
@@ -418,7 +435,7 @@ html[data-theme="dark"] {
 }
 
 [data-theme="dark"] .podcast-episode {
-    background-color: v.$gris-900;
+    background: v.$gris-900;
     border-color: v.$rosaOscuro;
     
     &:hover {
@@ -426,7 +443,7 @@ html[data-theme="dark"] {
     }
     
     &__content {
-        background-color: v.$gris-900;
+        background: v.$gris-900;
     }
     
     &__title {
@@ -464,7 +481,7 @@ html[data-theme="dark"] {
 
 // Controles del reproductor Plyr en modo oscuro
 [data-theme="dark"] .plyr--audio .plyr__controls {
-    background-color: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.3);
 }
 
 [data-theme="dark"] .plyr__control {
@@ -483,7 +500,7 @@ html[data-theme="dark"] {
 
 // Podcast Preview Card (index.html)
 [data-theme="dark"] .podcast-preview-card {
-    background-color: v.$gris-900;
+    background: v.$gris-900;
     border-color: v.$rosaOscuro;
     
     &:hover {
@@ -505,12 +522,12 @@ html[data-theme="dark"] {
     }
     
     &__cta {
-        background-color: v.$gris-800;
+        background: v.$gris-800;
         color: v.$blanco;
         border-color: v.$rosaOscuro;
         
         &:hover {
-            background-color: v.$negro;
+            background: v.$negro;
             color: v.$primario;
             border-color: v.$primario;
         }
@@ -536,7 +553,7 @@ html[data-theme="dark"] {
 // FOOTER
 // ============================================
 [data-theme="dark"] .footer {
-    background-color: v.$negro;
+    background: v.$negro;
     border-top-color: v.$primario;
     
     &__link {
@@ -557,7 +574,7 @@ html[data-theme="dark"] {
     }
     
     &__copyright {
-        background-color: v.$primario;
+        background: v.$primario;
         color: v.$negro;
     }
 }
@@ -566,7 +583,7 @@ html[data-theme="dark"] {
 // LIGHTBOX
 // ============================================
 [data-theme="dark"] .lightbox {
-    background-color: rgba(0, 0, 0, 0.95);
+    background: rgba(0, 0, 0, 0.95);
     
     &__zoom-controls {
         background: rgba(30, 30, 30, 0.9);
@@ -594,12 +611,12 @@ html[data-theme="dark"] {
     }
     
     &::-webkit-scrollbar-thumb {
-        background-color: v.$primario !important;
+        background: v.$primario !important;
         border-color: v.$negro !important;
     }
     
     &::-webkit-scrollbar-thumb:hover {
-        background-color: v.$primario-claro !important;
+        background: v.$primario-claro !important;
     }
 }
 
@@ -607,10 +624,10 @@ html[data-theme="dark"] {
 // HEADER INNER (páginas internas)
 // ============================================
 [data-theme="dark"] .header-inner {
-    background-color: v.$negro;
+    background: v.$negro;
     
     &__content {
-        background-color: v.$gris-900;
+        background: v.$gris-900;
         border-color: v.$primario;
     }
     
@@ -629,7 +646,7 @@ html[data-theme="dark"] {
 [data-theme="dark"] input,
 [data-theme="dark"] textarea,
 [data-theme="dark"] select {
-    background-color: v.$gris-800;
+    background: v.$gris-800;
     color: v.$blanco;
     border-color: v.$rosaOscuro;
     
@@ -648,23 +665,305 @@ html[data-theme="dark"] {
 // ============================================
 [data-theme="dark"] .custom-select {
     &__trigger {
-        background-color: v.$gris-800;
-        color: v.$blanco;
-        border-color: v.$rosaOscuro;
+        background: v.$gris-800 !important;
+        color: v.$blanco !important;
+        border-color: v.$rosaOscuro !important;
     }
     
-    &__options {
-        background-color: v.$gris-800;
-        border-color: v.$rosaOscuro;
+    &__list {
+        background: v.$gris-800 !important;
+        border-color: v.$rosaOscuro !important;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5) !important;
     }
     
     &__option {
-        color: v.$blanco;
+        color: v.$blanco !important;
+        background: v.$gris-800 !important;
         
         &:hover,
         &--selected {
-            background-color: v.$gris-700;
+            background: v.$gris-700 !important;
+            color: v.$primario !important;
+        }
+    }
+    
+    &__selected {
+        color: v.$blanco !important;
+    }
+    
+    &__arrow {
+        color: v.$blanco !important;
+    }
+}
+
+// ============================================
+// MENUS Y RECETAS
+// ============================================
+[data-theme="dark"] .menus {
+    background: v.$negro;
+}
+
+[data-theme="dark"] .menu {
+    background: v.$negro;
+    
+    &__contenido {
+        background: v.$gris-900;
+        border-color: v.$primario;
+    }
+    
+    &__title {
+        color: v.$blanco;
+    }
+    
+    &__receta,
+    &__receta-primera-parte,
+    &__receta-segunda-parte,
+    &__receta-footer {
+        color: v.$blanco;
+        
+        li {
+            color: v.$blanco;
+        }
+        
+        strong {
             color: v.$primario;
+        }
+    }
+    
+    &__receta-ingredientes,
+    &__receta-preparacion,
+    &__receta-alergenos {
+        ul, ol {
+            li {
+                color: v.$blanco;
+            }
+        }
+    }
+    
+    &__receta-comentario {
+        color: v.$primario;
+        font-style: italic;
+    }
+    
+    &__imagen {
+        border-color: v.$primario;
+    }
+}
+
+// ============================================
+// DIETAS Y BUSCADOR DE RECETAS
+// ============================================
+[data-theme="dark"] .dietas {
+    background: v.$negro;
+    
+    &__consejos {
+        color: v.$blanco;
+        background: v.$negro;
+        border: 2px solid v.$primario;
+        
+        p {
+            color: v.$blanco;
+        }
+        
+        h3 {
+            color: v.$primario;
+            text-shadow: 0 0 10px rgba(78, 205, 196, 0.3);
+        }
+    }
+}
+
+// Buscador de recetas
+[data-theme="dark"] .buscador-recetas {
+    &__contenedor {
+        background: v.$gris-900;
+        border-color: v.$primario;
+        box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.4);
+    }
+    
+    &__header {
+        border-bottom-color: rgba(78, 205, 196, 0.2) !important;
+    }
+    
+    &__titulo {
+        color: v.$blanco !important;
+    }
+    
+    &__input {
+        background: v.$gris-800 !important;
+        color: v.$blanco !important;
+        border-color: v.$rosaOscuro !important;
+        
+        &:focus {
+            border-color: v.$primario !important;
+            box-shadow: 0 0 0 3px rgba(78, 205, 196, 0.1) !important;
+        }
+        
+        &::placeholder {
+            color: v.$gris-400 !important;
+        }
+    }
+    
+    &__limpiar-texto,
+    &__reset {
+        background: v.$gris-800 !important;
+        color: v.$blanco !important;
+        border-color: v.$rosaOscuro !important;
+        
+        &:hover {
+            background: v.$negro !important;
+            color: v.$primario !important;
+            border-color: v.$primario !important;
+        }
+    }
+    
+    &__resultados {
+        background: v.$gris-900 !important;
+    }
+    
+    &__item {
+        background: v.$gris-800 !important;
+        border-color: v.$primario !important;
+        
+        &:hover {
+            background: v.$gris-900 !important;
+            box-shadow: 0 6px 20px rgba(78, 205, 196, 0.2) !important;
+        }
+    }
+    
+    &__item-nombre {
+        color: v.$blanco !important;
+    }
+
+    &__item-titulo {
+        color: v.$blanco;
+        &:hover {
+    
+            color: v.$primario !important;
+        }
+    }
+    
+    &__item-btn {
+        background: v.$gris-800 !important;
+        color: v.$blanco !important;
+        border-color: v.$rosaOscuro !important;
+        
+        &:hover {
+            background: v.$negro !important;
+            color: v.$primario !important;
+            border-color: v.$primario !important;
+        }
+    }
+    &__filtros-avanzados {
+        background: v.$negro;
+        border: 2px solid v.$rosaOscuro;
+    }
+}
+
+// Tarjetas de recetas dinámicas
+[data-theme="dark"] .receta-card {
+    background: v.$gris-900 !important;
+    border-color: v.$primario !important;
+    
+    &__title,
+    &__nombre {
+        color: v.$blanco !important;
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5) !important;
+    }
+    
+    &__tiempo,
+    &__duracion,
+    &__minutos {
+        color: v.$primario !important;
+    }
+    
+    &__btn,
+    &__button {
+        background: v.$gris-800 !important;
+        color: v.$blanco !important;
+        border-color: v.$rosaOscuro !important;
+        
+        &:hover {
+            background: v.$negro !important;
+            color: v.$primario !important;
+            border-color: v.$primario !important;
+        }
+    }
+    
+    &__etiquetas {
+        span {
+            background: v.$gris-700 !important;
+            color: v.$primario !important;
+        }
+    }
+}
+
+// Filtros avanzados
+[data-theme="dark"] .filtros-seccion {
+    .filtros-titulo {
+        color: v.$primario;
+    }
+}
+
+[data-theme="dark"] .filtros-contador {
+    background: v.$primario;
+    color: v.$negro;
+}
+
+// Sugerencias de búsqueda
+[data-theme="dark"] .buscador-sugerencias {
+    background: v.$gris-800;
+    border-color: v.$primario;
+}
+
+[data-theme="dark"] .sugerencia-item {
+    color: v.$blanco;
+    
+    &:hover {
+        background: v.$gris-700;
+        color: v.$primario;
+    }
+    
+    mark {
+        background: v.$primario;
+        color: v.$negro;
+    }
+}
+
+[data-theme="dark"] .sugerencia-tipo {
+    background: v.$gris-700 !important;
+    color: v.$primario !important;
+    border: 1px solid v.$primario !important;
+}
+
+[data-theme="dark"] .sugerencia-texto {
+    color: v.$blanco !important;
+}
+
+// Modal de receta
+[data-theme="dark"] .modal-receta {
+    &__contenido {
+        background-color: v.$negro !important;
+        border-color: v.$primario !important;
+    }
+    
+    &__cerrar {
+        background: v.$primario !important;
+        color: v.$negro;
+        
+        &:hover {
+            background: v.$primario-claro;
+        }
+    }
+    
+    &__cuerpo {
+        color: v.$blanco;
+        
+        h2, h3, h4 {
+            color: v.$primario;
+        }
+        
+        p, li {
+            color: v.$blanco;
         }
     }
 }
