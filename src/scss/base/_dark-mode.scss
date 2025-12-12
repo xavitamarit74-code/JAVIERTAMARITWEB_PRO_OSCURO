@@ -395,6 +395,12 @@ html[data-theme="dark"] {
             border-color: v.$primario;
         }
     }
+    
+    &__category-gaviotas {
+        background-color: v.$gris-900 !important;
+        border-color: v.$primario !important;
+        box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.4) !important;
+    }
 }
 
 
@@ -419,6 +425,10 @@ html[data-theme="dark"] {
         border-color: v.$primario;
     }
     
+    &__content {
+        background-color: v.$gris-900;
+    }
+    
     &__title {
         color: v.$blanco;
     }
@@ -427,16 +437,49 @@ html[data-theme="dark"] {
         color: v.$blanco;
     }
     
+    &__meta {
+        color: v.$primario;
+        border-top-color: rgba(78, 205, 196, 0.2);
+    }
+    
     &__date,
     &__duration {
-        color: v.$blanco;
+        color: v.$primario;
+        
+        .material-icons {
+            color: v.$primario;
+        }
     }
 }
 
+// Reproductor de audio y ecualizador en modo oscuro
 [data-theme="dark"] .podcast-player-container {
     background: linear-gradient(to bottom, rgba(78, 205, 196, 0.1), rgba(247, 144, 178, 0.1));
     border-color: rgba(247, 144, 178, 0.3);
 }
+
+[data-theme="dark"] .podcast-equalizer__bar {
+    background: linear-gradient(to top, v.$primario, v.$rosaOscuro);
+}
+
+// Controles del reproductor Plyr en modo oscuro
+[data-theme="dark"] .plyr--audio .plyr__controls {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .plyr__control {
+    color: v.$primario;
+    
+    &:hover {
+        background: v.$primario !important;
+        color: v.$blanco !important;
+    }
+}
+
+[data-theme="dark"] .plyr__time {
+    color: v.$blanco;
+}
+
 
 // Podcast Preview Card (index.html)
 [data-theme="dark"] .podcast-preview-card {
@@ -623,6 +666,39 @@ html[data-theme="dark"] {
             background-color: v.$gris-700;
             color: v.$primario;
         }
+    }
+}
+
+// ============================================
+// BOTONES GLOBALES
+// ============================================
+[data-theme="dark"] .botonRetroceso a {
+    background: v.$negro !important;
+    border: 2px solid v.$primario !important;
+    color: v.$primario !important;
+    box-shadow: 0 4px 15px rgba(78, 205, 196, 0.3) !important;
+    
+    &:hover {
+        background: v.$gris-900 !important;
+        box-shadow: 0 0 25px rgba(78, 205, 196, 0.6) !important;
+        
+        p {
+            color: v.$primario !important;
+        }
+    }
+    
+    // Ajustar el icono/imagen si es necesario
+    img {
+        filter: brightness(1.2) drop-shadow(0 0 3px rgba(78, 205, 196, 0.6)) !important;
+    }
+    
+    p {
+        color: v.$primario !important;
+    }
+    
+    // Eliminar el gradiente del ::after
+    &::after {
+        opacity: 0 !important;
     }
 }
 
