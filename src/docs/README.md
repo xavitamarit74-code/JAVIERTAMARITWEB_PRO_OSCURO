@@ -6,7 +6,7 @@
 ## JavierTamaritWeb
 
 [![Docs](https://img.shields.io/badge/Docs-Completo-success?style=for-the-badge&logo=read-the-docs&logoColor=white)](README.md)
-[![Versión](https://img.shields.io/badge/VERSIÓN-3.0.2-007ec6?style=for-the-badge&logo=semver&logoColor=white)](../../../)
+[![Versión](https://img.shields.io/badge/VERSIÓN-3.0.3-007ec6?style=for-the-badge&logo=semver&logoColor=white)](../../../)
 [![Dark Mode](https://img.shields.io/badge/Dark%20Mode-✓-4ECDC4?style=for-the-badge&logo=dark-reader&logoColor=white)](dark-mode.md)
 [![Seguridad](https://img.shields.io/badge/Seguridad-A+-green?style=for-the-badge&logo=security&logoColor=white)](formularios-seguridad.md)
 
@@ -186,7 +186,7 @@ class MiFormularioSeguro {
 
 <div align="center">
 
-### Versión Actual: 3.0.2
+### Versión Actual: 3.0.3
 
 | Métrica | Valor |
 |:--------|:------|

@@ -649,4 +649,4 @@ Ver archivo [`_variables.scss`](file:///Users/imac_mini_javi/Documents/WEB/MI_SI
 ---
 
 **Última actualización:** 2025-12-12  
-**Versión del proyecto:** 3.0.2
+**Versión del proyecto:** 3.0.3
