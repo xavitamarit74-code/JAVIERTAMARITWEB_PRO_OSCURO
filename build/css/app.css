@@ -1233,8 +1233,18 @@ html[data-theme=dark] {
 [data-theme=dark] .header-inner__title {
   color: #ffffff;
 }
+[data-theme=dark] .header-inner__title-container {
+  background: #2d2d2d;
+  border: 2px solid #4ECDC4;
+}
 [data-theme=dark] .header-inner__subtitle {
   color: #4ECDC4;
+}
+[data-theme=dark] .header-inner__social-link {
+  color: #ffffff;
+}
+[data-theme=dark] .header-inner__social-link:hover {
+  color: #f790b2;
 }
 
 [data-theme=dark] input,

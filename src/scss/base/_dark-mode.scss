@@ -635,8 +635,21 @@ html[data-theme="dark"] {
         color: v.$blanco;
     }
     
+    &__title-container {
+        background: v.$gris-800;
+        border: 2px solid v.$primario;
+    }
+    
     &__subtitle {
         color: v.$primario;
+    }
+    
+    &__social-link {
+        color: v.$blanco;
+        
+        &:hover {
+            color: v.$rosaOscuro;
+        }
     }
 }
 
