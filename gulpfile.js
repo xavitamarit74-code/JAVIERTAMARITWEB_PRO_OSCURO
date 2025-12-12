@@ -5,6 +5,7 @@ const { src, dest, watch, series } = require("gulp");
 const sass = require("gulp-sass")(require("sass"));
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
+const cssnano = require("cssnano");
 const sharp = require('sharp');
 const { glob } = require('glob');
 const path = require('path');
@@ -14,11 +15,21 @@ const fs = require('fs').promises;
 // TASKS
 // ===================================
 
-// CSS Task - Compile SCSS to CSS
+// CSS Task - Compile SCSS to CSS and minify
 function css(done) {
   src("src/scss/app.scss")
     .pipe(sass().on("error", sass.logError))
-    .pipe(postcss([autoprefixer()]))
+    .pipe(postcss([
+      autoprefixer(),
+      cssnano({
+        preset: ['default', {
+          discardComments: { removeAll: true },
+          normalizeWhitespace: true,
+          minifyFontValues: true,
+          minifyGradients: true
+        }]
+      })
+    ]))
     .pipe(dest("build/css"));
 
   done();
