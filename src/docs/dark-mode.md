@@ -1,4 +1,4 @@
-# 🌙 Modo Oscuro - Documentación Completa v3.0.3
+# 🌙 Modo Oscuro - Documentación Completa v3.0.7
 
 ## 📋 Tabla de Contenidos
 
@@ -14,7 +14,7 @@
 
 ## 🌟 Resumen Ejecutivo
 
-El modo oscuro de **JavierTamaritWeb v3.0.3** es una implementación completa y profesional que abarca **toda la aplicación** con **1130+ líneas de CSS** optimizado. Sistema activado mediante toggle dinámico con persistencia en localStorage.
+El modo oscuro de **JavierTamaritWeb v3.0.7** es una implementación completa y profesional que abarca **toda la aplicación** con **1130+ líneas de CSS** optimizado. Sistema activado mediante toggle dinámico con persistencia en localStorage.
 
 ### Estadísticas del Sistema
 
@@ -287,7 +287,7 @@ background: linear-gradient(135deg,
   - `__subtitle` - Turquesa
   - `__social-link` - Blancos con hover rosa
 
-**Novedad v3.0.3:** Title container con fondo y borde
+**Novedad v3.0.7:** Title container con fondo y borde
 
 ---
 

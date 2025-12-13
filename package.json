@@ -1,16 +1,21 @@
 {
-  "name": "prueba",
-  "version": "1.0.0",
-  "main": "index.js",
+  "name": "javiertamaritweb-pro-oscuro",
+  "version": "3.0.7",
+  "description": "Sitio web personal de Javier Tamarit con enfoque en recuperación ictus, recetas y podcasts.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "gulp",
     "build": "gulp css && gulp js && gulp fonts && gulp images && gulp favicon"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "keywords": [
+    "scss",
+    "gulp",
+    "javascript",
+    "web-accessibility",
+    "dark-mode"
+  ],
+  "author": "Javier Tamarit",
+  "license": "MIT",
   "devDependencies": {
     "autoprefixer": "^10.4.22",
     "cssnano": "^7.1.2",

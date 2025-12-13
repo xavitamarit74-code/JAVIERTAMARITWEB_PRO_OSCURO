@@ -6,9 +6,9 @@
 ### Historia de Recuperación y Segunda Vida
 
 [![Estado](https://img.shields.io/badge/Estado-Producción%20Ready-2ea44f?style=for-the-badge&logo=github)](https://github.com/javitamarit/web)
-[![Versión](https://img.shields.io/badge/VERSIÓN-2.0.2-007ec6?style=for-the-badge&logo=semver&logoColor=white)](https://github.com/javitamarit/web/releases)
+[![Versión](https://img.shields.io/badge/VERSIÓN-3.0.7-007ec6?style=for-the-badge&logo=semver&logoColor=white)](https://github.com/javitamarit/web/releases)
 [![Build](https://img.shields.io/badge/Build-Passing-Success?style=for-the-badge&logo=github-actions)](https://github.com/javitamarit/web/actions)
-[![License](https://img.shields.io/badge/Licencia-Proprietario-lightgrey?style=for-the-badge)](https://github.com/javitamarit/web/blob/main/LICENSE)
+[![License](https://img.shields.io/badge/Licencia-MIT-green?style=for-the-badge)](https://github.com/javitamarit/web/blob/main/LICENSE)
 
 **[Ver Demo en Vivo](https://javiertamaritweb.es)** • **[Leer Documentación](#-documentación-técnica)** • **[Reportar Bug](https://github.com/javitamarit/web/issues)**
 
@@ -168,7 +168,7 @@ El archivo `gulpfile.js` define las siguientes tareas automatizadas:
 
 ## 🔮 Roadmap Futuro
 
-*   [ ] **Modo Oscuro v2:** Implementación con preferencias de sistema (`prefers-color-scheme`).
+*   [x] **Modo Oscuro v2:** Implementación con preferencias de sistema (`prefers-color-scheme`) y toggle manual.
 *   [ ] **PWA (Progressive Web App):** Service Workers para funcionamiento offline completo.
 *   [ ] **Testing E2E:** Integración de Cypress para pruebas de flujo crítico.
 *   [ ] **Búsqueda Full-Text:** Implementación de Fuse.js para búsquedas instantáneas en el blog.
