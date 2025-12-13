@@ -14,7 +14,7 @@
 
 ## 🌟 Resumen Ejecutivo
 
-El modo oscuro de **JavierTamaritWeb v3.0.7** es una implementación completa y profesional que abarca **toda la aplicación** con **1130+ líneas de CSS** optimizado. Sistema activado mediante toggle dinámico con persistencia en localStorage.
+El modo oscuro de **JavierTamaritWeb v3.1.0** es una implementación completa y profesional que abarca **toda la aplicación** con **1130+ líneas de CSS** optimizado. Sistema activado mediante toggle dinámico con persistencia en localStorage.
 
 ### Estadísticas del Sistema
 

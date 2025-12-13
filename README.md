@@ -169,6 +169,7 @@ El archivo `gulpfile.js` define las siguientes tareas automatizadas:
 ## 🔮 Roadmap Futuro
 
 *   [x] **Modo Oscuro v2:** Implementación con preferencias de sistema (`prefers-color-scheme`) y toggle manual.
+*   [x] **Animación Podcast:** Video dinámico en reproducción de episodios (v3.1.0).
 *   [ ] **PWA (Progressive Web App):** Service Workers para funcionamiento offline completo.
 *   [ ] **Testing E2E:** Integración de Cypress para pruebas de flujo crítico.
 *   [ ] **Búsqueda Full-Text:** Implementación de Fuse.js para búsquedas instantáneas en el blog.

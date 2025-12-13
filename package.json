@@ -1,6 +1,6 @@
 {
   "name": "javiertamaritweb-pro-oscuro",
-  "version": "3.0.7",
+  "version": "3.1.0",
   "description": "Sitio web personal de Javier Tamarit con enfoque en recuperación ictus, recetas y podcasts.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
