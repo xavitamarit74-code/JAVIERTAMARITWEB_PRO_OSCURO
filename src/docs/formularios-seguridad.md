@@ -1,3 +1,11 @@
+
+
+<div align="center">
+
+<img src="../img/brain-neon-sin-fondo.png" alt="Logo Brain Neon" width="120">
+
+</div>
+
 # Formularios y Seguridad - Documentación Completa
 
 ## Tabla de Contenidos
@@ -727,6 +735,6 @@ Antes de añadir un nuevo formulario, verifica:
 
 ---
 
-**Última actualización:** 2025-12-12  
-**Versión del proyecto:** 3.0.3  
+**Última actualización:** 2025-12-13  
+**Versión del proyecto:** 3.1.0  
 **Nivel de seguridad:** A+ (Enterprise-grade)

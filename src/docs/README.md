@@ -6,7 +6,7 @@
 ## JavierTamaritWeb
 
 [![Docs](https://img.shields.io/badge/Docs-Completo-success?style=for-the-badge&logo=read-the-docs&logoColor=white)](README.md)
-[![Versión](https://img.shields.io/badge/VERSIÓN-3.0.3-007ec6?style=for-the-badge&logo=semver&logoColor=white)](../../../)
+[![Versión](https://img.shields.io/badge/VERSIÓN-3.1.0-007ec6?style=for-the-badge&logo=semver&logoColor=white)](../../../)
 [![Dark Mode](https://img.shields.io/badge/Dark%20Mode-✓-4ECDC4?style=for-the-badge&logo=dark-reader&logoColor=white)](dark-mode.md)
 [![Seguridad](https://img.shields.io/badge/Seguridad-A+-green?style=for-the-badge&logo=security&logoColor=white)](formularios-seguridad.md)
 
@@ -28,6 +28,7 @@
 | **[🔒 Seguridad](formularios-seguridad.md)** | Protección de formularios (7 capas) | Avanzado | ✅ Completo |
 | **[🏗️ Arquitectura](arquitectura.md)** | Estructura del proyecto (33 SCSS, 12 JS) | Básico-Intermedio | ✅ Completo |
 | **[🍳 Sistema de Recetas](recetas-sistema.md)** | Buscador inteligente con filtros avanzados | Intermedio-Avanzado | ✅ Completo |
+| **[🎙️ Sistema de Podcasts](podcast-sistema.md)** | Reproductor Plyr.js con video dinámico | Intermedio | ✅ Completo |
 
 </div>
 
@@ -186,7 +187,7 @@ class MiFormularioSeguro {
 
 <div align="center">
 
-### Versión Actual: 3.0.3
+### Versión Actual: 3.1.0
 
 | Métrica | Valor |
 |:--------|:------|
@@ -271,8 +272,8 @@ Si mejoras la documentación:
 **© 2025 Javier Tamarit**  
 *Documentación Técnica Completa*
 
-**Última actualización:** 2025-12-12  
-**Versión de documentación:** 1.0.0
+**Última actualización:** 2025-12-13  
+**Versión de documentación:** 1.0.1
 
 [🎨 Dark Mode](dark-mode.md)  •  [🔒 Seguridad](formularios-seguridad.md)  •  [🏗️ Arquitectura](arquitectura.md)
 

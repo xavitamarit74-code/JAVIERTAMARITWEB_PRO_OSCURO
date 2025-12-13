@@ -814,9 +814,9 @@ document.addEventListener('receta:vista', (e) => {
 **© 2025 Javier Tamarit**  
 *Sistema de Recetas Inteligente*
 
-**Última actualización:** 2025-12-12  
+**Última actualización:** 2025-12-13  
 **Total de recetas:** 52 saludables  
-**Motor de búsqueda:** v3.0 - Tiempo real
+**Motor de búsqueda:** v3.1 - Tiempo real
 
 [📚 Volver](README.md) • [🔒 Seguridad](formularios-seguridad.md) • [🏗️ Arquitectura](arquitectura.md)
 

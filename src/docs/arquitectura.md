@@ -1,3 +1,11 @@
+
+
+<div align="center">
+
+<img src="../img/brain-neon-sin-fondo.png" alt="Logo Brain Neon" width="120">
+
+</div>
+
 # Arquitectura del Proyecto JavierTamaritWeb
 
 ## Tabla de Contenidos

@@ -1,4 +1,12 @@
-# 🌙 Modo Oscuro - Documentación Completa v3.0.7
+
+
+<div align="center">
+
+<img src="../img/brain-neon-sin-fondo.png" alt="Logo Brain Neon" width="120">
+
+</div>
+
+# 🌙 Modo Oscuro - Documentación Completa v3.1.0
 
 ## 📋 Tabla de Contenidos
 
@@ -819,10 +827,10 @@ pie title Distribución de 1130 Líneas
 <div align="center">
 
 **© 2025 Javier Tamarit**  
-*Modo Oscuro Profesional v3.0.3*
+*Modo Oscuro Profesional v3.1.0*
 
 **Última actualización:** 2025-12-12  
-**Versión del proyecto:** 3.0.3  
+**Versión del proyecto:** 3.1.0  
 **Total de líneas:** 1,130 SCSS  
 **Componentes:** 35 principales + 130 sub-elementos
 

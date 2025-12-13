@@ -6,7 +6,7 @@
 ### Historia de Recuperación y Segunda Vida
 
 [![Estado](https://img.shields.io/badge/Estado-Producción%20Ready-2ea44f?style=for-the-badge&logo=github)](https://github.com/javitamarit/web)
-[![Versión](https://img.shields.io/badge/VERSIÓN-3.0.7-007ec6?style=for-the-badge&logo=semver&logoColor=white)](https://github.com/javitamarit/web/releases)
+[![Versión](https://img.shields.io/badge/VERSIÓN-3.1.0-007ec6?style=for-the-badge&logo=semver&logoColor=white)](https://github.com/javitamarit/web/releases)
 [![Build](https://img.shields.io/badge/Build-Passing-Success?style=for-the-badge&logo=github-actions)](https://github.com/javitamarit/web/actions)
 [![License](https://img.shields.io/badge/Licencia-MIT-green?style=for-the-badge)](https://github.com/javitamarit/web/blob/main/LICENSE)
 
