@@ -174,4 +174,7 @@
             }
         }
     }
+    @media (min-width: v.$desktop) {
+        padding: 5rem 0;
+    }
 }
