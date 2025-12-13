@@ -108,6 +108,11 @@
             top: 85%;
             transform: translateX(-50%);
             z-index: 2;
+            
+            // Combinar transforms en el estado active para evitar desplazamiento
+            &:active {
+                transform: translateX(-50%) scale(0.98);
+            }
         }
         @include m.desktop {
             font-size: 1.6rem;
