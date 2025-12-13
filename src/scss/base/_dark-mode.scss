@@ -1023,14 +1023,19 @@ html[data-theme="dark"] {
     left: 2rem;
     z-index: 9999;
     
-    width: 50px;
-    height: 50px;
+    width: 56px; // Slightly larger for better interaction
+    height: 56px;
     border-radius: 50%;
-    border: 2px solid v.$rosaOscuro;
     
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    // Double ring effect: Outer Turquoise (Border) + Inner Pink (Inset Shadow)
+    border: 3px solid v.$primario;
+    box-shadow: 
+        inset 0 0 0 2px v.$rosaOscuro, // Inner pink ring
+        0 8px 20px rgba(0, 0, 0, 0.2); // Drop shadow
+    
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     
     cursor: pointer;
     
@@ -1038,14 +1043,15 @@ html[data-theme="dark"] {
     align-items: center;
     justify-content: center;
     
-    font-size: 1.5rem;
+    font-size: 1.8rem; // Larger icon
+    color: v.$rosaOscuro; // Pink for sun icon (User request)
     
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); // Bouncy transition
     
     // Icono de sol (modo claro visible)
     &__icon--light {
         display: block;
+        filter: drop-shadow(0 0 5px rgba(247, 144, 178, 0.6));
     }
     
     &__icon--dark {
@@ -1053,14 +1059,18 @@ html[data-theme="dark"] {
     }
     
     &:hover {
-        transform: scale(1.1);
-        border-color: v.$primario;
-        box-shadow: 0 6px 20px rgba(78, 205, 196, 0.3);
+        transform: scale(1.1) rotate(15deg);
+        box-shadow: 
+            inset 0 0 0 2px v.$rosaOscuro,
+            0 0 20px rgba(247, 144, 178, 0.6), // Pink Glow
+            0 10px 25px rgba(0, 0, 0, 0.3);
     }
     
     &:focus {
-        outline: 3px solid v.$primario;
-        outline-offset: 2px;
+        outline: none;
+        box-shadow: 
+            inset 0 0 0 2px v.$rosaOscuro,
+            0 0 0 4px rgba(247, 144, 178, 0.4);
     }
     
     &:active {
@@ -1069,18 +1079,24 @@ html[data-theme="dark"] {
     
     // Responsive
     @media (max-width: 480px) {
-        width: 44px;
-        height: 44px;
+        width: 48px;
+        height: 48px;
         bottom: 1.5rem;
         left: 1.5rem;
-        font-size: 1.3rem;
+        font-size: 1.5rem;
+        border-width: 2px;
     }
 }
 
 // Estado cuando está en modo oscuro
 [data-theme="dark"] .theme-toggle {
-    background: rgba(0, 0, 0, 0.5);
-    border-color: v.$primario;
+    background: rgba(0, 0, 0, 0.6); // Darker glass
+    border-color: v.$rosaOscuro; // Pink outer in dark mode
+    box-shadow: 
+        inset 0 0 0 2px v.$primario, // Turquoise inner in dark mode
+        0 8px 20px rgba(0, 0, 0, 0.4);
+        
+    color: v.$rosaOscuro; // Pink Icon color (User request)
     
     &__icon--light {
         display: none;
@@ -1088,11 +1104,14 @@ html[data-theme="dark"] {
     
     &__icon--dark {
         display: block;
+        filter: drop-shadow(0 0 5px rgba(247, 144, 178, 0.6));
     }
     
     &:hover {
-        border-color: v.$rosaOscuro;
-        box-shadow: 0 6px 20px rgba(247, 144, 178, 0.3);
+        box-shadow: 
+            inset 0 0 0 2px v.$primario,
+            0 0 20px rgba(247, 144, 178, 0.6), // Pink Glow
+            0 10px 25px rgba(0, 0, 0, 0.5);
     }
 }
 

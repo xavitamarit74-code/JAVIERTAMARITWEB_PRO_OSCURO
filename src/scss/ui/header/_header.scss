@@ -12,6 +12,9 @@
     @media (max-width: v.$tablet) {
         padding: 2rem 2rem;
     }
+    @media (max-width: v.$desktop) {
+        padding: 2rem 2rem;
+    }
 
     &-hero {
         display: flex;

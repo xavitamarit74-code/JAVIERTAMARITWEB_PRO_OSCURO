@@ -113,8 +113,8 @@
     button.type = "button";
 
     button.innerHTML = `
-            <span class="theme-toggle__icon theme-toggle__icon--light" aria-hidden="true">☀️</span>
-            <span class="theme-toggle__icon theme-toggle__icon--dark" aria-hidden="true">🌙</span>
+            <span class="material-icons theme-toggle__icon theme-toggle__icon--light" aria-hidden="true">light_mode</span>
+            <span class="material-icons theme-toggle__icon theme-toggle__icon--dark" aria-hidden="true">dark_mode</span>
         `;
 
     // Evento click
