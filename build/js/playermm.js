@@ -2,18 +2,49 @@
  * playermm.js - Reproductor de Audio para Podcasts
  * Usa Plyr.js para compatibilidad cross-browser
  * Incluye ecualizador animado y controles accesibles
+ * Video background dynamic implementation
  */
 
 class PodcastPlayer {
+  // Static property for video preloading
+  static videoSource = 'video/animaciones/animacion_reproductor_1.mp4';
+  static videoBlobUrl = null;
+  static isPreloading = false;
+
   constructor(audioElement, episodeId) {
     this.audioElement = audioElement;
     this.episodeId = episodeId;
     this.player = null;
     this.equalizer = null;
-    this.imageContainer = null; // NUEVO: Contenedor de imagen
+    this.imageContainer = null;
+    this.videoElement = null; // Reference to the injected video
     this.isPlaying = false;
     
+    // Preload video globally if not done yet
+    PodcastPlayer.preloadVideo();
+
     this.init();
+  }
+
+  /**
+   * Preloads the animation video once for all instances
+   */
+  static async preloadVideo() {
+    if (PodcastPlayer.videoBlobUrl || PodcastPlayer.isPreloading) return;
+
+    PodcastPlayer.isPreloading = true;
+    try {
+        const response = await fetch(PodcastPlayer.videoSource);
+        const blob = await response.blob();
+        PodcastPlayer.videoBlobUrl = URL.createObjectURL(blob);
+        console.log('Podcast animation video preloaded successfully');
+    } catch (error) {
+        console.error('Failed to preload podcast animation:', error);
+        // Fallback to direct URL if blob fails
+        PodcastPlayer.videoBlobUrl = PodcastPlayer.videoSource;
+    } finally {
+        PodcastPlayer.isPreloading = false;
+    }
   }
   
   /**
@@ -30,7 +61,6 @@ class PodcastPlayer {
       'mute',
       'volume',
       'settings'
-      // 'download' eliminado
     ];
     
     // Obtener la URL del archivo de audio
@@ -42,7 +72,7 @@ class PodcastPlayer {
       settings: ['speed'],
       speed: { selected: 1, options: [0.5, 0.75, 1, 1.25, 1.5, 2] },
       urls: {
-        download: audioUrl // URL para el botón de descarga
+        download: audioUrl
       },
       i18n: {
         restart: 'Reiniciar',
@@ -101,7 +131,7 @@ class PodcastPlayer {
     // Crear el ecualizador
     this.createEqualizer();
     
-    // Encontrar contenedor de imagen
+    // Encontrar contenedor de imagen y preparar video
     this.findImageContainer();
     
     // Event listeners
@@ -155,16 +185,41 @@ class PodcastPlayer {
       this.imageContainer = episodeCard.querySelector('.podcast-episode__image-container');
     }
   }
+
+  /**
+   * Crea e inyecta el elemento de video si no existe
+   */
+  createVideoElement() {
+    if (!this.imageContainer || this.videoElement) return;
+
+    this.videoElement = document.createElement('video');
+    this.videoElement.className = 'podcast-episode__video';
+    this.videoElement.src = PodcastPlayer.videoBlobUrl || PodcastPlayer.videoSource;
+    this.videoElement.loop = true;
+    this.videoElement.muted = true;
+    this.videoElement.playsInline = true;
+    this.videoElement.setAttribute('aria-hidden', 'true'); // Decorativo
+    
+    // Insertar como primer hijo para que quede detrás del badge si se desea, 
+    // pero con z-index cubriremos la imagen.
+    this.imageContainer.appendChild(this.videoElement);
+  }
   
   /**
-   * Remueve la clase is-playing de todos los contenedores
-   * para asegurar que solo un episodio esté animado a la vez
+   * Gestión global de videos: Pausa y oculta todos los videos activos
+   * para asegurar que solo uno se reproduce a la vez.
    */
-  removeAllPlayingClasses() {
-    const allContainers = document.querySelectorAll('.podcast-episode__image-container.is-playing');
-    allContainers.forEach(container => {
-      container.classList.remove('is-playing');
+  resetAllVideos() {
+    const allVideos = document.querySelectorAll('.podcast-episode__video');
+    allVideos.forEach(video => {
+        video.pause();
+        video.style.opacity = '0';
+        // Opcional: reiniciar tiempo
+        // video.currentTime = 0;
     });
+
+    const allContainers = document.querySelectorAll('.podcast-episode__image-container');
+    allContainers.forEach(container => container.classList.remove('is-playing-video'));
   }
   
   /**
@@ -176,10 +231,23 @@ class PodcastPlayer {
       this.isPlaying = true;
       this.showEqualizer();
       
-      // NUEVO: Animación de fondo del contenedor de imagen
-      this.removeAllPlayingClasses(); // Solo uno activo a la vez
+      // Resetear otros videos y animaciones
+      this.resetAllVideos();
+      
+      // Iniciar video actual
       if (this.imageContainer) {
-        this.imageContainer.classList.add('is-playing');
+          this.imageContainer.classList.add('is-playing-video');
+          
+          // Crear video si es la primera vez
+          if (!this.videoElement) {
+              this.createVideoElement();
+          }
+
+          // Reproducir video
+          if (this.videoElement) {
+              this.videoElement.play().catch(e => console.warn('Auto-play prevented:', e));
+              this.videoElement.style.opacity = '1';
+          }
       }
       
       this.saveState();
@@ -191,9 +259,16 @@ class PodcastPlayer {
       this.isPlaying = false;
       this.hideEqualizer();
       
-      // NUEVO: Detener animación de fondo
+      // Pausar y ocultar video
+      if (this.videoElement) {
+          this.videoElement.style.opacity = '0';
+          setTimeout(() => {
+              if (!this.isPlaying) this.videoElement.pause();
+          }, 300); // Esperar a la transición CSS
+      }
+      
       if (this.imageContainer) {
-        this.imageContainer.classList.remove('is-playing');
+          this.imageContainer.classList.remove('is-playing-video');
       }
       
       this.saveState();
@@ -205,9 +280,14 @@ class PodcastPlayer {
       this.isPlaying = false;
       this.hideEqualizer();
       
-      // NUEVO: Detener animación de fondo
+      // Pausar y ocultar video
+      if (this.videoElement) {
+        this.videoElement.style.opacity = '0';
+        this.videoElement.pause();
+      }
+
       if (this.imageContainer) {
-        this.imageContainer.classList.remove('is-playing');
+        this.imageContainer.classList.remove('is-playing-video');
       }
       
       this.saveState();
@@ -381,6 +461,12 @@ class PodcastPlayer {
     
     if (this.equalizer) {
       this.equalizer.remove();
+    }
+
+    if (this.videoElement) {
+        this.videoElement.pause();
+        this.videoElement.remove();
+        this.videoElement = null; // Liberar referencia
     }
   }
 }

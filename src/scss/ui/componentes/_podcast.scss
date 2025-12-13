@@ -228,18 +228,33 @@
   }
   
   // Estado reproduciendo - añadido por JavaScript
-  &.is-playing {
-    animation: backgroundPulse 4.5s ease-in-out infinite;
+  &.is-playing-video {
+    // La animación pulsante se reemplaza por el video, pero mantenemos el color de fondo por si acaso
+    background-color: rgba(247, 144, 178, 0.15); 
   }
   
-  // Accesibilidad: Respetar preferencias de movimiento reducido
-  @media (prefers-reduced-motion: reduce) {
-    &.is-playing {
-      animation: none;
-      background-color: rgba(247, 144, 178, 0.15); // Rosa fijo cuando reproduce
-    }
+  // Video dinámico
+  .podcast-episode__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 5; // Encima de imagen (que tiene z-index default)
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    border-radius: inherit; // Mantiene el border-radius del padre si lo hubiera
+    
+    // El badge (T1 E1) debe estar por encima del video
   }
 }
+
+// Asegurar que el badge quede por encima del video
+.podcast-episode__badge {
+  z-index: 10;
+}
+
 
 .podcast-episode__image {
   width: 60%; // Slightly larger microphone icon
